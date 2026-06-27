@@ -1,0 +1,6 @@
+{
+  "name": "TortiTrack",
+  "description": "Sistema de gestión integral para tortillerías. Optimización de rutas de reparto, seguimiento de devoluciones/mermas y control de saldo inicial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
