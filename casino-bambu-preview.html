@@ -500,12 +500,8 @@ button { cursor: pointer; font-family: 'Lato', sans-serif; }
     </div>
   </div>
   <div class="hero-right">
-    <!-- Real venue photo — shown if available, fallback gradient -->
-    <img src="venue-hero.png" alt="Casino Bambú" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
-    <div class="hero-img-placeholder" style="display:none">
-      <div style="font-size:80px; opacity:.2">🎋</div>
-      <div style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:rgba(240,237,232,.3)">Casino Bambú · Nayarit</div>
-    </div>
+    <!-- Salón con luces colgantes — photo 1 of collage (top-left) -->
+    <div style="width:100%;height:100%;background-image:url(venue-gallery.png);background-size:400% 200%;background-position:0% 0%;background-repeat:no-repeat"></div>
     <!-- Floating tag -->
     <div style="position:absolute; bottom:32px; right:32px; background:rgba(249,246,241,0.92); backdrop-filter:blur(16px); border:1px solid rgba(14,74,66,0.12); border-radius:12px; padding:14px 20px;">
       <div style="font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#4A7B6F; margin-bottom:4px">Jardín Principal</div>
@@ -585,8 +581,8 @@ button { cursor: pointer; font-family: 'Lato', sans-serif; }
       <!-- Image -->
       <div class="reveal">
         <div class="about-img-wrap">
-          <img src="venue-jardin.png" alt="Casino Bambú Jardín" style="width:100%;height:100%;object-fit:cover"
-            onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(160deg,#C8D8C0,#8BAF9E)'"/>
+          <!-- Terraza con bugambilias — photo 8 of collage (bottom-right) -->
+          <div style="width:100%;height:100%;background-image:url(venue-gallery.png);background-size:400% 200%;background-position:100% 100%;background-repeat:no-repeat"></div>
           <div class="about-badge">
             <div class="about-badge-num">2024</div>
             <div class="about-badge-sub">Apertura en Nayarit</div>
@@ -645,10 +641,9 @@ button { cursor: pointer; font-family: 'Lato', sans-serif; }
       <h2 class="sec-title reveal reveal-delay-1">Tres ambientes,<br /><em>una experiencia</em> única</h2>
     </div>
     <div class="spaces-grid">
-      <!-- Space 1 -->
+      <!-- Space 1: Salón con luces (photo 1, 0% 0%) -->
       <div class="space-card reveal" onclick="smoothScroll('#contacto')">
-        <img src="venue-hero.png" alt="Jardín del Bambú" class="space-card-img"
-          onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(160deg,#1A3830,#0E2820)'"/>
+        <div style="width:100%;height:100%;background-image:url(venue-gallery.png);background-size:400% 200%;background-position:0% 0%;transition:transform .6s" class="space-card-img"></div>
         <div class="space-card-overlay"></div>
         <div class="space-card-content">
           <div class="space-card-cap">Espacio Principal</div>
@@ -659,13 +654,12 @@ button { cursor: pointer; font-family: 'Lato', sans-serif; }
           </div>
         </div>
       </div>
-      <!-- Space 2 -->
+      <!-- Space 2: Jardín vista montaña (photo 7, 66.67% 100%) -->
       <div class="space-card reveal reveal-delay-1" onclick="smoothScroll('#contacto')">
-        <img src="venue-jardin.png" alt="Terraza Los Olivos" class="space-card-img"
-          onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(160deg,#1C3428,#102818)'"/>
+        <div style="width:100%;height:100%;background-image:url(venue-gallery.png);background-size:400% 200%;background-position:66.67% 100%;transition:transform .6s" class="space-card-img"></div>
         <div class="space-card-overlay"></div>
         <div class="space-card-content">
-          <div class="space-card-cap">Jardín</div>
+          <div class="space-card-cap">Jardín & Terraza</div>
           <div class="space-card-name">Terraza Los Olivos</div>
           <div style="display:flex;align-items:center;justify-content:space-between">
             <span style="font-size:12px;color:rgba(240,237,232,.6);font-weight:300">Hasta 120 personas</span>
@@ -673,12 +667,9 @@ button { cursor: pointer; font-family: 'Lato', sans-serif; }
           </div>
         </div>
       </div>
-      <!-- Space 3 -->
-      <div class="space-card reveal reveal-delay-2" style="background:linear-gradient(160deg,#2A3828,#1A2E1A)" onclick="smoothScroll('#contacto')">
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">
-          <div style="font-size:56px;opacity:.15">🌿</div>
-          <div style="font-size:10px;letter-spacing:3px;color:rgba(240,237,232,.25);text-transform:uppercase">Foto próximamente</div>
-        </div>
+      <!-- Space 3: Salón interior madera (photo 3, 66.67% 0%) -->
+      <div class="space-card reveal reveal-delay-2" onclick="smoothScroll('#contacto')">
+        <div style="width:100%;height:100%;background-image:url(venue-gallery.png);background-size:400% 200%;background-position:66.67% 0%;transition:transform .6s" class="space-card-img"></div>
         <div class="space-card-overlay"></div>
         <div class="space-card-content">
           <div class="space-card-cap">Salón Interior</div>
@@ -747,53 +738,54 @@ button { cursor: pointer; font-family: 'Lato', sans-serif; }
         <span class="sec-eyebrow">Galería</span>
         <h2 class="sec-title" style="margin-bottom:16px">Momentos que <em>inspiran</em></h2>
         <p class="sec-desc" style="margin-bottom:32px;font-size:15px">
-          Cada foto cuenta una historia de amor, alegría y celebración dentro de nuestros espacios.
+          Espacios únicos donde cada celebración cobra vida — madera, naturaleza
+          y elegancia en perfecta armonía.
         </p>
         <p style="font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);line-height:1.8;border-left:2px solid var(--gold);padding-left:16px">
-          📸 Galería completa<br/>próximamente<br/>
-          <span style="font-weight:300;font-size:11px">Síguenos en redes</span>
+          📸 8 fotos reales<br/>del venue<br/>
+          <span style="font-weight:300;font-size:11px">Más próximamente</span>
         </p>
         <div style="display:flex;gap:10px;margin-top:24px">
           <a href="https://instagram.com" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 16px;background:var(--white);border:1px solid var(--border);border-radius:50px;font-size:12px;color:var(--mid-text);font-weight:700">📸 Instagram</a>
           <a href="https://facebook.com" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 16px;background:var(--white);border:1px solid var(--border);border-radius:50px;font-size:12px;color:var(--mid-text);font-weight:700">📘 Facebook</a>
         </div>
       </div>
-      <!-- Horizontal strip -->
+      <!-- Horizontal strip — real photos from collage -->
       <div class="gallery-strip reveal reveal-delay-2">
         <div class="gallery-strip-item" style="width:200px;height:240px">
-          <div class="gallery-strip-inner" style="background:linear-gradient(160deg,#C8D8C0,#A8C0A0)">
-            <div style="font-size:32px;opacity:.5">💍</div>
-            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mid-text);opacity:.6">Boda</div>
-          </div>
-          <div class="gallery-overlay"><span>Ver foto</span></div>
+          <div class="gallery-strip-inner" style="background-image:url(venue-gallery.png);background-size:400% 200%;background-position:0% 0%"></div>
+          <div class="gallery-overlay"><span>Salón con luces</span></div>
         </div>
         <div class="gallery-strip-item" style="width:160px;height:240px">
-          <div class="gallery-strip-inner" style="background:linear-gradient(160deg,#D8C8D0,#C0A0B0)">
-            <div style="font-size:32px;opacity:.5">👸</div>
-            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mid-text);opacity:.6">Quinceañera</div>
-          </div>
-          <div class="gallery-overlay"><span>Ver foto</span></div>
+          <div class="gallery-strip-inner" style="background-image:url(venue-gallery.png);background-size:400% 200%;background-position:33.33% 0%"></div>
+          <div class="gallery-overlay"><span>Área cubierta</span></div>
         </div>
         <div class="gallery-strip-item" style="width:220px;height:240px">
-          <div class="gallery-strip-inner" style="background:linear-gradient(160deg,#C0D0C8,#A0B8A8)">
-            <div style="font-size:32px;opacity:.5">🌿</div>
-            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mid-text);opacity:.6">Jardín</div>
-          </div>
-          <div class="gallery-overlay"><span>Ver foto</span></div>
+          <div class="gallery-strip-inner" style="background-image:url(venue-gallery.png);background-size:400% 200%;background-position:66.67% 100%"></div>
+          <div class="gallery-overlay"><span>Jardín · Montaña</span></div>
         </div>
         <div class="gallery-strip-item" style="width:160px;height:240px">
-          <div class="gallery-strip-inner" style="background:linear-gradient(160deg,#D0C8B8,#B8A898)">
-            <div style="font-size:32px;opacity:.5">🎉</div>
-            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mid-text);opacity:.6">Fiesta</div>
-          </div>
-          <div class="gallery-overlay"><span>Ver foto</span></div>
+          <div class="gallery-strip-inner" style="background-image:url(venue-gallery.png);background-size:400% 200%;background-position:100% 100%"></div>
+          <div class="gallery-overlay"><span>Terraza & jardín</span></div>
         </div>
         <div class="gallery-strip-item" style="width:190px;height:240px">
-          <div class="gallery-strip-inner" style="background:linear-gradient(160deg,#C8D0C0,#A8B8A0)">
-            <div style="font-size:32px;opacity:.5">✨</div>
-            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mid-text);opacity:.6">Noche</div>
-          </div>
-          <div class="gallery-overlay"><span>Ver foto</span></div>
+          <div class="gallery-strip-inner" style="background-image:url(venue-gallery.png);background-size:400% 200%;background-position:100% 0%"></div>
+          <div class="gallery-overlay"><span>Mesa rústica</span></div>
+        </div>
+      </div>
+      <!-- Second row — 3 more photos -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px">
+        <div style="border-radius:12px;overflow:hidden;height:160px;cursor:pointer;position:relative">
+          <div style="width:100%;height:100%;background-image:url(venue-gallery.png);background-size:400% 200%;background-position:0% 100%;transition:transform .4s" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 12px;background:linear-gradient(0deg,rgba(10,40,35,.65),transparent)"><span style="font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(240,237,232,.85);text-transform:uppercase">Barra de servicio</span></div>
+        </div>
+        <div style="border-radius:12px;overflow:hidden;height:160px;cursor:pointer;position:relative">
+          <div style="width:100%;height:100%;background-image:url(venue-gallery.png);background-size:400% 200%;background-position:33.33% 100%;transition:transform .4s" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 12px;background:linear-gradient(0deg,rgba(10,40,35,.65),transparent)"><span style="font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(240,237,232,.85);text-transform:uppercase">Área lounge</span></div>
+        </div>
+        <div style="border-radius:12px;overflow:hidden;height:160px;cursor:pointer;position:relative">
+          <div style="width:100%;height:100%;background-image:url(venue-gallery.png);background-size:400% 200%;background-position:66.67% 0%;transition:transform .4s" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 12px;background:linear-gradient(0deg,rgba(10,40,35,.65),transparent)"><span style="font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(240,237,232,.85);text-transform:uppercase">Salón interior</span></div>
         </div>
       </div>
     </div>

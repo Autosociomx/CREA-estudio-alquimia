@@ -6,11 +6,6 @@ export default function Hero() {
     <section id="inicio" className="hero">
       {/* LEFT — content */}
       <div className="hero-left">
-        {/* Botanical leaf top-left */}
-        <div className="leaf-deco leaf-tl" style={{
-          background: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 280\'%3E%3Cellipse cx=\'100\' cy=\'140\' rx=\'70\' ry=\'130\' fill=\'%230E4A42\' opacity=\'.6\'/%3E%3Cellipse cx=\'100\' cy=\'140\' rx=\'40\' ry=\'120\' fill=\'none\' stroke=\'%230E4A42\' stroke-width=\'1\' opacity=\'.4\'/%3E%3Cline x1=\'100\' y1=\'20\' x2=\'100\' y2=\'260\' stroke=\'%230E4A42\' stroke-width=\'1.5\' opacity=\'.5\'/%3E%3C/svg%3E") center/contain no-repeat',
-        }} />
-
         <span className="hero-eyebrow">Salón de Eventos · Nayarit, México</span>
 
         <h1 className="hero-title">
@@ -27,16 +22,10 @@ export default function Hero() {
         </p>
 
         <div className="hero-btns">
-          <button
-            className="btn-green"
-            onClick={() => scroll('cotizador')}
-          >
+          <button className="btn-green" onClick={() => scroll('cotizador')}>
             ✦ Cotizar Evento
           </button>
-          <button
-            className="btn-outline-green"
-            onClick={() => scroll('galeria')}
-          >
+          <button className="btn-outline-green" onClick={() => scroll('galeria')}>
             Ver Galería
           </button>
         </div>
@@ -52,24 +41,36 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* RIGHT — venue photo */}
+      {/* RIGHT — venue photo (salón con luces colgantes, top-left of collage) */}
       <div className="hero-right">
-        <img src="/venue-hero.png" alt="Casino Bambú — Salón principal" className="space-card-img" />
-        {/* Overlay gradient */}
+        <div style={{
+          width: '100%', height: '100%',
+          backgroundImage: 'url(/venue-gallery.png)',
+          backgroundSize: '400% 200%',
+          backgroundPosition: '0% 0%',
+          backgroundRepeat: 'no-repeat',
+        }} />
+
+        {/* Light overlay */}
         <div style={{
           position: 'absolute', inset: 0,
-          background: 'linear-gradient(180deg, rgba(14,74,66,0.15) 0%, transparent 40%)',
+          background: 'linear-gradient(180deg, rgba(14,74,66,0.1) 0%, transparent 40%)',
           pointerEvents: 'none',
         }} />
+
         {/* Floating tag */}
         <div style={{
           position: 'absolute', bottom: 32, right: 32,
-          background: 'rgba(249,246,241,0.92)', backdropFilter: 'blur(16px)',
+          background: 'rgba(249,246,241,0.93)', backdropFilter: 'blur(16px)',
           border: '1px solid var(--border)', borderRadius: 'var(--r)',
           padding: '14px 20px',
         }}>
-          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 3, textTransform: 'uppercase', color: 'var(--green3)', marginBottom: 4 }}>Jardín Principal</div>
-          <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, color: 'var(--dark-text)' }}>Hasta 200 personas</div>
+          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 3, textTransform: 'uppercase', color: 'var(--green3)', marginBottom: 4 }}>
+            Jardín Principal
+          </div>
+          <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, color: 'var(--dark-text)' }}>
+            Hasta 200 personas
+          </div>
         </div>
       </div>
     </section>

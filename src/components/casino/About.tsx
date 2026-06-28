@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
 
 const CARDS = [
-  { icon: '🎋', title: 'Arquitectura Natural', desc: 'Bambú, madera y piedra que conectan con la naturaleza en cada rincón.' },
-  { icon: '✨', title: 'Iluminación Mágica', desc: 'Miles de luces colgantes que transforman el espacio al caer la noche.' },
-  { icon: '🌸', title: 'Jardines en Flor', desc: 'Áreas verdes con buganvilias, plantas tropicales y senderos curados.' },
+  { icon: '🎋', title: 'Arquitectura Natural', desc: 'Madera, piedra y vegetación tropical crean una atmósfera única e irrepetible.' },
+  { icon: '✨', title: 'Iluminación Mágica', desc: 'Luces colgantes que transforman cada espacio al caer la noche.' },
+  { icon: '🌸', title: 'Jardines en Flor', desc: 'Bugambilias, agaves y jardines curados con vista a la montaña.' },
   { icon: '👨‍🍳', title: 'Servicio Completo', desc: 'Coordinación total con equipo dedicado a cada detalle de tu evento.' },
 ];
 
@@ -23,18 +23,16 @@ export default function About() {
     <section id="nosotros" className="section section-cream" ref={sectionRef} style={{ paddingTop: 100, paddingBottom: 100 }}>
       <div className="container">
         <div className="about-grid">
-          {/* Left — image */}
+          {/* Left — photo from collage (jardín con bugambilias, bottom-right) */}
           <div className="reveal">
             <div style={{ position: 'relative', borderRadius: 'var(--r-xl)', overflow: 'hidden', aspectRatio: '4/5' }}>
-              <img
-                src="/venue-jardin.png"
-                alt="Casino Bambú — Jardín"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                onError={e => {
-                  (e.currentTarget as HTMLImageElement).style.display = 'none';
-                  (e.currentTarget.parentElement as HTMLElement).style.background = 'linear-gradient(160deg, var(--bg2) 0%, var(--cream2) 100%)';
-                }}
-              />
+              <div style={{
+                width: '100%', height: '100%',
+                backgroundImage: 'url(/venue-gallery.png)',
+                backgroundSize: '400% 200%',
+                backgroundPosition: '100% 100%',
+                backgroundRepeat: 'no-repeat',
+              }} />
               {/* Badge */}
               <div style={{
                 position: 'absolute', bottom: 24, left: 24,
