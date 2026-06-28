@@ -3,858 +3,1287 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Casino Bambú — Salón de Eventos | Nayarit</title>
-<meta name="description" content="Casino Bambú, el espacio ideal para bodas, quinceañeras, graduaciones y todo tipo de celebraciones en Nayarit."/>
-<meta property="og:title" content="Casino Bambú — Salón de Eventos en Nayarit"/>
-<meta property="og:description" content="Celebra los momentos más importantes de tu vida en un espacio único rodeado de naturaleza en Nayarit."/>
-<meta property="og:type" content="website"/>
+<title>Casino Bambú — Salón de Eventos · Nayarit</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+
+<!-- JSON-LD SEO -->
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":["LocalBusiness","EventVenue"],
-  "name":"Casino Bambú",
-  "description":"Salón de eventos en Nayarit para bodas, quinceañeras, graduaciones, fiestas corporativas y todo tipo de celebraciones.",
-  "telephone":"+523221234567",
-  "address":{"@type":"PostalAddress","streetAddress":"Carretera Federal 200, cerca de Universidad Tecnológica de Nayarit","addressLocality":"Nayarit","addressRegion":"NAY","addressCountry":"MX"},
-  "geo":{"@type":"GeoCoordinates","latitude":21.4931,"longitude":-104.8914},
-  "openingHoursSpecification":[
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"15:00"}
-  ],
-  "maximumAttendeeCapacity":200,
-  "priceRange":"$$"
-}
+{"@context":"https://schema.org","@type":["LocalBusiness","EventVenue"],"name":"Casino Bambú","description":"Salón de eventos en Nayarit, México. Bodas, quinceañeras, graduaciones y más.","telephone":"+523221234567","address":{"@type":"PostalAddress","streetAddress":"Carretera Federal 200, cerca de UTN","addressLocality":"Nayarit","addressRegion":"NAY","addressCountry":"MX"},"geo":{"@type":"GeoCoordinates","latitude":21.4931,"longitude":-104.8914},"maximumAttendeeCapacity":200,"priceRange":"$$"}
 </script>
+
 <style>
-:root{
-  --bg:#090503;--bg2:#130B06;--bg3:#1C1009;--bg4:#261508;
-  --cream:#F5EDD8;--cream2:#EDE0C4;--cream3:#E0CCA8;
-  --gold:#C8A444;--gold2:#E2BC62;
-  --terra:#B06030;--terra2:#CC7840;
-  --green:#4A7040;--green2:#5E8852;
-  --dark-text:#2A1A0C;--mid-text:#6B4E30;
-  --light-text:#F0E2C8;--muted:rgba(240,226,200,0.45);
-  --border-dark:rgba(200,164,68,0.15);--border-light:rgba(42,26,12,0.12);
-  --shadow-warm:0 8px 40px rgba(200,120,40,0.12);
-  --r:12px;--r-lg:20px;
+/* ─── TOKENS ─── */
+:root {
+  --bg:        #F9F6F1;
+  --bg2:       #F3EDE3;
+  --bg3:       #EDE5D8;
+  --white:     #FFFFFF;
+  --green:     #0E4A42;
+  --green2:    #1A6358;
+  --green3:    #4A7B6F;
+  --sage:      #8BAF9E;
+  --gold:      #C8A444;
+  --gold2:     #A88830;
+  --cream:     #F5EDD8;
+  --cream2:    #E8DCC8;
+  --cream3:    #D9C9A8;
+  --dark-text: #1A2E2A;
+  --mid-text:  #4A5E58;
+  --muted:     #7A8E88;
+  --light-text:#F0EDE8;
+  --border:    rgba(14,74,66,0.12);
+  --border2:   rgba(14,74,66,0.20);
+  --shadow:    0 4px 32px rgba(14,74,66,0.10);
+  --shadow-lg: 0 12px 60px rgba(14,74,66,0.14);
+  --r:    12px;
+  --r-lg: 20px;
+  --r-xl: 28px;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--gold) var(--bg2)}
-body{background:var(--bg);color:var(--light-text);font-family:'Lato',sans-serif;font-weight:300;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.028;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-size:180px 180px}
-h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400;line-height:1.15}
-.section{padding:100px 24px}
-.section-light{background:var(--cream);color:var(--dark-text)}
-.section-mid{background:var(--cream2);color:var(--dark-text)}
-.section-dark{background:var(--bg2)}
-.container{max-width:1180px;margin:0 auto}
-.sec-eyebrow{font-family:'Lato',sans-serif;font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block}
-.sec-eyebrow-dark{color:var(--terra)}
-.sec-title{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,56px);font-weight:400;line-height:1.15;margin-bottom:20px}
-.sec-title em{font-style:italic;color:var(--gold)}
-.sec-desc{font-size:17px;font-weight:300;line-height:1.8;max-width:600px;opacity:.8}
-.gold-divider{display:flex;align-items:center;gap:12px;margin:20px 0}
-.gold-divider::before,.gold-divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.gold-divider-icon{font-size:16px;color:var(--terra);opacity:.7}
 
-/* NAVBAR */
-.navbar{position:fixed;top:0;left:0;right:0;z-index:500;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,padding .4s}
-.navbar.scrolled{padding:14px 32px;background:rgba(9,5,3,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-dark)}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;letter-spacing:2px;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:10px}
-.nav-logo-icon{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,var(--gold),var(--terra));display:flex;align-items:center;justify-content:center;font-size:16px}
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav-links a{font-size:13px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--gold)}
-.nav-cta{background:transparent;border:1px solid var(--gold);color:var(--gold)!important;padding:9px 22px;border-radius:50px;transition:background .2s,color .2s!important}
-.nav-cta:hover{background:var(--gold)!important;color:var(--bg)!important}
-.nav-burger{display:none;background:none;border:none;cursor:pointer;font-size:24px;color:var(--light-text)}
-.mobile-menu{position:fixed;inset:0;background:rgba(9,5,3,0.97);z-index:490;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:36px;transform:translateX(100%);transition:transform .35s ease}
-.mobile-menu.open{transform:translateX(0)}
-.mobile-menu a{font-family:'Playfair Display',serif;font-size:32px;font-weight:400;color:var(--light-text);text-decoration:none;letter-spacing:2px;transition:color .2s}
-.mobile-menu a:hover{color:var(--gold)}
-
-/* HERO */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,#090503 0%,#130B06 30%,#1C1009 60%,#090503 100%)}
-.hero-bg-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(200,164,68,.07) 0%,transparent 65%),radial-gradient(ellipse at 20% 80%,rgba(176,96,48,.06) 0%,transparent 50%)}
-#hero-canvas{position:absolute;inset:0;pointer-events:none;z-index:1}
-.hero-content{position:relative;z-index:2;padding:40px 24px;max-width:860px;margin:0 auto}
-.hero-eyebrow{font-family:'Lato',sans-serif;font-size:11px;font-weight:700;letter-spacing:7px;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:24px;display:flex;align-items:center;justify-content:center;gap:14px}
-.hero-eyebrow::before,.hero-eyebrow::after{content:'';width:48px;height:1px;background:var(--gold);opacity:.5}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(54px,10vw,110px);font-weight:300;letter-spacing:-1px;line-height:.95;color:var(--light-text);margin-bottom:8px}
-.hero-title em{font-style:italic;color:var(--gold);font-weight:400}
-.hero-subtitle{font-family:'Playfair Display',serif;font-size:clamp(16px,3vw,26px);font-weight:400;font-style:italic;color:var(--muted);margin-bottom:40px}
-.hero-desc{font-size:16px;font-weight:300;line-height:1.8;color:rgba(240,226,200,.6);max-width:540px;margin:0 auto 48px}
-.hero-btns{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
-.btn-primary{padding:16px 36px;background:linear-gradient(135deg,var(--gold),var(--terra));border:none;border-radius:50px;color:#fff;font-family:'Lato',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 24px rgba(200,164,68,.3)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(200,164,68,.45)}
-.btn-secondary{padding:16px 36px;background:transparent;border:1px solid rgba(240,226,200,.3);border-radius:50px;color:var(--light-text);font-family:'Lato',sans-serif;font-size:13px;font-weight:400;letter-spacing:3px;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:border-color .25s,color .25s}
-.btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
-.hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);font-size:10px;letter-spacing:3px;text-transform:uppercase;background:none;border:none;cursor:pointer;animation:hero-bounce 2s ease-in-out infinite}
-.hero-scroll-line{width:1px;height:50px;background:linear-gradient(180deg,var(--gold),transparent)}
-@keyframes hero-bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
-
-/* MARQUEE */
-.marquee-track{display:flex;width:max-content;animation:marquee 28s linear infinite}
-.marquee-track:hover{animation-play-state:paused}
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-33.333%)}}
-.mq-item{font-family:'Lato',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(9,5,3,.85);padding-right:52px;white-space:nowrap;display:inline-flex;align-items:center;gap:10px}
-.mq-dot{font-size:8px;opacity:.5}
-
-/* STATS */
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border-dark);border-bottom:1px solid var(--border-dark);margin:60px 0}
-.stat-item{padding:36px 24px;text-align:center;border-right:1px solid var(--border-dark)}
-.stat-item:last-child{border-right:none}
-.stat-number{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:600;color:var(--gold);line-height:1;margin-bottom:8px}
-.stat-label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
-
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-img-stack{position:relative;height:520px}
-.about-img-main,.about-img-accent{position:absolute;border-radius:var(--r-lg);overflow:hidden}
-.about-img-main{width:82%;height:88%;top:0;left:0;background:linear-gradient(160deg,var(--bg3) 0%,var(--bg4) 100%);display:flex;align-items:center;justify-content:center;border:1px solid var(--border-dark)}
-.about-img-accent{width:55%;height:50%;bottom:0;right:0;background:linear-gradient(135deg,var(--gold),var(--terra));opacity:.15}
-.about-img-badge{position:absolute;bottom:30px;left:-20px;background:var(--bg);border:1px solid var(--border-dark);border-radius:var(--r);padding:16px 24px;display:flex;align-items:center;gap:14px}
-.about-badge-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:var(--gold);line-height:1}
-.about-badge-text{font-size:12px;font-weight:300;color:var(--muted);line-height:1.5;max-width:100px}
-.about-features{margin-top:36px;display:flex;flex-direction:column;gap:18px}
-.about-feature{display:flex;align-items:flex-start;gap:16px}
-.about-feature-icon{width:42px;height:42px;background:rgba(176,96,48,.08);border:1px solid rgba(176,96,48,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.about-feature-title{font-size:15px;font-weight:700;color:var(--dark-text);margin-bottom:3px}
-.about-feature-desc{font-size:13px;font-weight:300;color:var(--mid-text);line-height:1.6}
-
-/* SPACES */
-.spaces-hscroll{display:flex;gap:20px;overflow-x:auto;padding-bottom:20px;scroll-snap-type:x mandatory;scrollbar-width:none}
-.spaces-hscroll::-webkit-scrollbar{display:none}
-.space-card{flex-shrink:0;width:clamp(300px,38vw,480px);scroll-snap-align:start;border-radius:var(--r-lg);overflow:hidden;cursor:pointer}
-.space-img{width:100%;aspect-ratio:4/5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;position:relative;transition:transform .5s}
-.space-img:hover{transform:scale(1.03)}
-.space-tag{position:absolute;top:20px;left:20px;background:rgba(9,5,3,.7);backdrop-filter:blur(8px);border:1px solid var(--border-dark);border-radius:50px;padding:6px 14px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
-.space-bar{padding:24px 28px;background:var(--bg2)}
-.space-name{font-family:'Playfair Display',serif;font-size:24px;font-weight:400;color:var(--light-text);margin-bottom:8px}
-.space-desc{font-size:13px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:16px}
-.space-foot{display:flex;align-items:center;justify-content:space-between}
-.space-cap{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
-.space-pills{display:flex;flex-wrap:wrap;gap:5px}
-.space-pill{font-size:10px;padding:3px 10px;background:rgba(200,164,68,.1);border:1px solid rgba(200,164,68,.18);border-radius:20px;color:var(--gold);letter-spacing:1px}
-.scroll-controls{display:flex;gap:10px}
-.scroll-btn{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;transition:border-color .2s,background .2s}
-.scroll-btn-prev{background:transparent;border:1px solid var(--border-dark);color:var(--muted)}
-.scroll-btn-prev:hover{border-color:var(--gold)}
-.scroll-btn-next{background:var(--gold);border:none;color:var(--bg)}
-
-/* EVENTS ACCORDION */
-.events-list{border-top:1px solid var(--border-dark)}
-.ev-row{border-bottom:1px solid var(--border-dark);cursor:pointer;transition:background .3s}
-.ev-row.open{background:rgba(200,164,68,.04)}
-.ev-inner{display:flex;align-items:center;gap:40px;padding:28px 0}
-.ev-num{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:400;letter-spacing:2px;color:var(--muted);width:28px;flex-shrink:0;transition:color .3s}
-.ev-row.open .ev-num{color:var(--gold)}
-.ev-name-col{flex:1}
-.ev-name{font-family:'Playfair Display',serif;font-size:clamp(22px,3.5vw,34px);font-weight:400;color:rgba(240,226,200,.7);transition:color .3s}
-.ev-row.open .ev-name{color:var(--light-text)}
-.ev-expand{display:none;padding-top:16px;padding-bottom:8px;display:none;grid-template-columns:1fr auto;gap:32px;align-items:start}
-.ev-expand.open{display:grid}
-.ev-expand-tag{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.ev-expand-desc{font-size:15px;font-weight:300;color:var(--muted);line-height:1.8;max-width:540px}
-.ev-cta{display:flex;align-items:center;gap:8px;background:var(--gold);border:none;border-radius:50px;padding:12px 22px;color:var(--bg);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;cursor:pointer;white-space:nowrap;flex-shrink:0;font-family:'Lato',sans-serif;transition:background .2s}
-.ev-cta:hover{background:var(--gold2)}
-.ev-tag-right{font-size:12px;letter-spacing:2px;color:var(--muted);min-width:180px;text-align:right;font-weight:300}
-.ev-toggle{width:32px;height:32px;border-radius:50%;border:1px solid var(--border-dark);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;color:var(--muted);transition:transform .35s,border-color .3s;user-select:none}
-.ev-row.open .ev-toggle{transform:rotate(45deg);border-color:var(--gold);color:var(--gold)}
-
-/* GALLERY */
-.gallery-filter{display:flex;gap:8px;margin-bottom:40px;flex-wrap:wrap}
-.gf-btn{padding:9px 22px;background:transparent;border:1px solid var(--border-light);border-radius:50px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;color:var(--mid-text);transition:all .2s;font-family:'Lato',sans-serif}
-.gf-btn.active,.gf-btn:hover{background:var(--terra);border-color:var(--terra);color:#fff}
-.gallery-masonry{columns:3;column-gap:14px}
-.gallery-item{break-inside:avoid;margin-bottom:14px;border-radius:var(--r);overflow:hidden;cursor:pointer;position:relative}
-.gallery-img{width:100%;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;transition:transform .4s}
-.gallery-item:hover .gallery-img{transform:scale(1.04)}
-.gallery-overlay{position:absolute;inset:0;background:rgba(42,26,12,0);display:flex;align-items:center;justify-content:center;transition:background .3s}
-.gallery-item:hover .gallery-overlay{background:rgba(42,26,12,.45)}
-.gallery-overlay span{color:#fff;font-size:13px;letter-spacing:2px;opacity:0;transition:opacity .3s}
-.gallery-item:hover .gallery-overlay span{opacity:1}
-
-/* AI QUOTE */
-.quote-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-.quote-form{background:var(--cream);border-radius:var(--r-lg);padding:48px;box-shadow:var(--shadow-warm)}
-.quote-steps{display:flex;gap:8px;margin-bottom:36px}
-.q-dot{width:8px;height:8px;border-radius:50%;background:var(--cream3);transition:background .3s,transform .3s}
-.q-dot.active{background:var(--terra);transform:scale(1.4)}
-.q-dot.done{background:var(--green)}
-.q-label{display:block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--mid-text);margin-bottom:10px}
-.q-input,.q-select{width:100%;padding:14px 18px;background:#fff;border:1.5px solid var(--cream3);border-radius:10px;font-family:'Lato',sans-serif;font-size:15px;color:var(--dark-text);margin-bottom:24px;outline:none;transition:border-color .2s}
-.q-input:focus,.q-select:focus{border-color:var(--terra)}
-.q-chips{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:24px}
-.q-chips-2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:24px}
-.q-chip{padding:10px 14px;background:#fff;border:1.5px solid var(--cream3);border-radius:8px;font-family:'Lato',sans-serif;font-size:13px;color:var(--mid-text);cursor:pointer;transition:all .2s;text-align:center}
-.q-chip.sel{border-color:var(--terra);background:rgba(176,96,48,.07);color:var(--terra);font-weight:700}
-.q-chip:hover{border-color:var(--terra)}
-.q-submit{width:100%;padding:18px;background:linear-gradient(135deg,var(--terra),var(--gold));border:none;border-radius:10px;color:#fff;font-family:'Lato',sans-serif;font-size:14px;font-weight:700;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:transform .2s,box-shadow .2s;display:flex;align-items:center;justify-content:center;gap:10px}
-.q-submit:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 6px 24px rgba(176,96,48,.3)}
-.q-submit:disabled{opacity:.6;cursor:not-allowed}
-.q-result{background:#fff;border:1.5px solid var(--cream3);border-radius:var(--r);padding:28px;margin-top:28px;font-size:14px;line-height:1.9;color:var(--dark-text);white-space:pre-line;min-height:80px}
-
-/* TESTIMONIALS */
-.testi-main{max-width:860px;margin:0 auto;text-align:center}
-.testi-big-quote{font-family:'Cormorant Garamond',serif;font-size:120px;line-height:.7;color:var(--gold);opacity:.3;margin-bottom:20px}
-.testi-text{font-family:'Playfair Display',serif;font-size:clamp(18px,2.5vw,26px);font-style:italic;font-weight:400;color:var(--light-text);line-height:1.7;margin-bottom:48px;transition:opacity .25s}
-.testi-author{display:flex;align-items:center;justify-content:center;gap:16px;transition:opacity .25s}
-.testi-avatar{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--terra));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-style:italic;color:#fff;flex-shrink:0}
-.testi-name{font-size:16px;font-weight:700;color:var(--light-text);margin-bottom:2px;text-align:left}
-.testi-ev{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
-.testi-stars{margin-top:28px;color:var(--gold);font-size:16px;letter-spacing:4px}
-.testi-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:48px}
-.testi-dots{display:flex;gap:8px}
-.t-dot{height:8px;border-radius:4px;border:none;cursor:pointer;padding:0;transition:width .3s,background .3s}
-.t-dot.active{width:28px;background:var(--gold)}
-.t-dot:not(.active){width:8px;background:rgba(200,164,68,.25)}
-.testi-arrows{display:flex;gap:10px;margin-left:20px}
-.t-arrow{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;transition:border-color .2s,background .2s}
-.t-arrow-prev{background:transparent;border:1px solid var(--border-dark);color:var(--muted)}
-.t-arrow-prev:hover{border-color:var(--gold)}
-.t-arrow-next{background:var(--gold);border:none;color:var(--bg)}
-.testi-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-size:clamp(160px,22vw,320px);font-style:italic;font-weight:700;color:transparent;-webkit-text-stroke:1px rgba(200,164,68,.06);letter-spacing:-8px;user-select:none;pointer-events:none;white-space:nowrap;line-height:1}
-
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.ci-item{display:flex;align-items:flex-start;gap:16px;margin-bottom:32px}
-.ci-icon{width:48px;height:48px;background:rgba(176,96,48,.08);border:1px solid rgba(176,96,48,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.ci-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
-.ci-val{font-size:16px;font-weight:300;color:var(--dark-text);line-height:1.5}
-.cf-field{margin-bottom:20px}
-.c-label{display:block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--mid-text);margin-bottom:8px}
-.c-input,.c-select,.c-textarea{width:100%;padding:14px 18px;background:#fff;border:1px solid var(--cream3);border-radius:10px;font-family:'Lato',sans-serif;font-size:15px;color:var(--dark-text);outline:none;transition:border-color .2s}
-.c-input:focus,.c-select:focus,.c-textarea:focus{border-color:var(--terra)}
-.c-textarea{resize:vertical;min-height:100px}
-.c-form-box{background:#fff;border-radius:var(--r-lg);padding:40px;border:1px solid var(--cream3)}
-.c-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.c-submit{width:100%;padding:18px;background:linear-gradient(135deg,var(--terra),var(--gold));border:none;border-radius:10px;color:#fff;font-family:'Lato',sans-serif;font-size:13px;font-weight:700;letter-spacing:4px;text-transform:uppercase;cursor:pointer;transition:transform .2s,box-shadow .2s;display:flex;align-items:center;justify-content:center;gap:8px}
-.c-submit:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(176,96,48,.35)}
-
-/* FOOTER */
-.footer{background:#050302;border-top:1px solid var(--border-dark);padding:80px 32px 40px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;max-width:1180px;margin:0 auto 60px}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;letter-spacing:2px;color:var(--gold);margin-bottom:14px}
-.footer-tagline{font-size:14px;font-weight:300;color:var(--muted);line-height:1.7;max-width:280px;margin-bottom:28px}
-.footer-social{display:flex;gap:10px}
-.f-social-btn{width:40px;height:40px;background:var(--bg2);border:1px solid var(--border-dark);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;text-decoration:none;transition:border-color .2s,background .2s}
-.f-social-btn:hover{border-color:var(--gold);background:rgba(200,164,68,.1)}
-.f-col-title{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.f-links{list-style:none;display:flex;flex-direction:column;gap:10px}
-.f-links a{font-size:14px;font-weight:300;color:var(--muted);text-decoration:none;transition:color .2s}
-.f-links a:hover{color:var(--light-text)}
-.footer-bottom{max-width:1180px;margin:0 auto;padding-top:32px;border-top:1px solid var(--border-dark);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted)}
-.footer-credit a{color:var(--gold);text-decoration:none}
-
-/* WHATSAPP */
-.wa-fab{position:fixed;bottom:28px;right:28px;z-index:900;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);cursor:pointer;text-decoration:none;transition:transform .25s,box-shadow .25s;animation:wa-pulse 3s ease-in-out infinite}
-.wa-fab:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.55);animation:none}
-.wa-fab:hover .wa-tip{opacity:1}
-@keyframes wa-pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 30px rgba(37,211,102,.65),0 0 0 8px rgba(37,211,102,.12)}}
-.wa-tip{position:absolute;right:72px;background:#fff;color:var(--dark-text);font-family:'Lato',sans-serif;font-size:13px;font-weight:700;padding:8px 14px;border-radius:8px;white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.12);opacity:0;pointer-events:none;transition:opacity .2s}
-
-/* UTILS */
-.spinner{width:18px;height:18px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:inline-block}
-@keyframes spin{to{transform:rotate(360deg)}}
-.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}
-.reveal-delay-3{transition-delay:.3s}.reveal-delay-4{transition-delay:.4s}
-
-/* RESPONSIVE */
-@media(max-width:1024px){
-  .about-grid{grid-template-columns:1fr}.about-img-stack{height:360px}
-  .quote-wrapper{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--green) var(--bg2); }
+body {
+  background: var(--bg);
+  color: var(--dark-text);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
-@media(max-width:768px){
-  .section{padding:70px 20px}
-  .contact-grid{grid-template-columns:1fr;gap:40px}
-  .stats-grid{grid-template-columns:1fr 1fr}
-  .gallery-masonry{columns:2}
-  .nav-links{display:none}
-  .nav-burger{display:block}
-  .footer-grid{grid-template-columns:1fr;gap:36px}
-  .c-row{grid-template-columns:1fr}
-  .ev-tag-right{display:none}
+img { display: block; max-width: 100%; }
+h1,h2,h3 { font-family: 'Playfair Display', serif; font-weight: 400; line-height: 1.15; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: 'Lato', sans-serif; }
+
+/* ─── LAYOUT ─── */
+.section      { padding: 90px 24px; }
+.section-light{ background: var(--bg); }
+.section-cream{ background: var(--bg2); }
+.section-green{ background: var(--green); color: var(--light-text); }
+.container    { max-width: 1200px; margin: 0 auto; }
+
+/* ─── TYPOGRAPHY ─── */
+.sec-eyebrow {
+  font-family: 'Lato', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 5px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 14px; display: block;
 }
-@media(max-width:480px){
-  .gallery-masonry{columns:1}
-  .q-chips{grid-template-columns:1fr 1fr}
-  .stats-grid{grid-template-columns:1fr 1fr}
+.sec-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4.5vw, 52px);
+  font-weight: 400; line-height: 1.15; margin-bottom: 20px;
+  color: var(--dark-text);
+}
+.sec-title em { font-style: italic; color: var(--gold); }
+.sec-desc { font-size: 16px; font-weight: 300; line-height: 1.8; color: var(--mid-text); }
+
+/* ─── DIVIDER ─── */
+.divider-gold { display: flex; align-items: center; gap: 14px; margin: 20px 0; }
+.divider-gold::before, .divider-gold::after {
+  content: ''; flex: 1; max-width: 80px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.divider-gold span { font-size: 14px; color: var(--gold); opacity: .7; }
+
+/* ─── BUTTONS ─── */
+.btn-green {
+  padding: 14px 28px; background: var(--green); border: none; border-radius: 50px;
+  color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+  transition: background .25s, transform .25s, box-shadow .25s;
+  box-shadow: 0 4px 20px rgba(14,74,66,0.25); text-decoration: none;
+}
+.btn-green:hover { background: var(--green2); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(14,74,66,0.35); }
+.btn-outline-green {
+  padding: 14px 28px; background: transparent; border: 1.5px solid var(--green);
+  border-radius: 50px; color: var(--green); font-size: 13px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px; transition: background .25s, color .25s;
+}
+.btn-outline-green:hover { background: var(--green); color: #fff; }
+.btn-outline-white {
+  padding: 14px 28px; background: transparent; border: 1.5px solid rgba(255,255,255,.5);
+  border-radius: 50px; color: #fff; font-size: 13px; font-weight: 400;
+  letter-spacing: 2px; text-transform: uppercase; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px; transition: border-color .2s, background .2s;
+}
+.btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.1); }
+
+/* ─── NAVBAR ─── */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  padding: 18px 36px; display: flex; align-items: center; justify-content: space-between;
+  transition: background .4s, padding .4s, box-shadow .4s;
+}
+.navbar.scrolled {
+  padding: 12px 36px;
+  background: rgba(249,246,241,0.96); backdrop-filter: blur(20px);
+  box-shadow: 0 1px 24px rgba(14,74,66,0.08);
+}
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.nav-logo-icon { font-size: 32px; }
+.nav-logo-text { line-height: 1; }
+.nav-logo-small { font-size: 9px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--mid-text); display: block; }
+.nav-logo-main { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; letter-spacing: 2px; color: var(--green); display: block; line-height: 1; }
+.nav-logo-sub { font-size: 8px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); display: block; }
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a { font-size: 12px; font-weight: 400; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid-text); transition: color .2s; }
+.nav-links a:hover { color: var(--green); }
+.nav-cta { padding: 10px 22px !important; background: var(--green); border-radius: 50px; color: #fff !important; font-weight: 700 !important; }
+.nav-burger { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: var(--dark-text); }
+.mobile-menu {
+  position: fixed; inset: 0; background: var(--bg); z-index: 490;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+  transform: translateX(100%); transition: transform .35s ease;
+}
+.mobile-menu.open { transform: translateX(0); }
+.mobile-menu a { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 400; color: var(--dark-text); transition: color .2s; }
+.mobile-menu a:hover { color: var(--green); }
+
+/* ─── HERO ─── */
+.hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; position: relative; overflow: hidden; }
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 120px 60px 80px 60px; background: var(--bg); position: relative; z-index: 2;
+}
+.hero-right { position: relative; overflow: hidden; }
+.hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero-right::after {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 80px;
+  background: linear-gradient(90deg, var(--bg), transparent);
+}
+.hero-eyebrow {
+  font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase;
+  color: var(--green3); margin-bottom: 20px; display: block;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 5.5vw, 80px);
+  font-weight: 300; line-height: 1.05; color: var(--dark-text); margin-bottom: 6px;
+}
+.hero-title em { font-style: italic; color: var(--gold); font-weight: 400; display: block; }
+.hero-divider { width: 60px; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); margin: 24px 0; }
+.hero-desc { font-size: 16px; font-weight: 300; line-height: 1.8; color: var(--mid-text); max-width: 420px; margin-bottom: 40px; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-stats { display: flex; gap: 40px; margin-top: 52px; padding-top: 32px; border-top: 1px solid var(--border); }
+.hero-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--green); line-height: 1; }
+.hero-stat-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+/* Hero fallback bg */
+.hero-img-placeholder {
+  width: 100%; height: 100%;
+  background: linear-gradient(160deg, #1A3830 0%, #2A5A48 50%, #1A3028 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 16px;
+}
+
+/* ─── FEATURES BAR ─── */
+.features-bar {
+  background: var(--white); box-shadow: var(--shadow); border-radius: var(--r-lg);
+  margin: -40px 36px 0; position: relative; z-index: 10;
+  padding: 32px 40px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
+}
+.feature-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 8px; }
+.feature-icon { width: 44px; height: 44px; background: var(--bg2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+.feature-title { font-size: 13px; font-weight: 700; color: var(--dark-text); line-height: 1.3; }
+.feature-desc { font-size: 11px; font-weight: 300; color: var(--muted); line-height: 1.5; }
+
+/* ─── MARQUEE ─── */
+.marquee-track {
+  background: var(--green); overflow: hidden; padding: 16px 0;
+  border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.marquee-inner { display: flex; gap: 0; animation: marquee 28s linear infinite; width: max-content; }
+.marquee-item {
+  padding: 0 36px; font-size: 11px; font-weight: 700; letter-spacing: 4px;
+  text-transform: uppercase; color: var(--sage); display: flex; align-items: center; gap: 16px;
+  white-space: nowrap; border-right: 1px solid rgba(255,255,255,.08);
+}
+.marquee-item span { color: var(--gold); font-size: 8px; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ─── ABOUT ─── */
+.about-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 80px; align-items: start; }
+.about-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.about-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r); padding: 28px 24px; transition: box-shadow .3s, transform .3s; }
+.about-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+.about-card-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+.about-card-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 400; color: var(--dark-text); margin-bottom: 8px; }
+.about-card-desc { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.7; }
+.about-img-wrap { position: relative; border-radius: var(--r-xl); overflow: hidden; aspect-ratio: 4/5; }
+.about-badge { position: absolute; bottom: 24px; left: 24px; background: var(--green); border-radius: var(--r); padding: 16px 22px; }
+.about-badge-num { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: #fff; line-height: 1; }
+.about-badge-sub { font-size: 11px; font-weight: 300; color: rgba(240,237,232,.7); margin-top: 4px; letter-spacing: 1px; }
+
+/* ─── SPACES ─── */
+.spaces-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+.space-card { position: relative; border-radius: var(--r-lg); overflow: hidden; cursor: pointer; aspect-ratio: 4/5; transition: transform .4s; }
+.space-card:hover { transform: scale(1.02); }
+.space-card-img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.space-card:hover .space-card-img { transform: scale(1.05); }
+.space-card-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(10,40,35,0.88) 100%); }
+.space-card-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px 24px; }
+.space-card-cap { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--sage); margin-bottom: 6px; }
+.space-card-name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: #fff; margin-bottom: 16px; }
+.space-card-btn {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; color: #fff;
+  background: rgba(255,255,255,.15); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.3); border-radius: 50px; padding: 8px 18px;
+  transition: background .2s;
+}
+.space-card-btn:hover { background: rgba(255,255,255,.25); }
+
+/* ─── EVENTS ICON ROW ─── */
+.events-eyebrow {
+  text-align: center; font-size: 10px; font-weight: 700; letter-spacing: 6px;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+}
+.events-eyebrow::before, .events-eyebrow::after {
+  content: ''; flex: 1; max-width: 120px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.events-icons { display: flex; align-items: flex-start; justify-content: center; flex-wrap: wrap; border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; background: var(--white); }
+.event-icon-item {
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  padding: 20px 32px; cursor: pointer; border-right: 1px solid var(--border); transition: background .2s;
+}
+.event-icon-item:last-child { border-right: none; }
+.event-icon-item:hover { background: var(--bg2); }
+.event-icon-circle {
+  width: 64px; height: 64px; border-radius: 50%; background: var(--bg2);
+  border: 1.5px solid var(--border2); display: flex; align-items: center; justify-content: center;
+  font-size: 26px; transition: background .2s, border-color .2s;
+}
+.event-icon-item:hover .event-icon-circle { background: var(--bg3); }
+.event-icon-label { font-size: 13px; font-weight: 700; color: var(--dark-text); letter-spacing: .5px; }
+
+/* ─── GALLERY ─── */
+.gallery-layout { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: center; }
+.gallery-strip { display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; padding-bottom: 8px; }
+.gallery-strip::-webkit-scrollbar { display: none; }
+.gallery-strip-item { flex-shrink: 0; border-radius: var(--r); overflow: hidden; cursor: pointer; position: relative; }
+.gallery-strip-inner { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; transition: transform .4s; }
+.gallery-strip-item:hover .gallery-strip-inner { transform: scale(1.06); }
+.gallery-overlay { position: absolute; inset: 0; background: rgba(10,40,35,0); display: flex; align-items: center; justify-content: center; transition: background .3s; }
+.gallery-strip-item:hover .gallery-overlay { background: rgba(10,40,35,.4); }
+.gallery-overlay span { color: #fff; font-size: 12px; letter-spacing: 2px; opacity: 0; transition: opacity .3s; }
+.gallery-strip-item:hover .gallery-overlay span { opacity: 1; }
+
+/* ─── QUOTE AI ─── */
+.quote-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.quote-form { background: var(--white); border-radius: var(--r-xl); padding: 40px; box-shadow: var(--shadow); }
+.quote-steps { display: flex; gap: 6px; margin-bottom: 28px; }
+.quote-step-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border2); transition: background .3s, width .3s; }
+.quote-step-dot.active { background: var(--green); width: 24px; border-radius: 4px; }
+.quote-step-dot.done { background: var(--sage); }
+.quote-chips { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+.quote-chip {
+  padding: 12px 8px; border: 1.5px solid var(--border); border-radius: var(--r);
+  background: transparent; font-size: 13px; font-weight: 700; color: var(--mid-text);
+  cursor: pointer; transition: all .2s; text-align: center;
+}
+.quote-chip:hover { border-color: var(--green); color: var(--green); }
+.quote-chip.selected { border-color: var(--green); background: rgba(14,74,66,0.06); color: var(--green); }
+.quote-label { display: block; font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--mid-text); margin-bottom: 7px; margin-top: 16px; }
+.quote-input, .quote-select {
+  width: 100%; padding: 12px 16px; background: var(--bg); border: 1.5px solid var(--border);
+  border-radius: 10px; font-family: 'Lato', sans-serif; font-size: 14px; color: var(--dark-text);
+  outline: none; transition: border-color .2s;
+}
+.quote-input:focus, .quote-select:focus { border-color: var(--green); }
+.quote-submit {
+  width: 100%; margin-top: 16px; padding: 16px; background: var(--green); border: none;
+  border-radius: 10px; color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: background .2s, transform .2s;
+}
+.quote-submit:hover { background: var(--green2); transform: translateY(-2px); }
+.quote-submit:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.quote-result { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r); padding: 20px; font-size: 14px; line-height: 1.7; color: var(--mid-text); white-space: pre-wrap; }
+.quote-info-side { padding-top: 20px; }
+
+/* ─── CONTACT ─── */
+.quote-contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.qc-form { background: var(--white); border-radius: var(--r-lg); padding: 40px; box-shadow: var(--shadow); }
+.qc-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.qf-field { margin-bottom: 16px; }
+.qf-label { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--mid-text); margin-bottom: 7px; display: block; }
+.qf-input, .qf-select, .qf-textarea {
+  width: 100%; padding: 12px 16px; background: var(--bg); border: 1.5px solid var(--border);
+  border-radius: 10px; font-family: 'Lato', sans-serif; font-size: 14px; color: var(--dark-text);
+  outline: none; transition: border-color .2s;
+}
+.qf-input:focus, .qf-select:focus, .qf-textarea:focus { border-color: var(--green); }
+.qf-textarea { resize: vertical; min-height: 90px; }
+.qf-submit {
+  width: 100%; padding: 16px; background: var(--green); border: none; border-radius: 10px;
+  color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: background .2s, transform .2s;
+}
+.qf-submit:hover { background: var(--green2); transform: translateY(-2px); }
+
+/* Testimonials */
+.testi-3-grid { display: flex; flex-direction: column; gap: 16px; }
+.testi-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r); padding: 24px; position: relative; }
+.testi-card-quote { font-family: 'Cormorant Garamond', serif; font-size: 60px; line-height: .5; color: var(--gold); opacity: .25; position: absolute; top: 18px; left: 20px; pointer-events: none; }
+.testi-card-text { font-size: 13px; font-weight: 300; color: var(--mid-text); line-height: 1.7; font-style: italic; margin-bottom: 16px; padding-top: 12px; }
+.testi-card-author { display: flex; align-items: center; gap: 12px; }
+.testi-card-avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--green), var(--gold)); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 15px; font-style: italic; color: #fff; flex-shrink: 0; }
+.testi-card-name { font-size: 13px; font-weight: 700; color: var(--dark-text); margin-bottom: 2px; }
+.testi-card-event { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--green3); }
+.testi-card-stars { color: var(--gold); font-size: 12px; letter-spacing: 2px; margin-top: 4px; }
+
+/* ─── PRE-FOOTER ─── */
+.prefooter {
+  background: var(--green); padding: 48px 40px;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 32px;
+}
+.prefooter-items { display: flex; gap: 60px; flex-wrap: wrap; }
+.prefooter-item { display: flex; align-items: flex-start; gap: 16px; }
+.prefooter-icon { width: 40px; height: 40px; flex-shrink: 0; background: rgba(255,255,255,.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.prefooter-text p:first-child { font-size: 14px; font-weight: 700; color: var(--light-text); margin-bottom: 4px; }
+.prefooter-text p:last-child { font-size: 13px; font-weight: 300; color: rgba(240,237,232,.65); line-height: 1.5; }
+
+/* ─── FOOTER ─── */
+.footer { background: var(--green); border-top: 1px solid rgba(255,255,255,.08); padding: 60px 36px 36px; }
+.footer-grid { display: grid; grid-template-columns: 2.5fr 1fr 1fr 1.5fr 1fr; gap: 40px; max-width: 1200px; margin: 0 auto 48px; }
+.footer-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; letter-spacing: 2px; color: var(--cream); margin-bottom: 12px; }
+.footer-tagline { font-size: 13px; font-weight: 300; color: rgba(240,237,232,.55); line-height: 1.7; max-width: 260px; margin-bottom: 24px; }
+.footer-social { display: flex; gap: 10px; }
+.fsoc-btn { width: 36px; height: 36px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; cursor: pointer; text-decoration: none; transition: background .2s; }
+.fsoc-btn:hover { background: rgba(255,255,255,.18); }
+.footer-col-title { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--sage); margin-bottom: 18px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13px; font-weight: 300; color: rgba(240,237,232,.55); text-decoration: none; transition: color .2s; }
+.footer-links a:hover { color: var(--cream); }
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.08);
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  font-size: 11px; color: rgba(240,237,232,.35);
+}
+.footer-credit a { color: var(--sage); text-decoration: none; }
+
+/* ─── WHATSAPP FAB ─── */
+.wa-fab {
+  position: fixed; bottom: 28px; right: 28px; z-index: 900;
+  width: 58px; height: 58px; background: #25D366; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,.4); cursor: pointer;
+  text-decoration: none; font-size: 26px; transition: transform .25s;
+  animation: wa-pulse 3s ease-in-out infinite;
+}
+.wa-fab:hover { transform: scale(1.1); animation: none; }
+@keyframes wa-pulse {
+  0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,.4); }
+  50% { box-shadow: 0 4px 30px rgba(37,211,102,.65), 0 0 0 8px rgba(37,211,102,.1); }
+}
+.wa-tip {
+  position: absolute; right: 68px; background: var(--white); color: var(--dark-text);
+  font-size: 12px; font-weight: 700; padding: 7px 12px; border-radius: 8px;
+  white-space: nowrap; box-shadow: 0 4px 16px rgba(0,0,0,.1); opacity: 0;
+  pointer-events: none; transition: opacity .2s;
+}
+.wa-fab:hover .wa-tip { opacity: 1; }
+
+/* Spinner */
+.spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; animation: spin .7s linear infinite; display: inline-block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Reveal */
+.reveal { opacity: 0; transform: translateY(32px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 120px 36px 60px; }
+  .hero-right { height: 55vw; min-height: 300px; }
+  .hero-right::after { display: none; }
+  .features-bar { grid-template-columns: repeat(3, 1fr); margin: -30px 20px 0; }
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .spaces-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .quote-wrapper, .quote-contact-grid { grid-template-columns: 1fr; }
+  .gallery-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .section { padding: 60px 20px; }
+  .features-bar { grid-template-columns: 1fr 1fr; margin: -20px 16px 0; padding: 24px 20px; }
+  .spaces-grid { grid-template-columns: 1fr; }
+  .events-icons { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; }
+  .event-icon-item { min-width: 100px; }
+  .nav-links { display: none; }
+  .nav-burger { display: block; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .prefooter { flex-direction: column; }
+  .prefooter-items { gap: 28px; }
+  .qc-form-row { grid-template-columns: 1fr; }
+  .hero-left { padding: 110px 24px 50px; }
+  .about-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .features-bar { grid-template-columns: 1fr; }
+  .hero-title { font-size: clamp(38px, 10vw, 56px); }
+  .quote-chips { grid-template-columns: 1fr 1fr; }
 }
 </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
+<!-- ═══ NAVBAR ═══ -->
 <nav class="navbar" id="navbar">
-  <a href="#inicio" class="nav-logo" onclick="goTo('inicio');return false">
-    <div class="nav-logo-icon">🎋</div>Casino Bambú
+  <a href="#inicio" class="nav-logo" onclick="smoothScroll('#inicio'); return false;">
+    <div class="nav-logo-icon">🎋</div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-small">Casino</span>
+      <span class="nav-logo-main">Bambú</span>
+      <span class="nav-logo-sub">Nayarit · México</span>
+    </div>
   </a>
   <ul class="nav-links">
-    <li><a href="#nosotros" onclick="goTo('nosotros');return false">Nosotros</a></li>
-    <li><a href="#espacios" onclick="goTo('espacios');return false">Espacios</a></li>
-    <li><a href="#eventos" onclick="goTo('eventos');return false">Eventos</a></li>
-    <li><a href="#galeria" onclick="goTo('galeria');return false">Galería</a></li>
-    <li><a href="#cotizador" onclick="goTo('cotizador');return false">Cotizar</a></li>
-    <li><a href="#contacto" class="nav-cta" onclick="goTo('contacto');return false">Contacto</a></li>
+    <li><a href="#nosotros" onclick="smoothScroll('#nosotros'); return false;">Nosotros</a></li>
+    <li><a href="#espacios" onclick="smoothScroll('#espacios'); return false;">Espacios</a></li>
+    <li><a href="#eventos" onclick="smoothScroll('#eventos'); return false;">Eventos</a></li>
+    <li><a href="#galeria" onclick="smoothScroll('#galeria'); return false;">Galería</a></li>
+    <li><a href="#cotizador" onclick="smoothScroll('#cotizador'); return false;">Cotizar</a></li>
+    <li><a href="#contacto" class="nav-cta" onclick="smoothScroll('#contacto'); return false;">Contacto</a></li>
   </ul>
-  <button class="nav-burger" id="burger" onclick="toggleMenu()">☰</button>
+  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menú">☰</button>
 </nav>
+
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#nosotros" onclick="goTo('nosotros');closeMenu();return false">Nosotros</a>
-  <a href="#espacios" onclick="goTo('espacios');closeMenu();return false">Espacios</a>
-  <a href="#eventos" onclick="goTo('eventos');closeMenu();return false">Eventos</a>
-  <a href="#galeria" onclick="goTo('galeria');closeMenu();return false">Galería</a>
-  <a href="#cotizador" onclick="goTo('cotizador');closeMenu();return false">Cotizar</a>
-  <a href="#contacto" onclick="goTo('contacto');closeMenu();return false">Contacto</a>
+  <a href="#nosotros" onclick="smoothScroll('#nosotros'); closeMenu(); return false;">Nosotros</a>
+  <a href="#espacios" onclick="smoothScroll('#espacios'); closeMenu(); return false;">Espacios</a>
+  <a href="#eventos" onclick="smoothScroll('#eventos'); closeMenu(); return false;">Eventos</a>
+  <a href="#galeria" onclick="smoothScroll('#galeria'); closeMenu(); return false;">Galería</a>
+  <a href="#cotizador" onclick="smoothScroll('#cotizador'); closeMenu(); return false;">Cotizar</a>
+  <a href="#contacto" onclick="smoothScroll('#contacto'); closeMenu(); return false;">Contacto</a>
 </div>
 
-<!-- HERO -->
+<!-- ═══ HERO ═══ -->
 <section id="inicio" class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-bg-overlay"></div>
-  <canvas id="hero-canvas"></canvas>
-  <div class="hero-content">
-    <div class="hero-eyebrow">Nayarit · México</div>
-    <h1 class="hero-title">Casino <em>Bambú</em></h1>
-    <p class="hero-subtitle">Donde cada celebración se convierte en recuerdo eterno</p>
-    <p class="hero-desc">Un espacio rústico y elegante rodeado de naturaleza, diseñado para dar vida a tus momentos más especiales. Bodas, quinceañeras, graduaciones y más.</p>
+  <div class="hero-left">
+    <span class="hero-eyebrow">Salón de Eventos · Nayarit, México</span>
+    <h1 class="hero-title">
+      Casino
+      <em>Bambú</em>
+    </h1>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">
+      Un espacio donde la naturaleza, la elegancia y el calor humano se fusionan
+      para crear celebraciones únicas e irrepetibles. Bodas, quinceañeras,
+      graduaciones y más.
+    </p>
     <div class="hero-btns">
-      <a href="#contacto" class="btn-primary" onclick="goTo('contacto');return false">✦ Reservar Fecha</a>
-      <a href="#galeria" class="btn-secondary" onclick="goTo('galeria');return false">Ver Galería</a>
+      <button class="btn-green" onclick="smoothScroll('#cotizador')">✦ Cotizar Evento</button>
+      <button class="btn-outline-green" onclick="smoothScroll('#galeria')">Ver Galería</button>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">200+</div>
+        <div class="hero-stat-label">Cap. máxima</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">Espacios únicos</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">100%</div>
+        <div class="hero-stat-label">Personalizado</div>
+      </div>
     </div>
   </div>
-  <button class="hero-scroll" onclick="goTo('nosotros')" aria-label="Scroll">
-    <span>Explorar</span><div class="hero-scroll-line"></div><span>↓</span>
-  </button>
+  <div class="hero-right">
+    <!-- Real venue photo — shown if available, fallback gradient -->
+    <img src="venue-hero.png" alt="Casino Bambú" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+    <div class="hero-img-placeholder" style="display:none">
+      <div style="font-size:80px; opacity:.2">🎋</div>
+      <div style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:rgba(240,237,232,.3)">Casino Bambú · Nayarit</div>
+    </div>
+    <!-- Floating tag -->
+    <div style="position:absolute; bottom:32px; right:32px; background:rgba(249,246,241,0.92); backdrop-filter:blur(16px); border:1px solid rgba(14,74,66,0.12); border-radius:12px; padding:14px 20px;">
+      <div style="font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#4A7B6F; margin-bottom:4px">Jardín Principal</div>
+      <div style="font-family:'Playfair Display',serif; font-size:18px; color:#1A2E2A">Hasta 200 personas</div>
+    </div>
+  </div>
 </section>
 
-<!-- MARQUEE -->
-<div style="background:var(--gold);overflow:hidden;padding:14px 0;border-top:1px solid rgba(0,0,0,.1);border-bottom:1px solid rgba(0,0,0,.08)">
-  <div class="marquee-track" id="marqueeTrack"></div>
-</div>
-
-<!-- STATS -->
-<div style="background:var(--bg2);border-top:1px solid var(--border-dark);border-bottom:1px solid var(--border-dark)">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Eventos realizados</div></div>
-      <div class="stat-item"><div class="stat-number">98%</div><div class="stat-label">Clientes satisfechos</div></div>
-      <div class="stat-item"><div class="stat-number">3</div><div class="stat-label">Espacios únicos</div></div>
-      <div class="stat-item"><div class="stat-number">∞</div><div class="stat-label">Memorias creadas</div></div>
+<!-- ═══ FEATURES BAR ═══ -->
+<div class="container" style="position:relative; z-index:10">
+  <div class="features-bar reveal">
+    <div class="feature-item">
+      <div class="feature-icon">🌿</div>
+      <div>
+        <div class="feature-title">Naturaleza & Elegancia</div>
+        <div class="feature-desc">Bambú, madera y jardines tropicales</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🛡️</div>
+      <div>
+        <div class="feature-title">Espacios Seguros</div>
+        <div class="feature-desc">Instalaciones certificadas y vigiladas</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🤝</div>
+      <div>
+        <div class="feature-title">Atención Personalizada</div>
+        <div class="feature-desc">Coordinador dedicado a tu evento</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">⚡</div>
+      <div>
+        <div class="feature-title">Respuesta Rápida</div>
+        <div class="feature-desc">Cotización en 24 horas o menos</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">✨</div>
+      <div>
+        <div class="feature-title">A Tu Medida</div>
+        <div class="feature-desc">Cada detalle adaptado a tus sueños</div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- ABOUT -->
-<section id="nosotros" class="section section-light">
+<!-- ═══ MARQUEE ═══ -->
+<div class="marquee-track" style="margin-top:60px">
+  <div class="marquee-inner" id="marqueeInner">
+    <!-- items duplicated for loop -->
+    <div class="marquee-item">Bodas <span>✦</span></div>
+    <div class="marquee-item">Quinceañeras <span>✦</span></div>
+    <div class="marquee-item">Graduaciones <span>✦</span></div>
+    <div class="marquee-item">Bodas Civiles <span>✦</span></div>
+    <div class="marquee-item">Corporativos <span>✦</span></div>
+    <div class="marquee-item">Fiestas Privadas <span>✦</span></div>
+    <div class="marquee-item">Bautizos <span>✦</span></div>
+    <div class="marquee-item">Aniversarios <span>✦</span></div>
+    <div class="marquee-item">Bodas <span>✦</span></div>
+    <div class="marquee-item">Quinceañeras <span>✦</span></div>
+    <div class="marquee-item">Graduaciones <span>✦</span></div>
+    <div class="marquee-item">Bodas Civiles <span>✦</span></div>
+    <div class="marquee-item">Corporativos <span>✦</span></div>
+    <div class="marquee-item">Fiestas Privadas <span>✦</span></div>
+    <div class="marquee-item">Bautizos <span>✦</span></div>
+    <div class="marquee-item">Aniversarios <span>✦</span></div>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="nosotros" class="section section-cream">
   <div class="container">
     <div class="about-grid">
-      <div class="about-img-stack reveal">
-        <div class="about-img-main"><div style="text-align:center;color:var(--muted);padding:40px"><div style="font-size:64px;opacity:.2">🌿</div><p style="font-size:12px;letter-spacing:3px;margin-top:12px;opacity:.4;text-transform:uppercase">Fotografía del Venue</p></div></div>
-        <div class="about-img-accent"></div>
-        <div class="about-img-badge"><div class="about-badge-num">2024</div><div class="about-badge-text">Apertura oficial en Nayarit</div></div>
+      <!-- Image -->
+      <div class="reveal">
+        <div class="about-img-wrap">
+          <img src="venue-jardin.png" alt="Casino Bambú Jardín" style="width:100%;height:100%;object-fit:cover"
+            onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(160deg,#C8D8C0,#8BAF9E)'"/>
+          <div class="about-badge">
+            <div class="about-badge-num">2024</div>
+            <div class="about-badge-sub">Apertura en Nayarit</div>
+          </div>
+        </div>
       </div>
+      <!-- Content -->
       <div>
-        <span class="sec-eyebrow sec-eyebrow-dark reveal">Nuestra Historia</span>
-        <h2 class="sec-title reveal reveal-delay-1" style="color:var(--dark-text)">Un espacio nacido del <em style="color:var(--terra)">amor</em> por los momentos especiales</h2>
-        <div class="gold-divider reveal reveal-delay-2"><span class="gold-divider-icon" style="color:var(--terra)">✦</span></div>
-        <p class="sec-desc reveal reveal-delay-2" style="color:var(--mid-text)">Casino Bambú nació con la visión de ofrecer a las familias nayaritas un espacio donde la naturaleza, la elegancia y el calor humano se fusionan para crear celebraciones únicas e irrepetibles.</p>
-        <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--mid-text);margin-top:16px" class="reveal reveal-delay-3">Ubicados a pasos de la Universidad Tecnológica de Nayarit, nuestro casino de eventos es el resultado de años de sueños y meses de trabajo para ofrecerte un lugar donde cada detalle importa.</p>
-        <div class="about-features">
-          <div class="about-feature reveal reveal-delay-2"><div class="about-feature-icon">🎋</div><div><div class="about-feature-title">Arquitectura Natural</div><div class="about-feature-desc">Bambú, madera y piedra crean una atmósfera única que conecta con la naturaleza.</div></div></div>
-          <div class="about-feature reveal reveal-delay-3"><div class="about-feature-icon">✨</div><div><div class="about-feature-title">Iluminación Encantadora</div><div class="about-feature-desc">Miles de luces colgantes que transforman el espacio al caer la noche.</div></div></div>
-          <div class="about-feature reveal reveal-delay-4"><div class="about-feature-icon">🌸</div><div><div class="about-feature-title">Jardines en Flor</div><div class="about-feature-desc">Áreas verdes con buganvilias, plantas tropicales y senderos de grava.</div></div></div>
-          <div class="about-feature reveal reveal-delay-4"><div class="about-feature-icon">👨‍🍳</div><div><div class="about-feature-title">Servicio Personalizado</div><div class="about-feature-desc">Coordinación completa de tu evento con equipo dedicado a cada detalle.</div></div></div>
+        <span class="sec-eyebrow reveal">Nuestra Historia</span>
+        <h2 class="sec-title reveal reveal-delay-1">
+          Más que un lugar,<br />creamos <em>recuerdos</em>
+        </h2>
+        <div class="divider-gold reveal reveal-delay-1" style="max-width:200px"><span>✦</span></div>
+        <p class="sec-desc reveal reveal-delay-2" style="margin-bottom:20px">
+          Casino Bambú nació con la visión de ofrecer a las familias nayaritas un espacio
+          donde la naturaleza, la elegancia y el calor humano se fusionan para crear
+          celebraciones únicas e irrepetibles.
+        </p>
+        <p style="font-size:15px;font-weight:300;line-height:1.8;color:var(--mid-text);margin-bottom:40px" class="reveal reveal-delay-2">
+          Ubicados a pasos de la Universidad Tecnológica de Nayarit, somos el resultado
+          de años de sueños y meses de trabajo para ofrecerte un lugar donde cada
+          detalle importa y cada momento se convierte en recuerdo.
+        </p>
+        <div class="about-cards reveal reveal-delay-3">
+          <div class="about-card">
+            <span class="about-card-icon">🎋</span>
+            <div class="about-card-title">Arquitectura Natural</div>
+            <div class="about-card-desc">Bambú, madera y piedra que conectan con la naturaleza en cada rincón.</div>
+          </div>
+          <div class="about-card">
+            <span class="about-card-icon">✨</span>
+            <div class="about-card-title">Iluminación Mágica</div>
+            <div class="about-card-desc">Miles de luces colgantes que transforman el espacio al caer la noche.</div>
+          </div>
+          <div class="about-card">
+            <span class="about-card-icon">🌸</span>
+            <div class="about-card-title">Jardines en Flor</div>
+            <div class="about-card-desc">Áreas verdes con buganvilias, plantas tropicales y senderos curados.</div>
+          </div>
+          <div class="about-card">
+            <span class="about-card-icon">👨‍🍳</span>
+            <div class="about-card-title">Servicio Completo</div>
+            <div class="about-card-desc">Coordinación total con equipo dedicado a cada detalle de tu evento.</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SPACES -->
-<section id="espacios" class="section section-dark" style="padding-bottom:100px;overflow:hidden">
+<!-- ═══ SPACES ═══ -->
+<section id="espacios" class="section section-light">
   <div class="container">
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:56px">
-      <div>
-        <span class="sec-eyebrow reveal">Nuestros Espacios</span>
-        <h2 class="sec-title reveal" style="margin-bottom:0">Tres ambientes,<br><em>una experiencia</em> única</h2>
-      </div>
-      <div class="scroll-controls reveal">
-        <button class="scroll-btn scroll-btn-prev" onclick="slideSpaces(-1)">←</button>
-        <button class="scroll-btn scroll-btn-next" onclick="slideSpaces(1)">→</button>
-      </div>
+    <div style="text-align:center; max-width:560px; margin:0 auto 56px">
+      <span class="sec-eyebrow reveal">Nuestros Espacios</span>
+      <h2 class="sec-title reveal reveal-delay-1">Tres ambientes,<br /><em>una experiencia</em> única</h2>
     </div>
-  </div>
-  <div class="spaces-hscroll" id="spacesScroll" style="padding-left:max(24px,calc((100vw - 1180px) / 2 + 24px));padding-right:max(24px,calc((100vw - 1180px) / 2 + 24px))">
-    <div class="space-card reveal" onclick="goTo('contacto')">
-      <div class="space-img" style="background:linear-gradient(160deg,#1C1009,#261508)">
-        <div style="font-size:64px;opacity:.18">🎋</div>
-        <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;opacity:.25;color:var(--light-text)">Foto próximamente</div>
-        <div class="space-tag">Espacio Principal</div>
+    <div class="spaces-grid">
+      <!-- Space 1 -->
+      <div class="space-card reveal" onclick="smoothScroll('#contacto')">
+        <img src="venue-hero.png" alt="Jardín del Bambú" class="space-card-img"
+          onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(160deg,#1A3830,#0E2820)'"/>
+        <div class="space-card-overlay"></div>
+        <div class="space-card-content">
+          <div class="space-card-cap">Espacio Principal</div>
+          <div class="space-card-name">Jardín del Bambú</div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <span style="font-size:12px;color:rgba(240,237,232,.6);font-weight:300">Hasta 200 personas</span>
+            <button class="space-card-btn">Conocer →</button>
+          </div>
+        </div>
       </div>
-      <div class="space-bar" style="border-top:2px solid var(--gold)">
-        <div class="space-name">Jardín del Bambú</div>
-        <p class="space-desc">Nuestro espacio estrella bajo arquitectura de bambú y cubierta de teja. Ideal para ceremonias y recepciones al aire libre con el toque rústico-elegante que nos distingue.</p>
-        <div class="space-foot"><div class="space-cap">👥 200 personas</div><div class="space-pills"><span class="space-pill">Cubierta de teja</span><span class="space-pill">Pista de baile</span></div></div>
+      <!-- Space 2 -->
+      <div class="space-card reveal reveal-delay-1" onclick="smoothScroll('#contacto')">
+        <img src="venue-jardin.png" alt="Terraza Los Olivos" class="space-card-img"
+          onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(160deg,#1C3428,#102818)'"/>
+        <div class="space-card-overlay"></div>
+        <div class="space-card-content">
+          <div class="space-card-cap">Jardín</div>
+          <div class="space-card-name">Terraza Los Olivos</div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <span style="font-size:12px;color:rgba(240,237,232,.6);font-weight:300">Hasta 120 personas</span>
+            <button class="space-card-btn">Conocer →</button>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="space-card reveal" onclick="goTo('contacto')">
-      <div class="space-img" style="background:linear-gradient(160deg,#160D08,#1C1009)">
-        <div style="font-size:64px;opacity:.18">🌿</div>
-        <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;opacity:.25;color:var(--light-text)">Foto próximamente</div>
-        <div class="space-tag">Terraza</div>
+      <!-- Space 3 -->
+      <div class="space-card reveal reveal-delay-2" style="background:linear-gradient(160deg,#2A3828,#1A2E1A)" onclick="smoothScroll('#contacto')">
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">
+          <div style="font-size:56px;opacity:.15">🌿</div>
+          <div style="font-size:10px;letter-spacing:3px;color:rgba(240,237,232,.25);text-transform:uppercase">Foto próximamente</div>
+        </div>
+        <div class="space-card-overlay"></div>
+        <div class="space-card-content">
+          <div class="space-card-cap">Salón Interior</div>
+          <div class="space-card-name">Salón Bugambilia</div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <span style="font-size:12px;color:rgba(240,237,232,.6);font-weight:300">Hasta 80 personas</span>
+            <button class="space-card-btn">Conocer →</button>
+          </div>
+        </div>
       </div>
-      <div class="space-bar" style="border-top:2px solid var(--terra)">
-        <div class="space-name">Terraza Los Olivos</div>
-        <p class="space-desc">Espacio semi-abierto con jardín curado, área de cocina exterior y el encanto natural de los olivos centenarios que crean un ambiente íntimo y especial.</p>
-        <div class="space-foot"><div class="space-cap">👥 120 personas</div><div class="space-pills"><span class="space-pill">Jardín de olivos</span><span class="space-pill">Cocina exterior</span></div></div>
-      </div>
-    </div>
-    <div class="space-card reveal" onclick="goTo('contacto')">
-      <div class="space-img" style="background:linear-gradient(160deg,#1C1009,#130B06)">
-        <div style="font-size:64px;opacity:.18">💐</div>
-        <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;opacity:.25;color:var(--light-text)">Foto próximamente</div>
-        <div class="space-tag">Salón Interior</div>
-      </div>
-      <div class="space-bar" style="border-top:2px solid var(--green2)">
-        <div class="space-name">Salón Bugambilia</div>
-        <p class="space-desc">Salón climatizado con decoración ecléctica y acceso privado independiente. La opción ideal para eventos más íntimos, presentaciones y reuniones exclusivas.</p>
-        <div class="space-foot"><div class="space-cap">👥 80 personas</div><div class="space-pills"><span class="space-pill">Climatizado</span><span class="space-pill">Pantalla LED</span></div></div>
-      </div>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:16px;font-size:11px;color:var(--muted);letter-spacing:3px;text-transform:uppercase">← Desliza para explorar →</div>
-</section>
-
-<!-- EVENTS ACCORDION -->
-<section id="eventos" class="section section-dark" style="padding-top:120px;padding-bottom:120px">
-  <div class="container">
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:32px;margin-bottom:80px">
-      <div style="flex:1;min-width:280px">
-        <span class="sec-eyebrow reveal">Tipos de Eventos</span>
-        <h2 class="sec-title reveal" style="margin-bottom:0">Cada celebración,<br><em>a tu medida</em></h2>
-      </div>
-      <p class="reveal" style="font-size:15px;font-weight:300;color:var(--muted);max-width:340px;line-height:1.8">Sin importar el tipo de evento, adaptamos nuestros espacios, servicios y atención para que tu celebración sea exactamente como la imaginaste.</p>
-    </div>
-    <div class="events-list" id="eventsList"></div>
-    <div style="margin-top:60px;display:flex;justify-content:center" class="reveal">
-      <button class="btn-primary" onclick="goTo('cotizador')">✦ Cotizar mi evento</button>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section id="galeria" class="section section-mid">
+<!-- ═══ EVENTS ═══ -->
+<section id="eventos" class="section section-cream">
   <div class="container">
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:40px">
-      <div>
-        <span class="sec-eyebrow sec-eyebrow-dark reveal">Galería</span>
-        <h2 class="sec-title reveal reveal-delay-1" style="color:var(--dark-text)">Momentos que <em style="color:var(--terra)">inspiran</em></h2>
+    <div class="events-eyebrow reveal">Celebra cada etapa</div>
+    <div style="text-align:center;margin-bottom:56px">
+      <h2 class="sec-title reveal reveal-delay-1" style="margin-bottom:12px">¿Cuál es tu <em>ocasión especial?</em></h2>
+      <p class="sec-desc reveal reveal-delay-2" style="margin:0 auto;text-align:center">
+        Adaptamos cada espacio y servicio para que tu evento sea exactamente como lo imaginaste.
+      </p>
+    </div>
+    <div class="events-icons reveal reveal-delay-2">
+      <div class="event-icon-item" onclick="smoothScroll('#cotizador')">
+        <div class="event-icon-circle">💍</div>
+        <div class="event-icon-label">Bodas</div>
       </div>
-      <p style="font-size:14px;color:var(--mid-text);max-width:300px;font-weight:300;line-height:1.6" class="reveal reveal-delay-2">Pronto compartiremos la galería completa de nuestros eventos. ¡Muy pronto!</p>
+      <div class="event-icon-item" onclick="smoothScroll('#cotizador')">
+        <div class="event-icon-circle">👸</div>
+        <div class="event-icon-label">Quinceañeras</div>
+      </div>
+      <div class="event-icon-item" onclick="smoothScroll('#cotizador')">
+        <div class="event-icon-circle">🎓</div>
+        <div class="event-icon-label">Graduaciones</div>
+      </div>
+      <div class="event-icon-item" onclick="smoothScroll('#cotizador')">
+        <div class="event-icon-circle">🎉</div>
+        <div class="event-icon-label">Fiestas</div>
+      </div>
+      <div class="event-icon-item" onclick="smoothScroll('#cotizador')">
+        <div class="event-icon-circle">💼</div>
+        <div class="event-icon-label">Corporativos</div>
+      </div>
+      <div class="event-icon-item" onclick="smoothScroll('#cotizador')">
+        <div class="event-icon-circle">🍼</div>
+        <div class="event-icon-label">Bautizos</div>
+      </div>
     </div>
-    <div class="gallery-filter reveal reveal-delay-2">
-      <button class="gf-btn active" onclick="filterGallery('todos',this)">Todos</button>
-      <button class="gf-btn" onclick="filterGallery('bodas',this)">Bodas</button>
-      <button class="gf-btn" onclick="filterGallery('xv',this)">Quinceañeras</button>
-      <button class="gf-btn" onclick="filterGallery('fiestas',this)">Fiestas</button>
-      <button class="gf-btn" onclick="filterGallery('espacios',this)">Espacios</button>
-    </div>
-    <div class="gallery-masonry reveal" id="galleryGrid"></div>
-    <div style="text-align:center;margin-top:60px;padding:32px 40px;background:rgba(176,96,48,.06);border:1px dashed rgba(176,96,48,.25);border-radius:var(--r);color:var(--mid-text);font-size:14px;font-weight:300" class="reveal">
-      📸 &nbsp;Nuestras fotos profesionales están en camino. ¡Síguenos en redes para ser el primero en verlas!
+    <div style="text-align:center;margin-top:48px" class="reveal reveal-delay-3">
+      <p style="font-size:15px;color:var(--mid-text);font-weight:300;margin-bottom:24px">
+        ¿No ves tu tipo de evento? Contáctanos — podemos organizarlo todo.
+      </p>
+      <button class="btn-green" onclick="smoothScroll('#cotizador')">✦ Cotizar mi evento</button>
     </div>
   </div>
 </section>
 
-<!-- AI QUOTE -->
-<section id="cotizador" class="section section-dark">
+<!-- ═══ GALLERY ═══ -->
+<section id="galeria" class="section section-light">
+  <div class="container">
+    <div class="gallery-layout">
+      <!-- Left text -->
+      <div class="reveal">
+        <span class="sec-eyebrow">Galería</span>
+        <h2 class="sec-title" style="margin-bottom:16px">Momentos que <em>inspiran</em></h2>
+        <p class="sec-desc" style="margin-bottom:32px;font-size:15px">
+          Cada foto cuenta una historia de amor, alegría y celebración dentro de nuestros espacios.
+        </p>
+        <p style="font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);line-height:1.8;border-left:2px solid var(--gold);padding-left:16px">
+          📸 Galería completa<br/>próximamente<br/>
+          <span style="font-weight:300;font-size:11px">Síguenos en redes</span>
+        </p>
+        <div style="display:flex;gap:10px;margin-top:24px">
+          <a href="https://instagram.com" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 16px;background:var(--white);border:1px solid var(--border);border-radius:50px;font-size:12px;color:var(--mid-text);font-weight:700">📸 Instagram</a>
+          <a href="https://facebook.com" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 16px;background:var(--white);border:1px solid var(--border);border-radius:50px;font-size:12px;color:var(--mid-text);font-weight:700">📘 Facebook</a>
+        </div>
+      </div>
+      <!-- Horizontal strip -->
+      <div class="gallery-strip reveal reveal-delay-2">
+        <div class="gallery-strip-item" style="width:200px;height:240px">
+          <div class="gallery-strip-inner" style="background:linear-gradient(160deg,#C8D8C0,#A8C0A0)">
+            <div style="font-size:32px;opacity:.5">💍</div>
+            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mid-text);opacity:.6">Boda</div>
+          </div>
+          <div class="gallery-overlay"><span>Ver foto</span></div>
+        </div>
+        <div class="gallery-strip-item" style="width:160px;height:240px">
+          <div class="gallery-strip-inner" style="background:linear-gradient(160deg,#D8C8D0,#C0A0B0)">
+            <div style="font-size:32px;opacity:.5">👸</div>
+            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mid-text);opacity:.6">Quinceañera</div>
+          </div>
+          <div class="gallery-overlay"><span>Ver foto</span></div>
+        </div>
+        <div class="gallery-strip-item" style="width:220px;height:240px">
+          <div class="gallery-strip-inner" style="background:linear-gradient(160deg,#C0D0C8,#A0B8A8)">
+            <div style="font-size:32px;opacity:.5">🌿</div>
+            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mid-text);opacity:.6">Jardín</div>
+          </div>
+          <div class="gallery-overlay"><span>Ver foto</span></div>
+        </div>
+        <div class="gallery-strip-item" style="width:160px;height:240px">
+          <div class="gallery-strip-inner" style="background:linear-gradient(160deg,#D0C8B8,#B8A898)">
+            <div style="font-size:32px;opacity:.5">🎉</div>
+            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mid-text);opacity:.6">Fiesta</div>
+          </div>
+          <div class="gallery-overlay"><span>Ver foto</span></div>
+        </div>
+        <div class="gallery-strip-item" style="width:190px;height:240px">
+          <div class="gallery-strip-inner" style="background:linear-gradient(160deg,#C8D0C0,#A8B8A0)">
+            <div style="font-size:32px;opacity:.5">✨</div>
+            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mid-text);opacity:.6">Noche</div>
+          </div>
+          <div class="gallery-overlay"><span>Ver foto</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COTIZADOR AI ═══ -->
+<section id="cotizador" class="section section-green">
   <div class="container">
     <div style="text-align:center;max-width:580px;margin:0 auto 60px">
-      <span class="sec-eyebrow reveal">Cotizador Inteligente</span>
-      <h2 class="sec-title reveal reveal-delay-1">Tu cotización en <em>30 segundos</em></h2>
-      <p class="sec-desc reveal reveal-delay-2" style="margin:0 auto;text-align:center">Powered by IA — obtén una estimación personalizada al instante.</p>
+      <span class="sec-eyebrow" style="color:var(--gold)">Cotizador Inteligente</span>
+      <h2 class="sec-title sec-title-white reveal reveal-delay-1" style="color:var(--light-text)">
+        Tu cotización en <em style="color:var(--gold)">30 segundos</em>
+      </h2>
+      <p style="font-size:15px;color:var(--muted);font-weight:300;text-align:center" class="reveal reveal-delay-2">
+        Powered by IA — obtén una estimación personalizada al instante.
+      </p>
     </div>
     <div class="quote-wrapper">
+      <!-- Form -->
       <div class="quote-form reveal">
         <div class="quote-steps">
-          <div class="q-dot active" id="qd0"></div>
-          <div class="q-dot" id="qd1"></div>
-          <div class="q-dot" id="qd2"></div>
+          <div class="quote-step-dot active" id="dot0"></div>
+          <div class="quote-step-dot" id="dot1"></div>
+          <div class="quote-step-dot" id="dot2"></div>
         </div>
-        <div id="qs0">
+
+        <!-- Step 0 -->
+        <div id="step0">
           <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--dark-text);margin-bottom:6px">¿Qué tipo de evento planeas?</h3>
           <p style="font-size:14px;color:var(--mid-text);margin-bottom:24px;font-weight:300">Selecciona el tipo de celebración</p>
-          <div class="q-chips" id="qTypeChips"></div>
-          <button class="q-submit" id="qBtn0" disabled onclick="qGoStep(1)" style="margin-top:16px">Siguiente →</button>
+          <div class="quote-chips" id="eventChips">
+            <button class="quote-chip" data-val="boda" onclick="selectChip(this, 'eventType')">💍 Boda</button>
+            <button class="quote-chip" data-val="xv" onclick="selectChip(this, 'eventType')">👸 Quinceañera</button>
+            <button class="quote-chip" data-val="graduacion" onclick="selectChip(this, 'eventType')">🎓 Graduación</button>
+            <button class="quote-chip" data-val="fiesta" onclick="selectChip(this, 'eventType')">🎉 Fiesta Privada</button>
+            <button class="quote-chip" data-val="corporativo" onclick="selectChip(this, 'eventType')">💼 Corporativo</button>
+            <button class="quote-chip" data-val="bautizo" onclick="selectChip(this, 'eventType')">🍼 Bautizo</button>
+          </div>
+          <button class="quote-submit" id="nextBtn0" onclick="goStep(1)" disabled>Siguiente →</button>
         </div>
-        <div id="qs1" style="display:none">
+
+        <!-- Step 1 -->
+        <div id="step1" style="display:none">
           <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--dark-text);margin-bottom:6px">Cuéntanos más detalles</h3>
           <p style="font-size:14px;color:var(--mid-text);margin-bottom:24px;font-weight:300">Número de invitados y fecha tentativa</p>
-          <label class="q-label">Número de invitados *</label>
-          <input type="number" min="10" max="500" placeholder="Ej. 150" class="q-input" id="qGuests"/>
-          <label class="q-label">Fecha tentativa (opcional)</label>
-          <input type="date" class="q-input" id="qDate"/>
+          <label class="quote-label">Número de invitados *</label>
+          <input type="number" min="10" max="500" placeholder="Ej. 150" class="quote-input" id="guestsInput" oninput="checkGuests()" style="margin-bottom:16px"/>
+          <label class="quote-label">Fecha tentativa (opcional)</label>
+          <input type="date" class="quote-input" id="dateInput" style="margin-bottom:16px"/>
           <div style="display:flex;gap:10px">
-            <button class="q-submit" style="background:var(--cream3);color:var(--mid-text);flex:0 0 auto;width:auto;padding:18px 20px" onclick="qGoStep(0)">←</button>
-            <button class="q-submit" onclick="qGoStep(2)">Siguiente →</button>
+            <button class="quote-submit" style="background:var(--bg3);color:var(--mid-text);flex:0 0 auto;width:auto;padding:16px 20px" onclick="goStep(0)">←</button>
+            <button class="quote-submit" id="nextBtn1" onclick="goStep(2)" disabled>Siguiente →</button>
           </div>
         </div>
-        <div id="qs2" style="display:none">
+
+        <!-- Step 2 -->
+        <div id="step2" style="display:none">
           <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--dark-text);margin-bottom:6px">¿Qué servicios necesitas?</h3>
           <p style="font-size:14px;color:var(--mid-text);margin-bottom:24px;font-weight:300">Puedes seleccionar varios (todos opcionales)</p>
-          <div class="q-chips-2" id="qSvcChips"></div>
+          <div class="quote-chips" id="serviceChips">
+            <button class="quote-chip" data-val="salon" onclick="toggleService(this)">🏛️ Salón</button>
+            <button class="quote-chip" data-val="catering" onclick="toggleService(this)">🍽️ Catering</button>
+            <button class="quote-chip" data-val="decoracion" onclick="toggleService(this)">🌸 Decoración</button>
+            <button class="quote-chip" data-val="musica" onclick="toggleService(this)">🎵 Música / DJ</button>
+            <button class="quote-chip" data-val="fotografia" onclick="toggleService(this)">📷 Fotografía</button>
+            <button class="quote-chip" data-val="coordinacion" onclick="toggleService(this)">📋 Coordinación</button>
+          </div>
           <div style="display:flex;gap:10px;margin-top:8px">
-            <button class="q-submit" style="background:var(--cream3);color:var(--mid-text);flex:0 0 auto;width:auto;padding:18px 20px" onclick="qGoStep(1)">←</button>
-            <button class="q-submit" onclick="qGenerate()">✦ Obtener Cotización</button>
+            <button class="quote-submit" style="background:var(--bg3);color:var(--mid-text);flex:0 0 auto;width:auto;padding:16px 20px" onclick="goStep(1)">←</button>
+            <button class="quote-submit" onclick="generateQuote()" id="generateBtn">✦ Obtener Cotización</button>
           </div>
         </div>
-        <div id="qs3" style="display:none">
-          <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--dark-text);margin-bottom:20px">✦ Tu cotización estimada</h3>
-          <div class="q-result" id="qResult"></div>
-          <div style="display:flex;gap:10px;margin-top:20px">
-            <button class="q-submit" style="background:#25D366" onclick="window.open('https://wa.me/523221234567?text=Hola%2C%20quiero%20cotizar%20mi%20evento%20en%20Casino%20Bambú','_blank')">📱 Contactar por WhatsApp</button>
-          </div>
-          <button onclick="qReset()" style="width:100%;margin-top:10px;background:none;border:none;color:var(--mid-text);font-size:13px;cursor:pointer;padding:8px">← Nueva cotización</button>
-        </div>
-      </div>
-      <div class="reveal reveal-delay-2" style="padding:20px 0">
-        <span class="sec-eyebrow">¿Por qué cotizar aquí?</span>
-        <h3 style="font-family:'Playfair Display',serif;font-size:32px;color:var(--light-text);margin-bottom:16px">Planea tu evento con <em style="color:var(--gold)">inteligencia artificial</em></h3>
-        <p style="font-size:15px;color:var(--muted);font-weight:300;line-height:1.8;margin-bottom:36px">Nuestra herramienta de IA analiza el tipo de evento, número de invitados y servicios para darte una estimación de precio honesta y personalizada en segundos.</p>
-        <div style="display:flex;gap:16px;margin-bottom:24px"><div style="width:44px;height:44px;flex-shrink:0;background:rgba(200,164,68,.1);border:1px solid var(--border-dark);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px">⚡</div><div><div style="font-size:15px;font-weight:700;color:var(--light-text);margin-bottom:4px">Respuesta Inmediata</div><div style="font-size:13px;color:var(--muted);font-weight:300;line-height:1.6">Nuestra IA analiza tus necesidades y te da una estimación en segundos.</div></div></div>
-        <div style="display:flex;gap:16px;margin-bottom:24px"><div style="width:44px;height:44px;flex-shrink:0;background:rgba(200,164,68,.1);border:1px solid var(--border-dark);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px">🎯</div><div><div style="font-size:15px;font-weight:700;color:var(--light-text);margin-bottom:4px">Personalizado para Ti</div><div style="font-size:13px;color:var(--muted);font-weight:300;line-height:1.6">Cada cotización considera el tipo de evento, invitados y servicios que eliges.</div></div></div>
-        <div style="display:flex;gap:16px;margin-bottom:24px"><div style="width:44px;height:44px;flex-shrink:0;background:rgba(200,164,68,.1);border:1px solid var(--border-dark);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px">💬</div><div><div style="font-size:15px;font-weight:700;color:var(--light-text);margin-bottom:4px">Sin Compromiso</div><div style="font-size:13px;color:var(--muted);font-weight:300;line-height:1.6">Es solo una estimación inicial. Un coordinador te contactará para detalles.</div></div></div>
-        <div style="display:flex;gap:16px;margin-bottom:24px"><div style="width:44px;height:44px;flex-shrink:0;background:rgba(200,164,68,.1);border:1px solid var(--border-dark);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px">📱</div><div><div style="font-size:15px;font-weight:700;color:var(--light-text);margin-bottom:4px">Seguimiento por WhatsApp</div><div style="font-size:13px;color:var(--muted);font-weight:300;line-height:1.6">Después de cotizar, te contactamos directamente para agendar una visita.</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- TESTIMONIALS -->
-<section class="section" style="background:var(--bg3);position:relative;overflow:hidden">
-  <div class="testi-bg">Clientes</div>
-  <div class="container" style="position:relative;z-index:1">
-    <div style="text-align:center;max-width:560px;margin:0 auto 80px">
-      <span class="sec-eyebrow reveal">Testimonios</span>
-      <h2 class="sec-title reveal" style="margin-bottom:0">Lo que dicen<br>nuestros <em>clientes</em></h2>
-    </div>
-    <div class="testi-main reveal">
-      <div class="testi-big-quote">"</div>
-      <p class="testi-text" id="tText"></p>
-      <div class="testi-author" id="tAuthor">
-        <div class="testi-avatar" id="tAvatar"></div>
-        <div><div class="testi-name" id="tName"></div><div class="testi-ev" id="tEv"></div></div>
-      </div>
-      <div class="testi-stars">★★★★★</div>
-      <div class="testi-nav">
-        <div class="testi-dots" id="tDots"></div>
-        <div class="testi-arrows">
-          <button class="t-arrow t-arrow-prev" onclick="tStep(-1)">←</button>
-          <button class="t-arrow t-arrow-next" onclick="tStep(1)">→</button>
+        <!-- Step 3 — Result -->
+        <div id="step3" style="display:none">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
+            <span style="color:var(--gold);font-size:20px">✦</span>
+            <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--dark-text)">Tu cotización estimada</h3>
+          </div>
+          <div id="quoteResult" class="quote-result"></div>
+          <button class="quote-submit" style="background:#25D366;margin-top:16px" onclick="window.open('https://wa.me/523221234567?text=Hola%2C%20me%20interesa%20cotizar%20un%20evento%20en%20Casino%20Bambú','_blank')">
+            📱 Contactar por WhatsApp
+          </button>
+          <button onclick="resetQuote()" style="width:100%;margin-top:10px;background:none;border:none;color:var(--mid-text);font-size:13px;cursor:pointer;padding:8px">
+            ← Nueva cotización
+          </button>
         </div>
       </div>
-    </div>
-    <div style="text-align:center;margin-top:80px" class="reveal">
-      <a href="#cotizador" class="btn-primary" onclick="goTo('cotizador');return false">✦ Cotizar Mi Evento</a>
-    </div>
-  </div>
-</section>
 
-<!-- CONTACT -->
-<section id="contacto" class="section section-light">
-  <div class="container">
-    <div style="text-align:center;max-width:560px;margin:0 auto 70px">
-      <span class="sec-eyebrow sec-eyebrow-dark reveal">Contacto</span>
-      <h2 class="sec-title reveal reveal-delay-1" style="color:var(--dark-text)">Hagamos realidad <em style="color:var(--terra)">tu celebración</em></h2>
-      <p class="sec-desc reveal reveal-delay-2" style="color:var(--mid-text);margin:0 auto;text-align:center">Escríbenos y un coordinador te contactará en menos de 24 horas.</p>
-    </div>
-    <div class="contact-grid">
-      <div class="reveal">
-        <div class="ci-item"><div class="ci-icon">📍</div><div><div class="ci-label">Ubicación</div><div class="ci-val">Carretera Federal 200, cerca de la Universidad Tecnológica de Nayarit<br>Nayarit, México</div></div></div>
-        <div class="ci-item"><div class="ci-icon">📞</div><div><div class="ci-label">Teléfono / WhatsApp</div><div class="ci-val">+52 322 123 4567<br><a href="https://wa.me/523221234567" target="_blank" rel="noreferrer" style="color:#25D366;font-size:13px;font-weight:700">Abrir WhatsApp →</a></div></div></div>
-        <div class="ci-item"><div class="ci-icon">🕐</div><div><div class="ci-label">Horario de atención</div><div class="ci-val">Lunes a Viernes: 9:00 – 18:00<br>Sábados: 10:00 – 15:00</div></div></div>
-        <div style="margin-top:32px;border-radius:var(--r);overflow:hidden;border:1px solid var(--border-light)">
-          <iframe title="Ubicación Casino Bambú" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.8!2d-104.8914!3d21.4931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842748c8f1d2db55%3A0x7c8e1a0e6bde4ef3!2sUniversidad%20Tecnol%C3%B3gica%20de%20Nayarit!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx" width="100%" height="260" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <div style="background:var(--cream);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-            <span style="font-size:12px;color:var(--mid-text);font-weight:300">📍 Junto a Universidad Tecnológica de Nayarit · Próximamente en Google Maps</span>
-            <a href="https://maps.app.goo.gl/UTNNayarit" target="_blank" rel="noreferrer" style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--terra);text-decoration:none">Cómo llegar →</a>
-          </div>
-        </div>
-      </div>
-      <div class="reveal reveal-delay-2">
-        <div id="cSuccess" style="display:none;text-align:center;padding:60px 40px;background:#fff;border-radius:var(--r-lg);border:1px solid var(--cream3)">
-          <div style="font-size:56px;margin-bottom:20px">🎉</div>
-          <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--dark-text);margin-bottom:12px">¡Mensaje enviado!</h3>
-          <p style="font-size:15px;color:var(--mid-text);font-weight:300;line-height:1.7">Gracias por contactar a Casino Bambú. Un coordinador se pondrá en contacto contigo en menos de 24 horas.</p>
-          <button onclick="cReset()" style="margin-top:28px;background:none;border:1px solid var(--cream3);border-radius:8px;padding:10px 24px;color:var(--mid-text);cursor:pointer;font-size:13px">Enviar otro mensaje</button>
-        </div>
-        <form id="cForm" class="c-form-box" onsubmit="cSubmit(event)">
-          <div class="c-row">
-            <div class="cf-field"><label class="c-label">Nombre completo *</label><input class="c-input" required placeholder="Tu nombre"/></div>
-            <div class="cf-field"><label class="c-label">Teléfono / WhatsApp *</label><input class="c-input" required placeholder="+52 322 123 4567"/></div>
-          </div>
-          <div class="cf-field"><label class="c-label">Correo electrónico</label><input class="c-input" type="email" placeholder="tu@correo.com"/></div>
-          <div class="c-row">
-            <div class="cf-field"><label class="c-label">Tipo de evento *</label>
-              <select class="c-select" required><option value="">Selecciona...</option><option>Boda</option><option>Quinceañera</option><option>Graduación</option><option>Fiesta Privada</option><option>Corporativo</option><option>Bautizo</option><option>Otro</option></select>
+      <!-- Info side -->
+      <div class="quote-info-side reveal reveal-delay-2">
+        <span class="sec-eyebrow" style="color:var(--gold)">¿Por qué cotizar aquí?</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:32px;color:var(--light-text);margin-bottom:16px">
+          Planea tu evento con <em style="color:var(--gold)">inteligencia artificial</em>
+        </h3>
+        <p style="font-size:15px;color:var(--muted);font-weight:300;line-height:1.8;margin-bottom:36px">
+          Nuestra herramienta de IA analiza el tipo de evento, número de invitados y servicios
+          para darte una estimación de precio honesta y personalizada en segundos.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <div style="display:flex;gap:16px">
+            <div style="width:44px;height:44px;flex-shrink:0;background:rgba(200,164,68,.1);border:1px solid rgba(200,164,68,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px">⚡</div>
+            <div>
+              <div style="font-size:15px;font-weight:700;color:var(--light-text);margin-bottom:4px">Respuesta Inmediata</div>
+              <div style="font-size:13px;color:var(--muted);font-weight:300;line-height:1.6">Nuestra IA analiza tus necesidades y te da una estimación en segundos.</div>
             </div>
-            <div class="cf-field"><label class="c-label">Fecha tentativa</label><input class="c-input" type="date"/></div>
           </div>
-          <div class="cf-field"><label class="c-label">Mensaje o preguntas</label><textarea class="c-textarea" placeholder="Cuéntanos sobre tu evento, número de invitados, presupuesto..."></textarea></div>
-          <button type="submit" class="c-submit" id="cBtn">📩 Enviar Solicitud</button>
-        </form>
+          <div style="display:flex;gap:16px">
+            <div style="width:44px;height:44px;flex-shrink:0;background:rgba(200,164,68,.1);border:1px solid rgba(200,164,68,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px">🎯</div>
+            <div>
+              <div style="font-size:15px;font-weight:700;color:var(--light-text);margin-bottom:4px">Personalizado para Ti</div>
+              <div style="font-size:13px;color:var(--muted);font-weight:300;line-height:1.6">Considera tipo de evento, invitados y servicios que eliges.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px">
+            <div style="width:44px;height:44px;flex-shrink:0;background:rgba(200,164,68,.1);border:1px solid rgba(200,164,68,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px">💬</div>
+            <div>
+              <div style="font-size:15px;font-weight:700;color:var(--light-text);margin-bottom:4px">Sin Compromiso</div>
+              <div style="font-size:13px;color:var(--muted);font-weight:300;line-height:1.6">Es solo una estimación inicial. Un coordinador te contactará para detalles.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px">
+            <div style="width:44px;height:44px;flex-shrink:0;background:rgba(200,164,68,.1);border:1px solid rgba(200,164,68,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px">📱</div>
+            <div>
+              <div style="font-size:15px;font-weight:700;color:var(--light-text);margin-bottom:4px">Seguimiento por WhatsApp</div>
+              <div style="font-size:13px;color:var(--muted);font-weight:300;line-height:1.6">Después de cotizar, te contactamos para agendar una visita.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══ CONTACT + TESTIMONIALS ═══ -->
+<section id="contacto" class="section section-cream">
+  <div class="container">
+    <div style="text-align:center;max-width:560px;margin:0 auto 60px">
+      <span class="sec-eyebrow reveal">Reservaciones</span>
+      <h2 class="sec-title reveal reveal-delay-1">Hagamos realidad <em>tu celebración</em></h2>
+      <p class="sec-desc reveal reveal-delay-2" style="margin:0 auto;text-align:center">
+        Escríbenos y un coordinador te contactará en menos de 24 horas.
+      </p>
+    </div>
+
+    <div class="quote-contact-grid">
+      <!-- Form -->
+      <div class="reveal">
+        <div class="qc-form" id="contactFormWrap">
+          <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--dark-text);margin-bottom:24px">Solicitar información</h3>
+          <form onsubmit="submitContact(event)">
+            <div class="qc-form-row">
+              <div class="qf-field">
+                <label class="qf-label">Nombre completo *</label>
+                <input class="qf-input" required placeholder="Tu nombre"/>
+              </div>
+              <div class="qf-field">
+                <label class="qf-label">WhatsApp *</label>
+                <input class="qf-input" required placeholder="+52 322 123 4567"/>
+              </div>
+            </div>
+            <div class="qf-field">
+              <label class="qf-label">Correo electrónico</label>
+              <input class="qf-input" type="email" placeholder="tu@correo.com"/>
+            </div>
+            <div class="qc-form-row">
+              <div class="qf-field">
+                <label class="qf-label">Tipo de evento *</label>
+                <select class="qf-select" required>
+                  <option value="">Selecciona...</option>
+                  <option>Boda</option>
+                  <option>Quinceañera</option>
+                  <option>Graduación</option>
+                  <option>Fiesta Privada</option>
+                  <option>Corporativo</option>
+                  <option>Bautizo</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="qf-field">
+                <label class="qf-label">Fecha tentativa</label>
+                <input class="qf-input" type="date"/>
+              </div>
+            </div>
+            <div class="qf-field">
+              <label class="qf-label">Mensaje</label>
+              <textarea class="qf-textarea" placeholder="Cuéntanos sobre tu evento, número de invitados..."></textarea>
+            </div>
+            <button type="submit" class="qf-submit" id="contactSubmitBtn">
+              ✉ Enviar Solicitud
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact info -->
+        <div style="margin-top:24px;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:36px;height:36px;flex-shrink:0;background:rgba(14,74,66,.08);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center">📍</div>
+            <p style="font-size:13px;color:var(--mid-text);font-weight:300;line-height:1.6;padding-top:2px">Carretera Federal 200, cerca de UTN · Nayarit, México</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:36px;height:36px;flex-shrink:0;background:rgba(14,74,66,.08);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center">📱</div>
+            <p style="font-size:13px;color:var(--mid-text);font-weight:300;line-height:1.6;padding-top:2px">+52 322 123 4567 — WhatsApp disponible</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:36px;height:36px;flex-shrink:0;background:rgba(14,74,66,.08);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center">🕐</div>
+            <p style="font-size:13px;color:var(--mid-text);font-weight:300;line-height:1.6;padding-top:2px">Lun–Vie 9:00–18:00 · Sáb 10:00–15:00</p>
+          </div>
+        </div>
+
+        <!-- Google Maps -->
+        <div style="margin-top:24px;border-radius:var(--r);overflow:hidden;border:1px solid var(--border)">
+          <iframe
+            title="Ubicación Casino Bambú"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.8!2d-104.8914!3d21.4931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842748c8f1d2db55%3A0x7c8e1a0e6bde4ef3!2sUniversidad%20Tecnol%C3%B3gica%20de%20Nayarit!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx"
+            width="100%" height="200" style="border:0;display:block"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div style="padding:10px 16px;background:var(--white);font-size:11px;color:var(--muted);font-weight:300">
+            📍 Junto a UTN · Próximamente en Google Maps
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="reveal reveal-delay-2">
+        <span class="sec-eyebrow" style="margin-bottom:24px;display:block">Lo que dicen nuestros clientes</span>
+        <div class="testi-3-grid">
+          <div class="testi-card">
+            <div class="testi-card-quote">"</div>
+            <p class="testi-card-text">"Casino Bambú superó todas nuestras expectativas. El jardín estaba absolutamente mágico con las luces colgantes, y el equipo estuvo atento a cada detalle."</p>
+            <div class="testi-card-author">
+              <div class="testi-card-avatar">V</div>
+              <div>
+                <div class="testi-card-name">Valeria & Rodrigo</div>
+                <div class="testi-card-event">Boda · Marzo 2025</div>
+                <div class="testi-card-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-card-quote">"</div>
+            <p class="testi-card-text">"Mi quinceañera fue perfecta. El espacio de bambú le dio un toque único que nadie más tenía. Mis invitados no paraban de hablar del lugar toda la noche."</p>
+            <div class="testi-card-author">
+              <div class="testi-card-avatar">S</div>
+              <div>
+                <div class="testi-card-name">Sofía Martínez</div>
+                <div class="testi-card-event">Quinceañera · Feb 2025</div>
+                <div class="testi-card-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-card-quote">"</div>
+            <p class="testi-card-text">"Organizamos el evento corporativo de fin de año aquí y fue un éxito total. Ambiente completamente diferente a cualquier salón convencional."</p>
+            <div class="testi-card-author">
+              <div class="testi-card-avatar">C</div>
+              <div>
+                <div class="testi-card-name">Carlos Vega</div>
+                <div class="testi-card-event">Corporativo · Dic 2024</div>
+                <div class="testi-card-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRE-FOOTER ═══ -->
+<div class="prefooter">
+  <div class="prefooter-items">
+    <div class="prefooter-item">
+      <div class="prefooter-icon">📍</div>
+      <div class="prefooter-text">
+        <p>Carretera Federal 200</p>
+        <p>Junto a UTN · Nayarit, México</p>
+      </div>
+    </div>
+    <div class="prefooter-item">
+      <div class="prefooter-icon">📱</div>
+      <div class="prefooter-text">
+        <p>+52 322 123 4567</p>
+        <p>WhatsApp disponible</p>
+      </div>
+    </div>
+    <div class="prefooter-item">
+      <div class="prefooter-icon">🗓️</div>
+      <div class="prefooter-text">
+        <p>Agenda tu visita</p>
+        <p>Coordinador disponible hoy</p>
+      </div>
+    </div>
+  </div>
+  <button class="btn-outline-white" onclick="smoothScroll('#contacto')">Reservar Fecha →</button>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
 <footer class="footer">
   <div class="footer-grid">
     <div>
-      <div class="footer-logo">🎋 Casino Bambú</div>
-      <p class="footer-tagline">El espacio ideal para que tus celebraciones se conviertan en recuerdos imborrables. Naturaleza, elegancia y calidez en un solo lugar.</p>
+      <div class="footer-logo-text">🎋 Casino Bambú</div>
+      <p class="footer-tagline">El espacio ideal para que tus celebraciones se conviertan en recuerdos imborrables. Naturaleza, elegancia y calidez.</p>
       <div class="footer-social">
-        <a href="https://facebook.com" target="_blank" rel="noreferrer" class="f-social-btn">📘</a>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer" class="f-social-btn">📸</a>
-        <a href="https://wa.me/523221234567" target="_blank" rel="noreferrer" class="f-social-btn">📱</a>
-        <a href="https://tiktok.com" target="_blank" rel="noreferrer" class="f-social-btn">🎵</a>
+        <a href="https://facebook.com" target="_blank" class="fsoc-btn" aria-label="Facebook">📘</a>
+        <a href="https://instagram.com" target="_blank" class="fsoc-btn" aria-label="Instagram">📸</a>
+        <a href="https://wa.me/523221234567" target="_blank" class="fsoc-btn" aria-label="WhatsApp">📱</a>
+        <a href="https://tiktok.com" target="_blank" class="fsoc-btn" aria-label="TikTok">🎵</a>
       </div>
     </div>
     <div>
-      <div class="f-col-title">Navegación</div>
-      <ul class="f-links">
-        <li><a href="#inicio" onclick="goTo('inicio');return false">Inicio</a></li>
-        <li><a href="#nosotros" onclick="goTo('nosotros');return false">Nosotros</a></li>
-        <li><a href="#espacios" onclick="goTo('espacios');return false">Espacios</a></li>
-        <li><a href="#eventos" onclick="goTo('eventos');return false">Tipos de Eventos</a></li>
-        <li><a href="#galeria" onclick="goTo('galeria');return false">Galería</a></li>
+      <div class="footer-col-title">Navegación</div>
+      <ul class="footer-links">
+        <li><a href="#inicio" onclick="smoothScroll('#inicio'); return false">Inicio</a></li>
+        <li><a href="#nosotros" onclick="smoothScroll('#nosotros'); return false">Nosotros</a></li>
+        <li><a href="#espacios" onclick="smoothScroll('#espacios'); return false">Espacios</a></li>
+        <li><a href="#eventos" onclick="smoothScroll('#eventos'); return false">Eventos</a></li>
+        <li><a href="#galeria" onclick="smoothScroll('#galeria'); return false">Galería</a></li>
       </ul>
     </div>
     <div>
-      <div class="f-col-title">Eventos</div>
-      <ul class="f-links">
-        <li><a href="#cotizador" onclick="goTo('cotizador');return false">Bodas</a></li>
-        <li><a href="#cotizador" onclick="goTo('cotizador');return false">Quinceañeras</a></li>
-        <li><a href="#cotizador" onclick="goTo('cotizador');return false">Graduaciones</a></li>
-        <li><a href="#cotizador" onclick="goTo('cotizador');return false">Fiestas Privadas</a></li>
-        <li><a href="#cotizador" onclick="goTo('cotizador');return false">Corporativos</a></li>
-        <li><a href="#cotizador" onclick="goTo('cotizador');return false">Bautizos</a></li>
+      <div class="footer-col-title">Eventos</div>
+      <ul class="footer-links">
+        <li><a href="#cotizador" onclick="smoothScroll('#cotizador'); return false">Bodas</a></li>
+        <li><a href="#cotizador" onclick="smoothScroll('#cotizador'); return false">Quinceañeras</a></li>
+        <li><a href="#cotizador" onclick="smoothScroll('#cotizador'); return false">Graduaciones</a></li>
+        <li><a href="#cotizador" onclick="smoothScroll('#cotizador'); return false">Fiestas</a></li>
+        <li><a href="#cotizador" onclick="smoothScroll('#cotizador'); return false">Corporativos</a></li>
+        <li><a href="#cotizador" onclick="smoothScroll('#cotizador'); return false">Bautizos</a></li>
       </ul>
     </div>
     <div>
-      <div class="f-col-title">Contacto</div>
-      <ul class="f-links" style="gap:14px">
-        <li style="color:var(--muted);font-size:14px;font-weight:300;line-height:1.6">📍 Carretera Fed. 200, cerca de UTN<br>Nayarit, México</li>
-        <li><a href="https://wa.me/523221234567" target="_blank" rel="noreferrer">📱 +52 322 123 4567</a></li>
-        <li><a href="#cotizador" onclick="goTo('cotizador');return false">✦ Cotizar mi evento</a></li>
+      <div class="footer-col-title">Contacto</div>
+      <ul class="footer-links" style="gap:14px">
+        <li style="color:rgba(240,237,232,.45);font-size:13px;font-weight:300;line-height:1.7">📍 Carretera Fed. 200<br/>cerca de UTN · Nayarit</li>
+        <li><a href="https://wa.me/523221234567" target="_blank">📱 +52 322 123 4567</a></li>
+        <li><a href="#cotizador" onclick="smoothScroll('#cotizador'); return false">✦ Cotizar mi evento</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Horarios</div>
+      <ul class="footer-links" style="gap:12px">
+        <li style="color:rgba(240,237,232,.45);font-size:13px;font-weight:300;line-height:1.8">Lun – Vie<br/>9:00 – 18:00</li>
+        <li style="color:rgba(240,237,232,.45);font-size:13px;font-weight:300;line-height:1.8">Sábados<br/>10:00 – 15:00</li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2025 Casino Bambú — Salón de Eventos · Nayarit, México</span>
-    <div class="footer-credit">Diseño por <a href="#" rel="noreferrer">Estudio Alquimia</a> ✦ Potenciado con IA</div>
+    <div class="footer-credit">Diseño por <a href="#">Estudio Alquimia</a> ✦ Potenciado con IA</div>
   </div>
 </footer>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/523221234567?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20Casino%20Bambú" target="_blank" rel="noreferrer" class="wa-fab">
+<!-- ═══ WHATSAPP FAB ═══ -->
+<a href="https://wa.me/523221234567?text=Hola%2C%20me%20interesa%20conocer%20Casino%20Bambú" target="_blank" class="wa-fab" aria-label="WhatsApp">
+  <span style="font-size:26px">💬</span>
   <span class="wa-tip">¡Escríbenos!</span>
-  <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M16 3C8.82 3 3 8.82 3 16C3 18.6 3.76 21.03 5.07 23.07L3.08 29L9.17 27.04C11.14 28.25 13.49 29 16 29C23.18 29 29 23.18 29 16C29 8.82 23.18 3 16 3Z" fill="#fff"/><path d="M22.1 19.83C21.85 20.55 20.65 21.17 20.02 21.23C19.39 21.29 18.77 21.54 15.78 20.37C12.22 18.98 10 15.37 9.83 15.15C9.66 14.93 8.5 13.34 8.5 11.7C8.5 10.06 9.37 9.26 9.69 8.91C10.01 8.56 10.38 8.47 10.6 8.47C10.82 8.47 11.04 8.47 11.24 8.48C11.45 8.49 11.73 8.42 12.01 9.09C12.29 9.76 12.96 11.4 13.04 11.57C13.12 11.74 13.17 11.94 13.06 12.16C12.95 12.38 12.9 12.52 12.73 12.72C12.56 12.92 12.37 13.17 12.22 13.32C12.05 13.49 11.87 13.67 12.06 13.99C12.25 14.31 12.94 15.41 13.93 16.3C15.19 17.43 16.25 17.77 16.58 17.94C16.91 18.11 17.1 18.09 17.29 17.87C17.48 17.65 18.15 16.87 18.37 16.55C18.59 16.23 18.81 16.28 19.11 16.39C19.41 16.5 21.04 17.3 21.37 17.47C21.7 17.64 21.92 17.73 22.0 17.87C22.08 18.01 22.08 18.54 21.83 19.27L22.1 19.83Z" fill="#25D366"/></svg>
 </a>
 
 <script>
-/* ── UTIL ── */
-function goTo(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'})}
+// ── Navbar scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
 
-/* ── NAVBAR ── */
-window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',scrollY>60)},{passive:true})
-let _mOpen=false
-function toggleMenu(){_mOpen=!_mOpen;document.getElementById('mobileMenu').classList.toggle('open',_mOpen);document.getElementById('burger').textContent=_mOpen?'✕':'☰'}
-function closeMenu(){_mOpen=false;document.getElementById('mobileMenu').classList.remove('open');document.getElementById('burger').textContent='☰'}
+// ── Smooth scroll
+function smoothScroll(selector) {
+  const el = document.querySelector(selector);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
 
-/* ── HERO CANVAS ── */
-;(function(){
-  const cv=document.getElementById('hero-canvas'),ctx=cv.getContext('2d')
-  const resize=()=>{cv.width=innerWidth;cv.height=innerHeight}
-  resize();addEventListener('resize',resize)
-  const ps=Array.from({length:80},()=>({x:Math.random()*cv.width,y:Math.random()*cv.height,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.2-.05,r:Math.random()*2.5+.8,a:Math.random(),ad:Math.random()>.5?.006:-.006,h:35+Math.random()*25}))
-  ;(function draw(){
-    ctx.clearRect(0,0,cv.width,cv.height)
-    for(const p of ps){
-      p.x+=p.vx;p.y+=p.vy;p.a+=p.ad
-      if(p.a>=1||p.a<=.05)p.ad*=-1
-      if(p.x<0)p.x=cv.width;if(p.x>cv.width)p.x=0
-      if(p.y<0)p.y=cv.height;if(p.y>cv.height)p.y=0
-      const g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*6)
-      g.addColorStop(0,`hsla(${p.h},90%,72%,${p.a})`);g.addColorStop(1,`hsla(${p.h},90%,72%,0)`)
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r*6,0,Math.PI*2);ctx.fillStyle=g;ctx.fill()
+// ── Mobile menu
+function toggleMenu() {
+  const m = document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// ── Reveal on scroll
+const observer = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.08 }
+);
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── Quote wizard state
+let eventType = '', selectedServices = [];
+
+function selectChip(btn, group) {
+  btn.closest('.quote-chips').querySelectorAll('.quote-chip').forEach(c => c.classList.remove('selected'));
+  btn.classList.add('selected');
+  if (group === 'eventType') {
+    eventType = btn.dataset.val;
+    document.getElementById('nextBtn0').disabled = false;
+  }
+}
+
+function toggleService(btn) {
+  btn.classList.toggle('selected');
+  const val = btn.dataset.val;
+  if (btn.classList.contains('selected')) {
+    selectedServices.push(val);
+  } else {
+    selectedServices = selectedServices.filter(s => s !== val);
+  }
+}
+
+function goStep(n) {
+  [0,1,2,3].forEach(i => {
+    const s = document.getElementById('step' + i);
+    if (s) s.style.display = i === n ? 'block' : 'none';
+    const d = document.getElementById('dot' + i);
+    if (d) {
+      d.classList.remove('active', 'done');
+      if (i < n) d.classList.add('done');
+      else if (i === n) d.classList.add('active');
     }
-    requestAnimationFrame(draw)
-  })()
-})()
-
-/* ── MARQUEE ── */
-;(function(){
-  const ITEMS=['Bodas','Quinceañeras','Graduaciones','Bodas Civiles','Corporativos','Fiestas Privadas','Bautizos','Aniversarios']
-  const track=document.getElementById('marqueeTrack')
-  ;[...ITEMS,...ITEMS,...ITEMS].forEach(item=>{
-    const s=document.createElement('span')
-    s.className='mq-item'
-    s.innerHTML=`${item} <span class="mq-dot">✦</span>`
-    track.appendChild(s)
-  })
-})()
-
-/* ── SPACES ── */
-function slideSpaces(dir){document.getElementById('spacesScroll').scrollBy({left:dir*420,behavior:'smooth'})}
-
-/* ── EVENTS ACCORDION ── */
-const EVENTS=[
-  {num:'01',name:'Bodas',tag:'La celebración de tu vida',desc:'El día más especial merece el espacio más especial. Diseñamos cada detalle para que tu boda sea exactamente como lo soñaste — desde la ceremonia hasta el último baile.'},
-  {num:'02',name:'Quinceañeras',tag:'Tu momento de brillar',desc:'Celebra tus XV años con todo el esplendor que mereces. Un ambiente mágico que combina tradición y modernidad para hacer de tu quinceañera una noche única.'},
-  {num:'03',name:'Graduaciones',tag:'El inicio de un nuevo capítulo',desc:'Un logro que merece una gran celebración. Brindemos juntos por los nuevos caminos que comienzan y los sueños que apenas empiezan a hacerse realidad.'},
-  {num:'04',name:'Fiestas Privadas',tag:'Cualquier motivo, una gran fiesta',desc:'Cumpleaños, aniversarios, despedidas de soltera y cualquier razón para reunir a los que más quieres en un espacio que hace cada momento especial.'},
-  {num:'05',name:'Corporativos',tag:'Negocios con estilo',desc:'Convenciones, presentaciones de empresa y cenas ejecutivas en un ambiente que inspira, sorprende y deja una impresión duradera a tus clientes y equipo.'},
-  {num:'06',name:'Bautizos',tag:'La bienvenida más especial',desc:'Celebra la llegada de los nuevos integrantes de la familia en un espacio íntimo y cálido, rodeado de naturaleza y de las personas más importantes.'},
-]
-let evOpen=null
-const evList=document.getElementById('eventsList')
-EVENTS.forEach((ev,i)=>{
-  const row=document.createElement('div')
-  row.className='ev-row reveal'
-  row.innerHTML=`
-    <div class="ev-inner">
-      <span class="ev-num">${ev.num}</span>
-      <div class="ev-name-col">
-        <div class="ev-name">${ev.name}</div>
-        <div class="ev-expand" id="evx${i}">
-          <div><div class="ev-expand-tag">${ev.tag}</div><div class="ev-expand-desc">${ev.desc}</div></div>
-          <button class="ev-cta" onclick="event.stopPropagation();goTo('cotizador')">Cotizar ↗</button>
-        </div>
-      </div>
-      <span class="ev-tag-right" id="evt${i}">${ev.tag}</span>
-      <div class="ev-toggle">+</div>
-    </div>`
-  row.addEventListener('click',()=>{
-    const prev=evOpen
-    if(evOpen!==null){
-      evList.children[evOpen].classList.remove('open')
-      document.getElementById('evx'+evOpen).classList.remove('open')
-      document.getElementById('evt'+evOpen).style.display=''
-    }
-    evOpen=prev===i?null:i
-    if(evOpen!==null){
-      row.classList.add('open')
-      document.getElementById('evx'+i).classList.add('open')
-      document.getElementById('evt'+i).style.display='none'
-    }
-  })
-  evList.appendChild(row)
-})
-
-/* ── GALLERY ── */
-const GALLERY=[
-  {cat:'bodas',h:320,bg:'linear-gradient(160deg,#E8D5C0,#D4BFA0)',icon:'💍',label:'Boda · Jardín del Bambú'},
-  {cat:'xv',h:240,bg:'linear-gradient(160deg,#F0D8C8,#DDBC9C)',icon:'👸',label:'Quinceañera · Salón Bugambilia'},
-  {cat:'espacios',h:200,bg:'linear-gradient(160deg,#E0CDB0,#CDB890)',icon:'🌿',label:'Vista general · Terraza'},
-  {cat:'fiestas',h:280,bg:'linear-gradient(160deg,#EDDBBD,#D9C08A)',icon:'🎉',label:'Celebración familiar'},
-  {cat:'bodas',h:360,bg:'linear-gradient(160deg,#E6D2B8,#CCBA96)',icon:'🌅',label:'Ceremonia al atardecer'},
-  {cat:'espacios',h:220,bg:'linear-gradient(160deg,#F2E4CC,#E0CC9C)',icon:'✨',label:'Decoración nocturna'},
-  {cat:'xv',h:300,bg:'linear-gradient(160deg,#EEDFC5,#D8C492)',icon:'🌸',label:'XV años · Entrada'},
-  {cat:'fiestas',h:240,bg:'linear-gradient(160deg,#F0DFC2,#D4BE8C)',icon:'🎊',label:'Aniversario · Vista jardín'},
-  {cat:'espacios',h:280,bg:'linear-gradient(160deg,#E8D8B8,#C8B688)',icon:'🎋',label:'Bambú estructural'},
-]
-function renderGallery(filter){
-  const grid=document.getElementById('galleryGrid')
-  grid.innerHTML=''
-  GALLERY.filter(g=>filter==='todos'||g.cat===filter).forEach(g=>{
-    grid.innerHTML+=`<div class="gallery-item"><div class="gallery-img" style="height:${g.h}px;background:${g.bg}"><div style="text-align:center;opacity:.5"><div style="font-size:40px;margin-bottom:10px">${g.icon}</div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--mid-text)">${g.label}</div></div><div class="gallery-overlay"><span>Ver foto</span></div></div></div>`
-  })
-}
-renderGallery('todos')
-function filterGallery(cat,btn){
-  document.querySelectorAll('.gf-btn').forEach(b=>b.classList.remove('active'))
-  btn.classList.add('active')
-  renderGallery(cat)
+  });
 }
 
-/* ── AI QUOTE ── */
-const Q_TYPES=[{id:'boda',label:'Boda',icon:'💍'},{id:'xv',label:'Quinceañera',icon:'👸'},{id:'graduacion',label:'Graduación',icon:'🎓'},{id:'fiesta',label:'Fiesta Privada',icon:'🎉'},{id:'corporativo',label:'Corporativo',icon:'💼'},{id:'bautizo',label:'Bautizo',icon:'🍼'}]
-const Q_SVCS=[{id:'salon',label:'Salón',icon:'🏛️'},{id:'catering',label:'Catering',icon:'🍽️'},{id:'decoracion',label:'Decoración',icon:'🌸'},{id:'musica',label:'Música / DJ',icon:'🎵'},{id:'fotografia',label:'Fotografía',icon:'📷'},{id:'coordinacion',label:'Coordinación',icon:'📋'}]
-let qType='',qSvcs=[]
-const qTypeChips=document.getElementById('qTypeChips')
-const qSvcChips=document.getElementById('qSvcChips')
-Q_TYPES.forEach(t=>{const b=document.createElement('button');b.className='q-chip';b.textContent=t.icon+' '+t.label;b.onclick=()=>{qType=t.id;qTypeChips.querySelectorAll('.q-chip').forEach(c=>c.classList.remove('sel'));b.classList.add('sel');document.getElementById('qBtn0').disabled=false};qTypeChips.appendChild(b)})
-Q_SVCS.forEach(s=>{const b=document.createElement('button');b.className='q-chip';b.textContent=s.icon+' '+s.label;b.onclick=()=>{if(qSvcs.includes(s.id)){qSvcs=qSvcs.filter(x=>x!==s.id);b.classList.remove('sel')}else{qSvcs.push(s.id);b.classList.add('sel')}};qSvcChips.appendChild(b)})
-function qGoStep(n){
-  for(let i=0;i<4;i++)document.getElementById('qs'+i).style.display='none'
-  document.getElementById('qs'+n).style.display='block'
-  ;[0,1,2].forEach(i=>{const d=document.getElementById('qd'+i);d.className='q-dot'+(i===n?' active':i<n?' done':'')})
+document.getElementById('guestsInput')?.addEventListener('input', checkGuests);
+function checkGuests() {
+  const v = document.getElementById('guestsInput').value;
+  document.getElementById('nextBtn1').disabled = !v || parseInt(v) < 1;
 }
-function qGenerate(){
-  const guests=document.getElementById('qGuests').value||'?'
-  const date=document.getElementById('qDate').value||'Por definir'
-  const svcMap={salon:'Salón',catering:'Catering',decoracion:'Decoración',musica:'Música / DJ',fotografia:'Fotografía',coordinacion:'Coordinación'}
-  const tyMap={boda:'Boda',xv:'Quinceañera',graduacion:'Graduación',fiesta:'Fiesta Privada',corporativo:'Corporativo',bautizo:'Bautizo'}
-  const sels=qSvcs.map(s=>svcMap[s]).join(', ')||'Solo el salón'
-  const tyName=tyMap[qType]||qType
-  qGoStep(3)
-  const res=document.getElementById('qResult')
-  res.innerHTML='<div style="display:flex;align-items:center;gap:10px;color:var(--mid-text)"><span class="spinner"></span> Generando cotización...</div>'
-  setTimeout(()=>{
-    const base={boda:45000,xv:32000,graduacion:28000,fiesta:25000,corporativo:38000,bautizo:22000}
-    const g=parseInt(guests)||100,gm=g<=50?.7:g<=100?1:g<=150?1.3:1.6
-    const sm=1+(qSvcs.length*.12)
-    const mn=Math.round(base[qType]*gm*sm/1000)*1000
-    const mx=Math.round(mn*1.35/1000)*1000
-    res.textContent=`¡Hola! Aquí tu cotización estimada para ${tyName} 🎉\n\n📅 Fecha: ${date}\n👥 Invitados: ${g} personas\n🎪 Servicios: ${sels}\n\n💰 Rango estimado: $${mn.toLocaleString('es-MX')} – $${mx.toLocaleString('es-MX')} MXN\n\nEste precio incluye el uso del espacio con iluminación, área de bar y pista de baile${qSvcs.includes('catering')?' · Menú personalizado de 3 tiempos':''}${qSvcs.includes('decoracion')?' · Decoración floral y temática':''}${qSvcs.includes('musica')?' · DJ profesional toda la noche':''}.\n\n✨ Recomendación: ¡Reserva con 3 meses de anticipación para asegurar tu fecha!\n\nUn coordinador te contactará pronto para afinar los detalles. ¡Será un placer hacer realidad tu celebración! 🌺`
-  },1400)
-}
-function qReset(){qType='';qSvcs=[];document.querySelectorAll('.q-chip').forEach(b=>b.classList.remove('sel'));document.getElementById('qBtn0').disabled=true;qGoStep(0)}
 
-/* ── TESTIMONIALS ── */
-const TESTIS=[
-  {text:'"Casino Bambú superó todas nuestras expectativas. El jardín estaba absolutamente mágico con las luces colgantes, y el equipo de coordinación estuvo atento a cada detalle. Fue exactamente la boda que siempre soñé."',name:'Valeria & Rodrigo',ev:'Boda · Marzo 2025',i:'V'},
-  {text:'"Mi quinceañera fue perfecta. El espacio de bambú le dio un toque único que nadie más tenía. Mis invitados no paraban de hablar del lugar toda la noche. Un espacio que te hace sentir especial desde que llegas."',name:'Sofía Martínez',ev:'Quinceañera · Febrero 2025',i:'S'},
-  {text:'"Organizamos el evento corporativo de fin de año aquí y fue un éxito total. El ambiente es completamente diferente a cualquier salón convencional. La naturaleza y la elegancia en perfecta armonía — nuestros clientes quedaron impresionados."',name:'Carlos Vega',ev:'Evento Corporativo · Diciembre 2024',i:'C'},
-]
-let tIdx=0,tAnim=false
-const tDots=document.getElementById('tDots')
-TESTIS.forEach((_,i)=>{const b=document.createElement('button');b.className='t-dot'+(i===0?' active':'');b.onclick=()=>goTesti(i);tDots.appendChild(b)})
-function renderTesti(){const t=TESTIS[tIdx];document.getElementById('tText').textContent=t.text;document.getElementById('tAvatar').textContent=t.i;document.getElementById('tName').textContent=t.name;document.getElementById('tEv').textContent=t.ev;tDots.querySelectorAll('.t-dot').forEach((d,j)=>d.classList.toggle('active',j===tIdx))}
-renderTesti()
-function goTesti(i){
-  if(tAnim||i===tIdx)return;tAnim=true
-  const el=[document.getElementById('tText'),document.getElementById('tAuthor')]
-  el.forEach(e=>e.style.opacity=0)
-  setTimeout(()=>{tIdx=i;renderTesti();el.forEach(e=>e.style.opacity=1);tAnim=false},250)
-}
-function tStep(d){goTesti((tIdx+d+TESTIS.length)%TESTIS.length)}
+// ── Quote generation (simulated for HTML preview)
+function generateQuote() {
+  const btn = document.getElementById('generateBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Generando...';
 
-/* ── CONTACT ── */
-async function cSubmit(e){
-  e.preventDefault()
-  const btn=document.getElementById('cBtn')
-  btn.disabled=true;btn.innerHTML='<span class="spinner"></span> Enviando...'
-  await new Promise(r=>setTimeout(r,1200))
-  document.getElementById('cForm').style.display='none'
-  document.getElementById('cSuccess').style.display='block'
-}
-function cReset(){document.getElementById('cForm').style.display='block';document.getElementById('cSuccess').style.display='none';document.getElementById('cForm').reset();const b=document.getElementById('cBtn');b.disabled=false;b.innerHTML='📩 Enviar Solicitud'}
+  const guests = document.getElementById('guestsInput').value || '100';
+  const date = document.getElementById('dateInput').value || 'Por definir';
+  const eventLabels = { boda:'Boda', xv:'Quinceañera', graduacion:'Graduación', fiesta:'Fiesta Privada', corporativo:'Corporativo', bautizo:'Bautizo' };
+  const serviceLabels = { salon:'Salón', catering:'Catering', decoracion:'Decoración', musica:'Música/DJ', fotografia:'Fotografía', coordinacion:'Coordinación' };
+  const evLabel = eventLabels[eventType] || 'Evento';
+  const svcList = selectedServices.map(s => serviceLabels[s] || s);
 
-/* ── SCROLL REVEAL ── */
-const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.07})
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el))
+  setTimeout(() => {
+    const base = { boda: 45000, xv: 35000, graduacion: 28000, fiesta: 25000, corporativo: 40000, bautizo: 20000 };
+    const guestMult = Math.ceil(parseInt(guests) / 50) * 0.25 + 0.75;
+    const basePrice = (base[eventType] || 30000) * guestMult;
+    const svcPrice = svcList.length * 8000;
+    const min = Math.round((basePrice + svcPrice) / 1000) * 1000;
+    const max = Math.round(min * 1.35 / 1000) * 1000;
+
+    document.getElementById('quoteResult').innerHTML =
+      `✨ <strong>Estimación para tu ${evLabel}</strong>\n\n` +
+      `👥 ${guests} invitados · 📅 ${date}\n` +
+      (svcList.length ? `📋 Servicios: ${svcList.join(', ')}\n` : '') +
+      `\n💰 <strong>Rango estimado: $${min.toLocaleString()} – $${max.toLocaleString()} MXN</strong>\n\n` +
+      `Este presupuesto incluye el uso del espacio, mobiliario básico y coordinación general. ` +
+      `Te recomendamos agendar una visita para conocer el venue y recibir una cotización detallada sin compromiso. 🎋\n\n` +
+      `¡Un coordinador de Casino Bambú estará encantado de atenderte!`;
+
+    goStep(3);
+    btn.disabled = false;
+    btn.innerHTML = '✦ Obtener Cotización';
+  }, 1800);
+}
+
+function resetQuote() {
+  eventType = ''; selectedServices = [];
+  document.querySelectorAll('#eventChips .quote-chip, #serviceChips .quote-chip').forEach(c => c.classList.remove('selected'));
+  document.getElementById('guestsInput').value = '';
+  document.getElementById('dateInput').value = '';
+  document.getElementById('nextBtn0').disabled = true;
+  goStep(0);
+}
+
+// ── Contact form
+function submitContact(e) {
+  e.preventDefault();
+  const btn = document.getElementById('contactSubmitBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Enviando...';
+  setTimeout(() => {
+    document.getElementById('contactFormWrap').innerHTML =
+      `<div style="text-align:center;padding:60px 40px">
+        <div style="font-size:56px;margin-bottom:20px">🎉</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:var(--dark-text);margin-bottom:12px">¡Mensaje enviado!</h3>
+        <p style="font-size:15px;color:var(--mid-text);font-weight:300;line-height:1.7">Gracias por contactar a Casino Bambú. Un coordinador se pondrá en contacto contigo en menos de 24 horas.</p>
+      </div>`;
+  }, 1400);
+}
 </script>
 </body>
 </html>

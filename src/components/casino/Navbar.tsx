@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const LINKS = [
-  { href: '#nosotros',    label: 'Nosotros'  },
-  { href: '#espacios',    label: 'Espacios'  },
-  { href: '#eventos',     label: 'Eventos'   },
-  { href: '#galeria',     label: 'Galería'   },
-  { href: '#cotizador',   label: 'Cotizar'   },
-  { href: '#contacto',    label: 'Contacto', cta: true },
+  { href: '#nosotros',  label: 'Nosotros'  },
+  { href: '#espacios',  label: 'Espacios'  },
+  { href: '#eventos',   label: 'Eventos'   },
+  { href: '#galeria',   label: 'Galería'   },
+  { href: '#cotizador', label: 'Cotizar'   },
+  { href: '#contacto',  label: 'Contacto', cta: true },
 ];
 
 export default function Navbar() {
@@ -28,9 +28,17 @@ export default function Navbar() {
   return (
     <>
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-        <a href="#inicio" className="nav-logo" onClick={e => { e.preventDefault(); handleLink('#inicio'); }}>
-          <div className="nav-logo-icon">🎋</div>
-          Casino Bambú
+        <a
+          href="#inicio"
+          className="nav-logo"
+          onClick={e => { e.preventDefault(); handleLink('#inicio'); }}
+        >
+          <div className="nav-logo-icon" style={{ fontSize: 32 }}>🎋</div>
+          <div className="nav-logo-text">
+            <span className="nav-logo-small">Casino</span>
+            <span className="nav-logo-main">Bambú</span>
+            <span className="nav-logo-sub">Nayarit · México</span>
+          </div>
         </a>
 
         <ul className="nav-links">
@@ -38,7 +46,8 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className={l.cta ? 'nav-cta' : ''}
+                className={l.cta ? 'btn-green' : ''}
+                style={l.cta ? { padding: '10px 22px', fontSize: 11, letterSpacing: 2 } : {}}
                 onClick={e => { e.preventDefault(); handleLink(l.href); }}
               >
                 {l.label}
@@ -49,8 +58,8 @@ export default function Navbar() {
 
         <button className="nav-burger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menú">
           {menuOpen
-            ? <X size={24} color="var(--light-text)" />
-            : <Menu size={24} color="var(--light-text)" />
+            ? <X size={24} color="var(--dark-text)" />
+            : <Menu size={24} color="var(--dark-text)" />
           }
         </button>
       </nav>

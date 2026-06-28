@@ -1,111 +1,77 @@
-import { useEffect, useRef } from 'react';
-import { ChevronDown } from 'lucide-react';
-
-interface Particle {
-  x: number; y: number;
-  vx: number; vy: number;
-  r: number;
-  alpha: number; alphaDir: number;
-  hue: number;
-}
-
 export default function Hero() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const cv = canvasRef.current;
-    if (!cv) return;
-    const ctx = cv.getContext('2d');
-    if (!ctx) return;
-
-    const resize = () => { cv.width = window.innerWidth; cv.height = window.innerHeight; };
-    resize();
-    window.addEventListener('resize', resize);
-
-    /* Warm firefly particles — like string lights */
-    const particles: Particle[] = Array.from({ length: 80 }, () => ({
-      x: Math.random() * cv.width,
-      y: Math.random() * cv.height,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.2 - 0.05,
-      r: Math.random() * 2.5 + 0.8,
-      alpha: Math.random(),
-      alphaDir: Math.random() > 0.5 ? 0.006 : -0.006,
-      hue: 35 + Math.random() * 25,   /* warm gold to amber */
-    }));
-
-    let animId: number;
-    const draw = () => {
-      ctx.clearRect(0, 0, cv.width, cv.height);
-      for (const p of particles) {
-        p.x += p.vx; p.y += p.vy;
-        p.alpha += p.alphaDir;
-        if (p.alpha >= 1 || p.alpha <= 0.05) p.alphaDir *= -1;
-        if (p.x < 0) p.x = cv.width;
-        if (p.x > cv.width) p.x = 0;
-        if (p.y < 0) p.y = cv.height;
-        if (p.y > cv.height) p.y = 0;
-
-        const grd = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 6);
-        grd.addColorStop(0, `hsla(${p.hue},90%,72%,${p.alpha})`);
-        grd.addColorStop(1, `hsla(${p.hue},90%,72%,0)`);
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r * 6, 0, Math.PI * 2);
-        ctx.fillStyle = grd;
-        ctx.fill();
-      }
-      animId = requestAnimationFrame(draw);
-    };
-    draw();
-
-    return () => { cancelAnimationFrame(animId); window.removeEventListener('resize', resize); };
-  }, []);
-
-  const scroll = () => document.getElementById('nosotros')?.scrollIntoView({ behavior: 'smooth' });
+  const scroll = (id: string) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
     <section id="inicio" className="hero">
-      <div className="hero-bg" />
-      <div className="hero-bg-overlay" />
-      <canvas ref={canvasRef} id="hero-canvas" />
+      {/* LEFT — content */}
+      <div className="hero-left">
+        {/* Botanical leaf top-left */}
+        <div className="leaf-deco leaf-tl" style={{
+          background: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 280\'%3E%3Cellipse cx=\'100\' cy=\'140\' rx=\'70\' ry=\'130\' fill=\'%230E4A42\' opacity=\'.6\'/%3E%3Cellipse cx=\'100\' cy=\'140\' rx=\'40\' ry=\'120\' fill=\'none\' stroke=\'%230E4A42\' stroke-width=\'1\' opacity=\'.4\'/%3E%3Cline x1=\'100\' y1=\'20\' x2=\'100\' y2=\'260\' stroke=\'%230E4A42\' stroke-width=\'1.5\' opacity=\'.5\'/%3E%3C/svg%3E") center/contain no-repeat',
+        }} />
 
-      <div className="hero-content">
-        <div className="hero-eyebrow">Nayarit · México</div>
+        <span className="hero-eyebrow">Salón de Eventos · Nayarit, México</span>
 
         <h1 className="hero-title">
-          Casino <em>Bambú</em>
+          Casino
+          <em>Bambú</em>
         </h1>
 
-        <p className="hero-subtitle">Donde cada celebración se convierte en recuerdo eterno</p>
+        <div className="hero-divider" />
 
         <p className="hero-desc">
-          Un espacio rústico y elegante rodeado de naturaleza, diseñado para dar vida
-          a tus momentos más especiales. Bodas, quinceañeras, graduaciones y más.
+          Un espacio donde la naturaleza, la elegancia y el calor humano
+          se fusionan para crear celebraciones únicas e irrepetibles.
+          Bodas, quinceañeras, graduaciones y más.
         </p>
 
         <div className="hero-btns">
-          <a
-            href="#contacto"
-            className="btn-primary"
-            onClick={e => { e.preventDefault(); document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' }); }}
+          <button
+            className="btn-green"
+            onClick={() => scroll('cotizador')}
           >
-            ✦ Reservar Fecha
-          </a>
-          <a
-            href="#galeria"
-            className="btn-secondary"
-            onClick={e => { e.preventDefault(); document.getElementById('galeria')?.scrollIntoView({ behavior: 'smooth' }); }}
+            ✦ Cotizar Evento
+          </button>
+          <button
+            className="btn-outline-green"
+            onClick={() => scroll('galeria')}
           >
             Ver Galería
-          </a>
+          </button>
+        </div>
+
+        {/* Stats row */}
+        <div style={{ display: 'flex', gap: 40, marginTop: 52, paddingTop: 32, borderTop: '1px solid var(--border)' }}>
+          {[['200+', 'Cap. máxima'], ['3', 'Espacios únicos'], ['100%', 'Personalizado']].map(([num, label]) => (
+            <div key={label}>
+              <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 28, fontWeight: 600, color: 'var(--green)', lineHeight: 1 }}>{num}</div>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', color: 'var(--muted)', marginTop: 4 }}>{label}</div>
+            </div>
+          ))}
         </div>
       </div>
 
-      <button className="hero-scroll" onClick={scroll} aria-label="Scroll">
-        <span>Explorar</span>
-        <div className="hero-scroll-line" />
-        <ChevronDown size={14} />
-      </button>
+      {/* RIGHT — venue photo */}
+      <div className="hero-right">
+        <img src="/venue-hero.png" alt="Casino Bambú — Salón principal" className="space-card-img" />
+        {/* Overlay gradient */}
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(180deg, rgba(14,74,66,0.15) 0%, transparent 40%)',
+          pointerEvents: 'none',
+        }} />
+        {/* Floating tag */}
+        <div style={{
+          position: 'absolute', bottom: 32, right: 32,
+          background: 'rgba(249,246,241,0.92)', backdropFilter: 'blur(16px)',
+          border: '1px solid var(--border)', borderRadius: 'var(--r)',
+          padding: '14px 20px',
+        }}>
+          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 3, textTransform: 'uppercase', color: 'var(--green3)', marginBottom: 4 }}>Jardín Principal</div>
+          <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, color: 'var(--dark-text)' }}>Hasta 200 personas</div>
+        </div>
+      </div>
     </section>
   );
 }
