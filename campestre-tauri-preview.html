@@ -1,741 +1,794 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Salón Campestre Tauri — Xalisco, Nayarit</title>
-<meta name="description" content="Salón Campestre Tauri. Hasta 150 personas. Xalisco, Nayarit. 311 350 40 89" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<meta name="description" content="Salón Campestre Tauri. Celebra bodas, quinceañeras, graduaciones y más. Hasta 150 personas. Frente a UT Xalisco. Tel: 311 350 40 89"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 
 :root {
-  --ink:   #0D0A07;
-  --gold:  #C8952A;
-  --gold2: #E5B84A;
-  --cream: #F5EDD5;
-  --muted: rgba(245,237,213,.5);
-  --dim:   rgba(245,237,213,.25);
+  --green:   #1B4A38;
+  --green2:  #2A6B52;
+  --green3:  #3D8B6E;
+  --gold:    #C8952A;
+  --gold2:   #E0B04A;
+  --cream:   #F7F2E8;
+  --cream2:  #EDE5D0;
+  --white:   #FFFFFF;
+  --dark:    #141414;
+  --mid:     #4A4A4A;
+  --muted:   #888;
+  --border:  #E5DDD0;
+  --r:       10px;
+  --shadow:  0 2px 20px rgba(0,0,0,.08);
+  --shadow2: 0 8px 40px rgba(0,0,0,.12);
 }
 
-html { scroll-behavior: smooth; }
-body { background: var(--ink); color: var(--cream); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
-/* ── NAV ─────────────────────────────── */
+/* ── NAV ── */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  padding: 24px 48px;
-  display: flex; align-items: center; justify-content: space-between;
-  background: linear-gradient(180deg, rgba(13,10,7,.85) 0%, transparent 100%);
+  position: sticky; top: 0; z-index: 100;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center;
+  padding: 0 48px; height: 72px; gap: 40px;
 }
 .nav-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 20px; font-weight: 400; letter-spacing: 1px;
-  color: var(--cream); text-decoration: none;
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; flex-shrink: 0;
 }
-.nav-logo span { color: var(--gold); font-style: italic; }
-.nav-links { display: flex; align-items: center; gap: 36px; }
+.nav-logo-text { line-height: 1.2; }
+.nav-logo-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--green);
+}
+.nav-logo-sub {
+  font-size: 9px; font-weight: 500; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--muted);
+}
+.nav-links {
+  display: flex; gap: 28px; list-style: none;
+  flex: 1; justify-content: center;
+}
 .nav-links a {
-  font-size: 12px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase;
-  color: var(--muted); text-decoration: none; transition: color .2s;
+  font-size: 13px; font-weight: 500; color: var(--mid);
+  text-decoration: none; letter-spacing: .4px;
+  transition: color .2s; padding-bottom: 2px;
+  border-bottom: 1.5px solid transparent;
 }
-.nav-links a:hover { color: var(--cream); }
-.nav-tel {
-  font-size: 13px; font-weight: 500; color: var(--gold);
-  text-decoration: none; border-bottom: 1px solid rgba(200,149,42,.4);
-  padding-bottom: 2px; transition: border-color .2s;
+.nav-links a:hover, .nav-links a.active {
+  color: var(--green); border-bottom-color: var(--green);
 }
-.nav-tel:hover { border-color: var(--gold); }
+.nav-cta {
+  flex-shrink: 0;
+  display: flex; align-items: center; gap: 8px;
+  background: var(--green); color: white;
+  padding: 10px 20px; border-radius: var(--r);
+  font-size: 13px; font-weight: 600; letter-spacing: .4px;
+  text-decoration: none; transition: background .2s; white-space: nowrap;
+}
+.nav-cta:hover { background: var(--green2); }
 
-/* ── HERO — full screen ──────────────── */
+/* ── HERO ── */
 .hero {
-  height: 100vh; position: relative; overflow: hidden;
+  display: grid; grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 72px); max-height: 820px; min-height: 560px;
 }
-.hero-bg {
-  position: absolute; inset: 0;
-  background-image: url(tauri-wide.png);
-  background-size: cover; background-position: center;
-  transform: scale(1.04);
-  transition: transform 12s ease;
-}
-.hero-bg.loaded { transform: scale(1); }
-.hero-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(13,10,7,.45) 0%,
-    rgba(13,10,7,.05) 40%,
-    rgba(13,10,7,.05) 60%,
-    rgba(13,10,7,.80) 100%
-  );
-}
-.hero-content {
-  position: absolute; bottom: 80px; left: 64px; right: 64px;
-  display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;
-}
-.hero-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(52px, 7vw, 100px);
-  font-weight: 300; line-height: 1; color: var(--cream);
-}
-.hero-title em { font-style: italic; color: var(--gold2); display: block; }
-.hero-right-info { text-align: right; flex-shrink: 0; }
-.hero-eyebrow {
-  font-size: 11px; font-weight: 400; letter-spacing: 4px; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 12px; display: block;
-}
-.hero-detail {
-  font-size: 14px; font-weight: 300; color: var(--muted); line-height: 1.8; margin-bottom: 28px;
-}
-.btn-ghost {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 14px 28px; border: 1px solid rgba(245,237,213,.4); border-radius: 50px;
-  font-size: 13px; font-weight: 500; letter-spacing: 1px; color: var(--cream);
-  text-decoration: none; transition: all .25s; backdrop-filter: blur(8px);
-  background: rgba(245,237,213,.06);
-}
-.btn-ghost:hover { background: rgba(245,237,213,.14); border-color: var(--cream); }
-.btn-gold {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 14px 28px; border-radius: 50px;
-  font-size: 13px; font-weight: 500; letter-spacing: 1px; color: var(--ink);
-  text-decoration: none; background: var(--gold); transition: background .2s;
-}
-.btn-gold:hover { background: var(--gold2); }
-
-/* scroll indicator */
-.scroll-hint {
-  position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 6px;
-  font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--dim);
-  animation: bob 2s ease-in-out infinite;
-}
-.scroll-hint::after { content:''; width: 1px; height: 40px; background: var(--dim); }
-@keyframes bob { 0%,100%{ transform: translateX(-50%) translateY(0); } 50%{ transform: translateX(-50%) translateY(6px); } }
-
-/* ── PULL QUOTE ──────────────────────── */
-.pull-quote {
-  padding: 120px 64px;
-  display: flex; align-items: center; justify-content: center;
-  text-align: center;
-}
-.pull-quote blockquote {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 4vw, 54px);
-  font-weight: 300; font-style: italic; line-height: 1.4;
-  color: var(--cream); max-width: 900px;
-}
-.pull-quote blockquote em { color: var(--gold2); font-style: normal; }
-.pull-quote blockquote cite {
-  display: block; font-family: 'DM Sans', sans-serif;
-  font-size: 12px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase;
-  color: var(--gold); font-style: normal; margin-top: 32px;
-}
-
-/* ── FULL-BLEED PHOTO ROWS ───────────── */
-.photo-row {
-  display: grid; height: 80vh; min-height: 500px;
-}
-.photo-row.split { grid-template-columns: 55fr 45fr; }
-.photo-row.split-rev { grid-template-columns: 45fr 55fr; }
-.photo-row.trio { grid-template-columns: 1fr 1fr 1fr; height: 60vh; }
-
-.photo-panel {
-  position: relative; overflow: hidden; cursor: default;
-}
-.photo-panel-img {
-  width: 100%; height: 100%;
-  background-size: cover; background-position: center;
-  transition: transform .8s cubic-bezier(.25,.46,.45,.94);
-}
-.photo-panel:hover .photo-panel-img { transform: scale(1.04); }
-
-.photo-caption {
-  position: absolute;
-  background: var(--ink);
-  padding: 28px 32px;
-}
-.photo-caption.bottom-left  { bottom: 0; left: 0; }
-.photo-caption.bottom-right { bottom: 0; right: 0; }
-.photo-caption.top-right    { top: 0; right: 0; }
-.photo-caption-tag {
-  font-size: 10px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 6px;
-}
-.photo-caption-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 24px; font-weight: 400; color: var(--cream); line-height: 1.2;
-}
-
-.text-panel {
-  background: var(--ink);
+.hero-left {
+  padding: 64px 56px 64px 64px;
   display: flex; flex-direction: column; justify-content: center;
-  padding: 64px 56px;
+  position: relative; overflow: hidden; background: var(--white);
 }
-.text-panel-eyebrow {
-  font-size: 11px; font-weight: 400; letter-spacing: 4px; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 20px;
+.hero-leaf {
+  position: absolute; top: -30px; left: -30px;
+  width: 300px; opacity: .06; pointer-events: none;
 }
-.text-panel-title {
+.hero-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--green3);
+  margin-bottom: 20px; position: relative; z-index: 1;
+}
+.hero-h1 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 700; line-height: 1.1;
+  color: var(--dark); position: relative; z-index: 1; margin-bottom: 8px;
+}
+.hero-h1 em {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(32px, 3.5vw, 52px); font-weight: 300; line-height: 1.25;
-  color: var(--cream); margin-bottom: 24px;
+  font-style: italic; font-weight: 400;
+  color: var(--green); font-size: 1.08em;
 }
-.text-panel-title em { font-style: italic; color: var(--gold2); }
-.text-panel-body {
-  font-size: 15px; font-weight: 300; line-height: 1.9; color: var(--muted);
-  margin-bottom: 36px;
+.hero-desc {
+  font-size: 15px; color: var(--mid); line-height: 1.75;
+  margin: 24px 0 36px; max-width: 380px;
+  position: relative; z-index: 1;
 }
-.text-panel-stat {
-  display: flex; gap: 40px; padding-top: 28px;
-  border-top: 1px solid rgba(245,237,213,.1);
+.hero-btns {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  position: relative; z-index: 1;
 }
-.stat-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 42px; font-weight: 300; color: var(--gold2); line-height: 1;
+.btn-primary {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--green); color: white;
+  padding: 13px 24px; border-radius: var(--r);
+  font-size: 14px; font-weight: 600;
+  text-decoration: none; border: none; cursor: pointer;
+  transition: background .2s; white-space: nowrap;
 }
-.stat-lbl {
-  font-size: 11px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--dim); margin-top: 4px;
+.btn-primary:hover { background: var(--green2); }
+.btn-outline {
+  display: flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--green);
+  padding: 13px 24px; border-radius: var(--r);
+  font-size: 14px; font-weight: 600;
+  text-decoration: none; border: 1.5px solid var(--green);
+  cursor: pointer; transition: all .2s; white-space: nowrap;
+}
+.btn-outline:hover { background: var(--green); color: white; }
+.hero-right { position: relative; overflow: hidden; }
+.hero-img {
+  width: 100%; height: 100%;
+  background-image: url(tauri-wide.png);
+  background-size: cover; background-position: center 30%;
 }
 
-/* ── MOSAIC GALLERY ──────────────────── */
-.mosaic {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 340px 340px;
-  gap: 3px;
+/* ── FEATURES BAR ── */
+.features-wrap {
+  background: white; padding: 0 64px; position: relative; z-index: 10;
 }
-.mosaic-item {
-  position: relative; overflow: hidden;
+.features-inner {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  border: 1px solid var(--border); border-radius: var(--r);
+  box-shadow: var(--shadow2); background: white; overflow: hidden;
+  transform: translateY(-40px);
 }
-.mosaic-item.wide { grid-column: span 2; }
-.mosaic-item.tall { grid-row: span 2; }
-.mosaic-img {
+.feature-item {
+  padding: 28px 22px; border-right: 1px solid var(--border);
+  display: flex; align-items: flex-start; gap: 14px;
+}
+.feature-item:last-child { border-right: none; }
+.feature-icon {
+  width: 42px; height: 42px; flex-shrink: 0;
+  background: var(--cream); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 19px;
+}
+.feature-title { font-size: 13px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+.feature-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* ── SECTIONS ── */
+.section { padding: 80px 64px; }
+.section-cream { background: var(--cream); }
+.container { max-width: 1200px; margin: 0 auto; }
+.sec-eyebrow {
+  display: block; font-size: 11px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--green3); margin-bottom: 16px;
+}
+.sec-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 3.2vw, 42px); font-weight: 400;
+  line-height: 1.2; color: var(--dark);
+}
+.sec-title em { color: var(--green); font-style: italic; }
+.sec-desc { font-size: 15px; color: var(--mid); line-height: 1.75; }
+
+/* ── ABOUT ── */
+.about-grid {
+  display: grid; grid-template-columns: 40% 60%; gap: 64px; align-items: center;
+}
+.about-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--green); font-size: 13px; font-weight: 600;
+  text-decoration: none; margin-top: 24px;
+  border-bottom: 1px solid transparent; transition: border-color .2s;
+}
+.about-link:hover { border-bottom-color: var(--green); }
+.about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.about-card {
+  background: white; border: 1px solid var(--border); border-radius: var(--r);
+  padding: 24px; display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: 10px; box-shadow: var(--shadow);
+}
+.about-card-icon {
+  font-size: 26px; background: var(--cream); width: 54px; height: 54px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+}
+.about-card-title { font-size: 13px; font-weight: 700; color: var(--dark); }
+.about-card-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* ── SPACES ── */
+.spaces-eyebrow-row {
+  display: flex; align-items: center; gap: 20px;
+  justify-content: center; margin-bottom: 48px;
+}
+.spaces-eyebrow-row::before, .spaces-eyebrow-row::after {
+  content: ''; flex: 1; max-width: 120px; height: 1px; background: var(--gold);
+}
+.spaces-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.space-card {
+  border-radius: var(--r); overflow: hidden;
+  height: 280px; position: relative; cursor: pointer;
+}
+.space-img {
   width: 100%; height: 100%;
   background-image: url(tauri-gallery.png);
   background-size: 400% 200%;
-  background-repeat: no-repeat;
-  transition: transform .6s ease;
+  transition: transform .5s;
 }
-.mosaic-item:hover .mosaic-img { transform: scale(1.06); }
-.mosaic-lbl {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  padding: 40px 20px 16px;
-  background: linear-gradient(0deg, rgba(13,10,7,.85) 0%, transparent 100%);
-  font-size: 11px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase;
-  color: rgba(245,237,213,.7);
-  opacity: 0; transition: opacity .3s;
-}
-.mosaic-item:hover .mosaic-lbl { opacity: 1; }
-
-/* ── SERVICES STRIP ──────────────────── */
-.services {
-  padding: 100px 64px;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
-}
-.services-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(36px, 4vw, 60px); font-weight: 300; line-height: 1.2;
-  color: var(--cream); margin-bottom: 12px;
-}
-.services-title em { font-style: italic; color: var(--gold2); }
-.services-sub {
-  font-size: 14px; font-weight: 300; color: var(--muted); line-height: 1.8;
-  margin-bottom: 40px;
-}
-.service-list { display: flex; flex-direction: column; gap: 0; }
-.service-item {
-  display: flex; align-items: center; gap: 20px;
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(245,237,213,.08);
-}
-.service-item:first-child { border-top: 1px solid rgba(245,237,213,.08); }
-.service-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 13px; font-weight: 300; color: var(--gold);
-  width: 24px; flex-shrink: 0;
-}
-.service-name {
-  font-size: 15px; font-weight: 400; color: var(--cream); flex: 1;
-}
-.service-detail {
-  font-size: 12px; font-weight: 300; color: var(--muted);
-}
-
-/* ── PANORAMIC BREAK ─────────────────── */
-.panoramic-break {
-  height: 70vh; min-height: 420px;
-  position: relative; overflow: hidden;
-}
-.panoramic-break-img {
-  width: 100%; height: 100%;
-  background-image: url(tauri-panoramic.png);
-  background-size: cover; background-position: center 30%;
-}
-.panoramic-break-overlay {
+.space-card:hover .space-img { transform: scale(1.05); }
+.space-overlay {
   position: absolute; inset: 0;
-  background: rgba(13,10,7,.45);
+  background: linear-gradient(0deg, rgba(10,30,20,.78) 0%, rgba(10,30,20,.18) 55%, transparent 100%);
+}
+.space-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px; }
+.space-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--gold2); margin-bottom: 4px;
+}
+.space-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; color: white; font-weight: 400; margin-bottom: 8px;
+}
+.space-cap { font-size: 12px; color: rgba(255,255,255,.65); margin-bottom: 12px; }
+.space-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: white; color: var(--green); padding: 7px 16px; border-radius: 50px;
+  font-size: 11px; font-weight: 700; border: none; cursor: pointer;
+  text-transform: uppercase; letter-spacing: 1px; transition: background .2s;
+}
+.space-btn:hover { background: var(--cream); }
+
+/* ── EVENT TYPES ── */
+.events-types {
+  display: flex; justify-content: center;
+  border: 1px solid var(--border); border-radius: var(--r);
+  overflow: hidden; background: white; box-shadow: var(--shadow);
+}
+.event-type-item {
+  flex: 1; padding: 22px 10px;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  border-right: 1px solid var(--border); text-align: center;
+  transition: background .2s; cursor: default;
+}
+.event-type-item:last-child { border-right: none; }
+.event-type-item:hover { background: var(--cream); }
+.event-type-icon { font-size: 22px; }
+.event-type-label { font-size: 12px; font-weight: 600; color: var(--mid); }
+
+/* ── GALLERY ── */
+.gallery-layout {
+  display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: start;
+}
+.gallery-strip { display: flex; gap: 10px; overflow: hidden; }
+.gallery-item {
+  flex-shrink: 0; border-radius: var(--r); overflow: hidden;
+  position: relative; cursor: pointer;
+}
+.gallery-img {
+  width: 100%; height: 100%;
+  background-image: url(tauri-gallery.png);
+  background-size: 400% 200%;
+  transition: transform .4s;
+}
+.gallery-item:hover .gallery-img { transform: scale(1.06); }
+
+/* ── CONTACT + TESTIMONIALS ── */
+.contact-layout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+}
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+.form-full { grid-column: 1 / -1; }
+.form-input {
+  width: 100%; padding: 12px 16px;
+  border: 1px solid var(--border); border-radius: var(--r);
+  font-size: 13px; font-family: inherit; color: var(--dark);
+  background: var(--cream); outline: none; transition: border-color .2s;
+}
+.form-input:focus { border-color: var(--green3); background: white; }
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer;
+}
+.testimonials { display: flex; flex-direction: column; gap: 16px; }
+.testimonial-card {
+  background: var(--cream); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 22px;
+}
+.testimonial-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; margin-bottom: 8px; }
+.testimonial-text {
+  font-size: 13px; color: var(--mid); line-height: 1.65;
+  margin-bottom: 12px; font-style: italic;
+}
+.testimonial-author { font-size: 12px; font-weight: 700; color: var(--dark); }
+
+/* ── CTA BANNER ── */
+.cta-banner {
+  background: var(--green); padding: 48px 64px;
+  display: flex; align-items: center; justify-content: space-between; gap: 32px;
+}
+.cta-banner-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 2.5vw, 32px); font-weight: 400;
+  color: white; line-height: 1.3;
+}
+.cta-banner-right { display: flex; align-items: center; gap: 24px; flex-shrink: 0; }
+.cta-contact { display: flex; flex-direction: column; gap: 4px; }
+.cta-phone {
+  color: white; font-size: 15px; font-weight: 600;
+  text-decoration: none; display: flex; align-items: center; gap: 8px;
+}
+.cta-addr { color: rgba(255,255,255,.55); font-size: 12px; }
+.cta-btn {
+  background: white; color: var(--green); padding: 13px 24px; border-radius: var(--r);
+  font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap;
+  transition: background .2s;
+}
+.cta-btn:hover { background: var(--cream); }
+
+/* ── FOOTER ── */
+footer { background: #0F2D22; padding: 56px 64px 32px; }
+.footer-top {
+  display: grid; grid-template-columns: 220px 1fr 1fr 1fr 180px;
+  gap: 40px; margin-bottom: 48px;
+}
+.footer-logo-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: white; margin-bottom: 4px;
+}
+.footer-logo-sub {
+  font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+}
+.footer-social { display: flex; gap: 10px; margin-top: 20px; }
+.footer-social a {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,.1);
   display: flex; align-items: center; justify-content: center;
+  font-size: 15px; text-decoration: none; transition: background .2s;
 }
-.panoramic-break-text { text-align: center; }
-.panoramic-break-sub {
-  font-size: 11px; font-weight: 400; letter-spacing: 4px; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 16px;
+.footer-social a:hover { background: rgba(255,255,255,.2); }
+.footer-col-title {
+  font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 16px;
 }
-.panoramic-break-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(40px, 6vw, 80px); font-weight: 300; color: var(--cream);
-  line-height: 1.1;
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col a {
+  color: rgba(255,255,255,.6); font-size: 13px;
+  text-decoration: none; transition: color .2s;
 }
-.panoramic-break-title em { font-style: italic; color: var(--gold2); }
-
-/* ── CONTACT ─────────────────────────── */
-.contact-section {
-  padding: 120px 64px;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+.footer-col a:hover { color: white; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1); padding-top: 24px;
+  display: flex; align-items: center; justify-content: space-between;
 }
-.contact-left {}
-.contact-eyebrow {
-  font-size: 11px; font-weight: 400; letter-spacing: 4px; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 20px;
-}
-.contact-big {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(36px, 5vw, 70px); font-weight: 300; line-height: 1.1;
-  color: var(--cream); margin-bottom: 32px;
-}
-.contact-big em { font-style: italic; color: var(--gold2); }
-.contact-tel {
-  display: flex; align-items: center; gap: 16px; margin-bottom: 16px;
-}
-.contact-tel a {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(32px, 4vw, 52px); font-weight: 300;
-  color: var(--cream); text-decoration: none;
-  border-bottom: 1px solid rgba(200,149,42,.4); padding-bottom: 4px;
-  transition: border-color .2s;
-}
-.contact-tel a:hover { border-color: var(--gold); }
-.contact-row {
-  display: flex; align-items: flex-start; gap: 16px;
-  padding: 20px 0; border-bottom: 1px solid rgba(245,237,213,.08);
-}
-.contact-row:first-of-type { border-top: 1px solid rgba(245,237,213,.08); margin-top: 40px; }
-.contact-row-icon { font-size: 18px; margin-top: 2px; width: 24px; flex-shrink: 0; }
-.contact-row-lbl {
-  font-size: 10px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--dim); margin-bottom: 4px;
-}
-.contact-row-val { font-size: 15px; font-weight: 300; color: var(--muted); line-height: 1.6; }
-
-.contact-right {}
-.wa-big {
-  display: flex; align-items: center; justify-content: center; gap: 12px;
-  padding: 22px 32px; border-radius: 4px;
-  background: #25D366; color: #fff;
-  font-size: 16px; font-weight: 500; text-decoration: none;
-  transition: background .2s, transform .15s;
-  margin-bottom: 16px;
-}
-.wa-big:hover { background: #1EBD5A; transform: translateY(-2px); }
-.wa-big svg { width: 24px; height: 24px; fill: white; flex-shrink: 0; }
-
-.contact-form { margin-top: 0; }
-.cf-field { margin-bottom: 12px; }
-.cf-field input, .cf-field select, .cf-field textarea {
-  width: 100%; padding: 16px 18px;
-  background: rgba(245,237,213,.04); border: 1px solid rgba(245,237,213,.12);
-  border-radius: 4px; font-family: 'DM Sans', sans-serif; font-size: 14px;
-  color: var(--cream); outline: none; transition: border-color .2s;
-}
-.cf-field input::placeholder, .cf-field textarea::placeholder { color: var(--dim); }
-.cf-field input:focus, .cf-field select:focus, .cf-field textarea:focus {
-  border-color: var(--gold);
-}
-.cf-field select { appearance: none; }
-.cf-field select option { background: #1a1208; color: var(--cream); }
-.cf-field textarea { resize: none; height: 100px; }
-.cf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.cf-submit {
-  width: 100%; padding: 18px; margin-top: 4px;
-  background: transparent; border: 1px solid var(--gold); border-radius: 4px;
-  font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500;
-  letter-spacing: 2px; text-transform: uppercase; color: var(--gold);
-  cursor: pointer; transition: all .25s;
-}
-.cf-submit:hover { background: var(--gold); color: var(--ink); }
-
-/* ── FOOTER ──────────────────────────── */
-footer {
-  border-top: 1px solid rgba(245,237,213,.08);
-  padding: 40px 64px;
-  display: flex; align-items: center; justify-content: space-between; gap: 24px;
-  flex-wrap: wrap;
-}
-.footer-brand {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px; font-weight: 400; color: var(--cream);
-}
-.footer-brand span { color: var(--gold); font-style: italic; }
-.footer-nav { display: flex; gap: 28px; }
-.footer-nav a {
-  font-size: 12px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--dim); text-decoration: none; transition: color .2s;
-}
-.footer-nav a:hover { color: var(--cream); }
-.footer-copy { font-size: 12px; font-weight: 300; color: var(--dim); }
-
-/* ── WHATSAPP FAB ────────────────────── */
-.wa-fab {
-  position: fixed; bottom: 28px; right: 28px; z-index: 200;
-  width: 56px; height: 56px; border-radius: 50%;
-  background: #25D366;
-  display: flex; align-items: center; justify-content: center;
-  text-decoration: none; box-shadow: 0 4px 24px rgba(37,211,102,.45);
-  transition: transform .2s;
-}
-.wa-fab:hover { transform: scale(1.1); }
-.wa-fab svg { width: 28px; height: 28px; fill: white; }
-
-/* ── REVEAL ──────────────────────────── */
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s ease, transform .8s ease; }
-.reveal.visible { opacity: 1; transform: none; }
-.rd1 { transition-delay: .1s; }
-.rd2 { transition-delay: .22s; }
-.rd3 { transition-delay: .36s; }
-
-/* ── RESPONSIVE ──────────────────────── */
-@media (max-width: 1024px) {
-  nav { padding: 20px 28px; }
-  .nav-links { display: none; }
-  .hero-content { left: 28px; right: 28px; bottom: 56px; flex-direction: column; align-items: flex-start; }
-  .hero-right-info { text-align: left; }
-  .photo-row.split, .photo-row.split-rev { grid-template-columns: 1fr; height: auto; }
-  .photo-row.split .text-panel, .photo-row.split-rev .text-panel { padding: 48px 28px; }
-  .photo-row.split .photo-panel, .photo-row.split-rev .photo-panel { height: 60vw; }
-  .photo-row.trio { grid-template-columns: 1fr; height: auto; }
-  .photo-row.trio .photo-panel { height: 60vw; }
-  .mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 280px 280px 280px 280px; }
-  .mosaic-item.wide { grid-column: span 1; }
-  .pull-quote { padding: 80px 28px; }
-  .services { grid-template-columns: 1fr; padding: 72px 28px; gap: 48px; }
-  .contact-section { grid-template-columns: 1fr; padding: 80px 28px; gap: 48px; }
-  footer { padding: 32px 28px; flex-direction: column; align-items: flex-start; gap: 20px; }
-  .panoramic-break { height: 50vh; }
-}
-@media (max-width: 640px) {
-  .mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 200px); }
-  .cf-grid { grid-template-columns: 1fr; }
-}
+.footer-copy { font-size: 12px; color: rgba(255,255,255,.3); }
+.footer-palette { display: flex; gap: 8px; align-items: center; }
+.palette-dot { width: 20px; height: 20px; border-radius: 50%; }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ── NAV ── -->
 <nav>
-  <a href="#inicio" class="nav-logo">Campestre <span>Tauri</span></a>
-  <div class="nav-links">
-    <a href="#espacios">Espacios</a>
-    <a href="#galeria">Galería</a>
-    <a href="#contacto">Contacto</a>
-    <a href="tel:3113504089" class="nav-tel">311 350 40 89</a>
-  </div>
+  <a href="#inicio" class="nav-logo">
+    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="21" cy="21" r="21" fill="#EDF4F0"/>
+      <path d="M21 7C21 7 9 15 9 25C9 31.5 14.5 36 21 36C27.5 36 33 31.5 33 25C33 15 21 7 21 7Z" fill="#1B4A38" opacity=".12"/>
+      <path d="M21 11C21 11 12 18 12 26C12 30.5 16 34 21 34C26 34 30 30.5 30 26C30 18 21 11 21 11Z" fill="#1B4A38" opacity=".35"/>
+      <path d="M21 15C21 15 15 21 15 27C15 30.3 17.7 32.5 21 32.5C24.3 32.5 27 30.3 27 27C27 21 21 15 21 15Z" fill="#1B4A38"/>
+      <line x1="21" y1="16" x2="21" y2="33" stroke="#EDF4F0" stroke-width="1.4" stroke-linecap="round"/>
+      <line x1="21" y1="23" x2="17" y2="19.5" stroke="#EDF4F0" stroke-width="1" stroke-linecap="round" opacity=".7"/>
+      <line x1="21" y1="26.5" x2="25" y2="22.5" stroke="#EDF4F0" stroke-width="1" stroke-linecap="round" opacity=".7"/>
+    </svg>
+    <div class="nav-logo-text">
+      <div class="nav-logo-name">Salón Campestre Tauri</div>
+      <div class="nav-logo-sub">Xalisco · Nayarit · México</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#inicio" class="active">Inicio</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#espacios">Espacios</a></li>
+    <li><a href="#eventos">Eventos</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#cotizar">Cotizar</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a href="https://wa.me/523113504089" class="nav-cta" target="_blank">
+    📅 Agenda tu visita
+  </a>
 </nav>
 
-<!-- HERO — foto a pantalla completa -->
+<!-- ── HERO ── -->
 <section id="inicio" class="hero">
-  <div class="hero-bg" id="heroBg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1 class="hero-title">
-      Tu celebración<br />más grande.
-      <em>Aquí.</em>
+  <div class="hero-left">
+    <svg class="hero-leaf" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="90" cy="170" rx="75" ry="28" fill="#1B4A38" transform="rotate(-42 90 170)"/>
+      <ellipse cx="130" cy="120" rx="85" ry="26" fill="#1B4A38" transform="rotate(-22 130 120)"/>
+      <ellipse cx="60" cy="80" rx="65" ry="22" fill="#1B4A38" transform="rotate(-58 60 80)"/>
+      <ellipse cx="170" cy="195" rx="70" ry="24" fill="#1B4A38" transform="rotate(-8 170 195)"/>
+      <ellipse cx="40" cy="140" rx="50" ry="18" fill="#1B4A38" transform="rotate(-70 40 140)"/>
+    </svg>
+    <span class="hero-eyebrow">Salón de Eventos · Xalisco, Nayarit</span>
+    <h1 class="hero-h1">
+      Celebra momentos<br>
+      <em>inolvidables</em>
     </h1>
-    <div class="hero-right-info">
-      <span class="hero-eyebrow">Salón de Eventos · Xalisco, Nayarit</span>
-      <p class="hero-detail">Hasta 150 personas<br />Carretera Federal 200<br />Frente a UT Xalisco</p>
-      <a href="tel:3113504089" class="btn-gold">Reservar mi fecha →</a>
-    </div>
-  </div>
-  <div class="scroll-hint">Descubrir</div>
-</section>
-
-<!-- PULL QUOTE -->
-<div class="pull-quote">
-  <blockquote>
-    "No dejes que te ganen la fecha.<br />
-    Los fines de semana de <em>Tauri</em> se agotan rápido."
-    <cite>Xalisco · Nayarit · 311 350 40 89</cite>
-  </blockquote>
-</div>
-
-<!-- PHOTO ROW 1: foto grande + texto -->
-<div class="photo-row split" id="espacios">
-  <div class="photo-panel">
-    <div class="photo-panel-img" style="background-image:url(tauri-wide.png);background-position:center 40%;"></div>
-    <div class="photo-caption bottom-left">
-      <div class="photo-caption-tag">Área Principal</div>
-      <div class="photo-caption-title">Jardín & Bambú</div>
-    </div>
-  </div>
-  <div class="text-panel reveal">
-    <div class="text-panel-eyebrow">Espacio versátil</div>
-    <h2 class="text-panel-title">
-      Naturaleza<br /><em>sin renunciar</em><br />a la comodidad.
-    </h2>
-    <p class="text-panel-body">
-      Área techada con luces colgantes para hasta 150 personas,
-      jardín abierto y toda la magia campestre de Nayarit en
-      un solo lugar. Perfecto para cualquier clima y temporada.
+    <p class="hero-desc">
+      En Salón Campestre Tauri creamos experiencias únicas en espacios rodeados de naturaleza, ambiente campestre y el mejor servicio en Nayarit.
     </p>
-    <div class="text-panel-stat">
-      <div><div class="stat-num">150</div><div class="stat-lbl">Personas</div></div>
-      <div><div class="stat-num">2</div><div class="stat-lbl">Espacios</div></div>
-      <div><div class="stat-num">1</div><div class="stat-lbl">Lugar único</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- PHOTO ROW 2: texto + foto -->
-<div class="photo-row split-rev">
-  <div class="text-panel reveal">
-    <div class="text-panel-eyebrow">Cocina & Asado</div>
-    <h2 class="text-panel-title">
-      Todo para<br /><em>el asado</em><br />perfecto.
-    </h2>
-    <p class="text-panel-body">
-      Cocina equipada con refrigerador, hieleras y parrilla incluidos.
-      El rincón del asador con jardín y bugambilias es el corazón
-      de cada celebración en Tauri.
-    </p>
-    <a href="tel:3113504089" class="btn-ghost" style="align-self:flex-start;">Consultar disponibilidad</a>
-  </div>
-  <div class="photo-panel">
-    <div class="photo-panel-img" style="background-image:url(tauri-gallery.png);background-size:400% 200%;background-position:100% 100%;"></div>
-    <div class="photo-caption bottom-right">
-      <div class="photo-caption-tag">Jardín con Flores</div>
-      <div class="photo-caption-title">Rincón del Asador</div>
-    </div>
-  </div>
-</div>
-
-<!-- PHOTO TRIO -->
-<div class="photo-row trio">
-  <div class="photo-panel">
-    <div class="photo-panel-img" style="background-image:url(tauri-gallery.png);background-size:400% 200%;background-position:0% 0%;"></div>
-    <div class="photo-caption bottom-left">
-      <div class="photo-caption-tag">Interior</div>
-      <div class="photo-caption-title">Área Techada</div>
-    </div>
-  </div>
-  <div class="photo-panel">
-    <div class="photo-panel-img" style="background-image:url(tauri-gallery.png);background-size:400% 200%;background-position:66.67% 100%;"></div>
-    <div class="photo-caption bottom-left">
-      <div class="photo-caption-tag">Acceso</div>
-      <div class="photo-caption-title">El Sendero</div>
-    </div>
-  </div>
-  <div class="photo-panel">
-    <div class="photo-panel-img" style="background-image:url(tauri-gallery.png);background-size:400% 200%;background-position:100% 0%;"></div>
-    <div class="photo-caption bottom-left">
-      <div class="photo-caption-tag">Mobiliario</div>
-      <div class="photo-caption-title">Mesa Escultura</div>
-    </div>
-  </div>
-</div>
-
-<!-- FULL MOSAIC -->
-<div class="mosaic" id="galeria">
-  <!-- Fila 1 -->
-  <div class="mosaic-item wide">
-    <div class="mosaic-img" style="background-position:0% 0%;"></div>
-    <div class="mosaic-lbl">Área Techada con Luces</div>
-  </div>
-  <div class="mosaic-item">
-    <div class="mosaic-img" style="background-position:66.67% 0%;"></div>
-    <div class="mosaic-lbl">Interior Madera</div>
-  </div>
-  <div class="mosaic-item">
-    <div class="mosaic-img" style="background-position:33.33% 0%;"></div>
-    <div class="mosaic-lbl">Patio con Toldo</div>
-  </div>
-  <!-- Fila 2 -->
-  <div class="mosaic-item">
-    <div class="mosaic-img" style="background-position:0% 100%;"></div>
-    <div class="mosaic-lbl">Barra de Servicio</div>
-  </div>
-  <div class="mosaic-item">
-    <div class="mosaic-img" style="background-position:33.33% 100%;"></div>
-    <div class="mosaic-lbl">Zona Tauri</div>
-  </div>
-  <div class="mosaic-item wide">
-    <div class="mosaic-img" style="background-position:100% 100%;background-size:400% 200%;"></div>
-    <div class="mosaic-lbl">Jardín & Parrilla</div>
-  </div>
-</div>
-
-<!-- PANORAMIC BREAK -->
-<div class="panoramic-break">
-  <div class="panoramic-break-img"></div>
-  <div class="panoramic-break-overlay">
-    <div class="panoramic-break-text">
-      <div class="panoramic-break-sub">Campestre Tauri · Xalisco</div>
-      <div class="panoramic-break-title">
-        Cada detalle<br /><em>para tu mejor</em><br />momento.
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SERVICES -->
-<div class="services">
-  <div class="reveal">
-    <div class="text-panel-eyebrow">Lo que incluye</div>
-    <h2 class="services-title">Todo está<br /><em>listo para ti.</em></h2>
-    <p class="services-sub">
-      Sin rentas extras, sin sorpresas.<br />
-      Llega y celebra — el resto es nuestro.
-    </p>
-    <a href="tel:3113504089" class="btn-gold" style="align-self:flex-start;">📞 311 350 40 89</a>
-  </div>
-  <div class="reveal rd1">
-    <div class="service-list">
-      <div class="service-item">
-        <div class="service-num">01</div>
-        <div class="service-name">Área techada + jardín abierto</div>
-        <div class="service-detail">Cualquier clima</div>
-      </div>
-      <div class="service-item">
-        <div class="service-num">02</div>
-        <div class="service-name">Cocina equipada & parrilla</div>
-        <div class="service-detail">Refrigerador + hieleras</div>
-      </div>
-      <div class="service-item">
-        <div class="service-num">03</div>
-        <div class="service-name">Estacionamiento amplio</div>
-        <div class="service-detail">Sin costo extra</div>
-      </div>
-      <div class="service-item">
-        <div class="service-num">04</div>
-        <div class="service-name">Área para brincolines</div>
-        <div class="service-detail">Los niños felices</div>
-      </div>
-      <div class="service-item">
-        <div class="service-num">05</div>
-        <div class="service-name">Hasta 150 personas</div>
-        <div class="service-detail">Bodas · Quinceañeras · Fiestas</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CONTACT -->
-<section id="contacto">
-  <div class="contact-section">
-    <div class="reveal">
-      <div class="contact-eyebrow">Asegura tu fecha</div>
-      <h2 class="contact-big">
-        Hablemos<br /><em>hoy mismo.</em>
-      </h2>
-      <div class="contact-tel">
-        <a href="tel:3113504089">311 350 40 89</a>
-      </div>
-      <a href="https://wa.me/523113504089?text=Hola,%20me%20interesa%20apartar%20fecha%20en%20Salon%20Campestre%20Tauri" target="_blank" class="wa-big">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        Escribir por WhatsApp
+    <div class="hero-btns">
+      <a href="https://wa.me/523113504089" class="btn-primary" target="_blank">
+        📅 Agenda tu visita
       </a>
-      <div class="contact-row">
-        <div class="contact-row-icon">📍</div>
-        <div>
-          <div class="contact-row-lbl">Ubicación</div>
-          <div class="contact-row-val">Carretera Federal 200<br />Xalisco – Compostela<br />Frente a UT Xalisco, Nayarit</div>
-        </div>
-      </div>
-      <div class="contact-row">
-        <div class="contact-row-icon">🕐</div>
-        <div>
-          <div class="contact-row-lbl">Atención</div>
-          <div class="contact-row-val">Lun – Sáb: 9 am – 7 pm</div>
-        </div>
+      <a href="#cotizar" class="btn-outline">
+        📩 Cotiza tu evento
+      </a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img"></div>
+  </div>
+</section>
+
+<!-- ── FEATURES BAR ── -->
+<div class="features-wrap">
+  <div class="features-inner">
+    <div class="feature-item">
+      <div class="feature-icon">🏡</div>
+      <div>
+        <div class="feature-title">Cocina equipada</div>
+        <div class="feature-desc">Refrigerador, hieleras y parrilla de asado incluidos.</div>
       </div>
     </div>
-    <div class="reveal rd1">
-      <div class="contact-form">
-        <div class="cf-field">
-          <input type="text" placeholder="Tu nombre" />
+    <div class="feature-item">
+      <div class="feature-icon">🚗</div>
+      <div>
+        <div class="feature-title">Estacionamiento amplio</div>
+        <div class="feature-desc">Comodidad y seguridad para todos tus invitados.</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🎪</div>
+      <div>
+        <div class="feature-title">Área de juegos</div>
+        <div class="feature-desc">Brincolines y zona de entretenimiento familiar.</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">✨</div>
+      <div>
+        <div class="feature-title">Servicio personalizado</div>
+        <div class="feature-desc">Tu evento diseñado a tu estilo y presupuesto.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section id="nosotros" class="section" style="padding-top:56px">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <span class="sec-eyebrow">Nuestra Historia</span>
+        <h2 class="sec-title">Más que un lugar,<br>creamos <em>recuerdos.</em></h2>
+        <p class="sec-desc" style="margin-top:20px">
+          Somos un salón de eventos ubicado sobre la Carretera Federal 200, frente a la Universidad Tecnológica de Xalisco. Combinamos la belleza del campo con la elegancia y el servicio de primera. Nuestro compromiso es hacer de tu celebración un momento verdaderamente único e irrepetible.
+        </p>
+        <a href="#espacios" class="about-link">Conócenos más →</a>
+      </div>
+      <div class="about-features">
+        <div class="about-card">
+          <div class="about-card-icon">🌿</div>
+          <div class="about-card-title">Jardín & Naturaleza</div>
+          <div class="about-card-desc">Espacios al aire libre entre vegetación y ambiente campestre.</div>
         </div>
-        <div class="cf-grid">
-          <div class="cf-field">
-            <input type="tel" placeholder="WhatsApp / Teléfono" />
-          </div>
-          <div class="cf-field">
-            <input type="date" />
-          </div>
+        <div class="about-card">
+          <div class="about-card-icon">🔥</div>
+          <div class="about-card-title">Parrilla & Cocina</div>
+          <div class="about-card-desc">Parrilla de asado y cocina equipada para tu gastronomía.</div>
         </div>
-        <div class="cf-grid">
-          <div class="cf-field">
-            <select>
-              <option value="" disabled selected>Tipo de evento</option>
-              <option>Boda</option>
-              <option>Quinceañera</option>
-              <option>Graduación</option>
-              <option>Bautizo</option>
-              <option>Fiesta Infantil</option>
-              <option>Corporativo</option>
-              <option>Otro</option>
-            </select>
-          </div>
-          <div class="cf-field">
-            <select>
-              <option value="" disabled selected>Núm. de personas</option>
-              <option>Hasta 50</option>
-              <option>51 – 100</option>
-              <option>101 – 150</option>
-            </select>
-          </div>
+        <div class="about-card">
+          <div class="about-card-icon">👥</div>
+          <div class="about-card-title">Capacidad versátil</div>
+          <div class="about-card-desc">Hasta 150 personas, perfecta para cualquier tipo de evento.</div>
         </div>
-        <div class="cf-field">
-          <textarea placeholder="Cuéntanos sobre tu evento..."></textarea>
+        <div class="about-card">
+          <div class="about-card-icon">💚</div>
+          <div class="about-card-title">Pasión por los detalles</div>
+          <div class="about-card-desc">Cuidamos cada detalle como si el evento fuera nuestro.</div>
         </div>
-        <button class="cf-submit" onclick="this.textContent='✓  Enviado — te contactamos pronto'">
-          Consultar disponibilidad
-        </button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ── SPACES ── -->
+<section id="espacios" class="section section-cream">
+  <div class="container">
+    <div class="spaces-eyebrow-row">
+      <span style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--green3)">Nuestros Espacios</span>
+    </div>
+    <div class="spaces-grid">
+      <div class="space-card">
+        <div class="space-img" style="background-position:0% 0%"></div>
+        <div class="space-overlay"></div>
+        <div class="space-content">
+          <div class="space-tag">Espacio Techado</div>
+          <div class="space-name">Área Campestre</div>
+          <div class="space-cap">Hasta 100 personas</div>
+          <button class="space-btn" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Ver detalles</button>
+        </div>
+      </div>
+      <div class="space-card">
+        <div class="space-img" style="background-position:66.67% 100%"></div>
+        <div class="space-overlay"></div>
+        <div class="space-content">
+          <div class="space-tag">Jardín & Terraza</div>
+          <div class="space-name">Jardín Campestre</div>
+          <div class="space-cap">Hasta 150 personas</div>
+          <button class="space-btn" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Ver detalles</button>
+        </div>
+      </div>
+      <div class="space-card">
+        <div class="space-img" style="background-position:100% 100%"></div>
+        <div class="space-overlay"></div>
+        <div class="space-content">
+          <div class="space-tag">Área de Asados</div>
+          <div class="space-name">Parrilla & Jardín</div>
+          <div class="space-cap">Ideal para toda la familia</div>
+          <button class="space-btn" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Ver detalles</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EVENT TYPES ── -->
+<section id="eventos" class="section" style="padding-top:48px;padding-bottom:64px">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:32px">
+      <span class="sec-eyebrow">Celebramos Contigo</span>
+    </div>
+    <div class="events-types">
+      <div class="event-type-item">
+        <div class="event-type-icon">💍</div>
+        <div class="event-type-label">Bodas</div>
+      </div>
+      <div class="event-type-item">
+        <div class="event-type-icon">👑</div>
+        <div class="event-type-label">Quinceañeras</div>
+      </div>
+      <div class="event-type-item">
+        <div class="event-type-icon">🎓</div>
+        <div class="event-type-label">Graduaciones</div>
+      </div>
+      <div class="event-type-item">
+        <div class="event-type-icon">💼</div>
+        <div class="event-type-label">Corporativos</div>
+      </div>
+      <div class="event-type-item">
+        <div class="event-type-icon">✝️</div>
+        <div class="event-type-label">Bautizos</div>
+      </div>
+      <div class="event-type-item">
+        <div class="event-type-icon">🎉</div>
+        <div class="event-type-label">Fiestas privadas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY ── -->
+<section id="galeria" class="section section-cream" style="padding-top:64px">
+  <div class="container">
+    <div class="gallery-layout">
+      <div>
+        <span class="sec-eyebrow">Galería —</span>
+        <h2 class="sec-title" style="margin-bottom:16px">Inspírate con<br>nuestros <em>eventos</em></h2>
+        <p class="sec-desc" style="margin-bottom:28px;font-size:14px">
+          Espacios únicos donde cada celebración cobra vida — madera, naturaleza y elegancia campestre en perfecta armonía.
+        </p>
+        <a href="https://wa.me/523113504089" class="about-link" target="_blank">Ver galería completa →</a>
+      </div>
+      <div class="gallery-strip">
+        <div class="gallery-item" style="width:155px;height:245px">
+          <div class="gallery-img" style="background-position:0% 0%"></div>
+        </div>
+        <div class="gallery-item" style="width:195px;height:245px">
+          <div class="gallery-img" style="background-position:33.33% 0%"></div>
+        </div>
+        <div class="gallery-item" style="width:175px;height:245px">
+          <div class="gallery-img" style="background-position:66.67% 0%"></div>
+        </div>
+        <div class="gallery-item" style="width:155px;height:245px">
+          <div class="gallery-img" style="background-position:0% 100%"></div>
+        </div>
+        <div class="gallery-item" style="width:175px;height:245px">
+          <div class="gallery-img" style="background-position:33.33% 100%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COTIZAR + TESTIMONIALS ── -->
+<section id="cotizar" class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px">
+      <span style="display:inline-flex;align-items:center;gap:14px;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--green3)">
+        <span style="width:80px;height:1px;background:var(--gold);display:inline-block"></span>
+        Lo que dicen nuestros clientes
+        <span style="width:80px;height:1px;background:var(--gold);display:inline-block"></span>
+      </span>
+    </div>
+    <div class="contact-layout">
+      <div>
+        <span class="sec-eyebrow">Cotiza tu Evento</span>
+        <h2 class="sec-title" style="font-size:28px;margin-bottom:6px">
+          Cuéntanos tu idea,<br>nosotros la hacemos realidad
+        </h2>
+        <form class="form-grid" onsubmit="return false">
+          <input class="form-input" type="text" placeholder="Nombre completo"/>
+          <div style="position:relative">
+            <input class="form-input" type="tel" placeholder="WhatsApp o teléfono" style="padding-left:40px"/>
+            <span style="position:absolute;left:13px;top:50%;transform:translateY(-50%);font-size:15px">📱</span>
+          </div>
+          <select class="form-input form-select">
+            <option value="" disabled selected>Tipo de evento</option>
+            <option>Boda</option>
+            <option>Quinceañera</option>
+            <option>Graduación</option>
+            <option>Corporativo</option>
+            <option>Bautizo</option>
+            <option>Fiesta privada</option>
+            <option>Otro</option>
+          </select>
+          <input class="form-input" type="date"/>
+          <div style="position:relative">
+            <input class="form-input" type="number" placeholder="Número de invitados" style="padding-left:40px"/>
+            <span style="position:absolute;left:13px;top:50%;transform:translateY(-50%);font-size:15px">👥</span>
+          </div>
+          <div></div>
+          <textarea class="form-input form-full" rows="3" placeholder="Mensaje (opcional)" style="resize:vertical"></textarea>
+          <div class="form-full">
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:14px">
+              Enviar solicitud →
+            </button>
+          </div>
+        </form>
+        <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:7px;height:7px;border-radius:50%;background:var(--green3);flex-shrink:0"></div>
+            <span style="font-size:12px;color:var(--muted)">Te aseguramos una cotización sin sorpresas</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:7px;height:7px;border-radius:50%;background:var(--green3);flex-shrink:0"></div>
+            <span style="font-size:12px;color:var(--muted)">Cotización clara y transparente</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:7px;height:7px;border-radius:50%;background:var(--green3);flex-shrink:0"></div>
+            <span style="font-size:12px;color:var(--muted)">Respuesta en menos de 24 h</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"El mejor salón de Nayarit... Nuestros invitados quedaron encantados con el lugar, la comida y el servicio. Todo salió perfecto."</p>
+          <div class="testimonial-author">— Mariana &amp; Luis <span style="font-weight:400;color:var(--muted)">· Boda</span></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Gracias Salón Tauri por hacer de los XV de nuestra hija un día mágico e inolvidable. Todo fue perfecto, el espacio, la decoración y la atención."</p>
+          <div class="testimonial-author">— Familia Ramírez <span style="font-weight:400;color:var(--muted)">· XV Años</span></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Un equipo increíble, súper atentos y profesionales. El jardín quedó espectacular y la parrilla estuvo deliciosa. Lo recomiendo al 100%."</p>
+          <div class="testimonial-author">— Carlos G. <span style="font-weight:400;color:var(--muted)">· Graduación</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BANNER ── -->
+<div id="contacto" class="cta-banner">
+  <div class="cta-banner-text">
+    Agenda tu visita y enamórate<br>de nuestro espacio.
+  </div>
+  <div class="cta-banner-right">
+    <div class="cta-contact">
+      <a href="https://wa.me/523113504089" class="cta-phone" target="_blank">
+        📱 311 350 40 89
+      </a>
+      <div class="cta-addr">Carretera Fed. 200 · Frente a UT Xalisco</div>
+    </div>
+    <a href="https://wa.me/523113504089" class="cta-btn" target="_blank">
+      Agenda tu visita
+    </a>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
 <footer>
-  <div class="footer-brand">Campestre <span>Tauri</span></div>
-  <nav class="footer-nav">
-    <a href="#inicio">Inicio</a>
-    <a href="#espacios">Espacios</a>
-    <a href="#galeria">Galería</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-  <div class="footer-copy">© 2024 Campestre Tauri · Diseñado por CREA Estudio Alquimia</div>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-name">Salón Campestre Tauri</div>
+      <div class="footer-logo-sub">Xalisco · Nayarit · México</div>
+      <div class="footer-social">
+        <a href="https://facebook.com" target="_blank">📘</a>
+        <a href="https://instagram.com" target="_blank">📷</a>
+        <a href="https://wa.me/523113504089" target="_blank">💬</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Navegación</div>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#espacios">Espacios</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Eventos</div>
+      <ul>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#cotizar">Cotizar</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#">Aviso de privacidad</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Información</div>
+      <ul>
+        <li><a href="#nosotros">Acerca de</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Visítanos</div>
+      <p style="color:rgba(255,255,255,.6);font-size:13px;line-height:1.8">
+        📍 Carretera Fed. 200<br>
+        Xalisco – Compostela<br>
+        Frente a UT Xalisco<br>
+        Nayarit, México
+      </p>
+      <div style="margin-top:20px">
+        <div class="footer-col-title">Paleta de colores</div>
+        <div class="footer-palette">
+          <div class="palette-dot" style="background:#1B4A38"></div>
+          <div class="palette-dot" style="background:#2A6B52"></div>
+          <div class="palette-dot" style="background:#F7F2E8"></div>
+          <div class="palette-dot" style="background:#DDD0B8"></div>
+          <div class="palette-dot" style="background:#C8952A"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Salón Campestre Tauri · Todos los derechos reservados</div>
+    <div class="footer-copy">Diseño por CREA Estudio Alquimia</div>
+  </div>
 </footer>
 
-<!-- WHATSAPP FAB -->
-<a href="https://wa.me/523113504089" target="_blank" class="wa-fab">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-</a>
-
-<script>
-  // Hero subtle zoom on load
-  window.addEventListener('load', () => {
-    document.getElementById('heroBg').classList.add('loaded');
-  });
-
-  // Reveal scroll
-  const obs = new IntersectionObserver(
-    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-    { threshold: 0.08 }
-  );
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script>
 </body>
 </html>
