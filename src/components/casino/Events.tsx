@@ -1,83 +1,153 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
 const EVENTS = [
-  { icon: '💍', name: 'Bodas',         desc: 'El día más especial merece el espacio más especial. Creamos la boda de tus sueños.' },
-  { icon: '👸', name: 'Quinceañeras',  desc: 'Celebra tus XV años con todo el esplendor que mereces en un ambiente mágico.' },
-  { icon: '🎓', name: 'Graduaciones',  desc: 'Un logro que merece una gran celebración. Brindemos por el nuevo capítulo.' },
-  { icon: '🎉', name: 'Fiestas',       desc: 'Cumpleaños, aniversarios, despedidas de soltera y más. Cualquier motivo es bueno.' },
-  { icon: '💼', name: 'Corporativos',  desc: 'Presentaciones, reuniones de empresa y convenciones en un ambiente único.' },
-  { icon: '🍼', name: 'Bautizos',      desc: 'Celebra la llegada de los nuevos integrantes de la familia con estilo.' },
+  { num: '01', name: 'Bodas',           tag: 'La celebración de tu vida',        desc: 'El día más especial merece el espacio más especial. Diseñamos cada detalle para que tu boda sea exactamente como lo soñaste — desde la ceremonia hasta el último baile.' },
+  { num: '02', name: 'Quinceañeras',    tag: 'Tu momento de brillar',            desc: 'Celebra tus XV años con todo el esplendor que mereces. Un ambiente mágico que combina tradición y modernidad para hacer de tu quinceañera una noche única.' },
+  { num: '03', name: 'Graduaciones',    tag: 'El inicio de un nuevo capítulo',   desc: 'Un logro que merece una gran celebración. Brindemos juntos por los nuevos caminos que comienzan y los sueños que apenas empiezan a hacerse realidad.' },
+  { num: '04', name: 'Fiestas Privadas',tag: 'Cualquier motivo, una gran fiesta',desc: 'Cumpleaños, aniversarios, despedidas de soltera y cualquier razón para reunir a los que más quieres en un espacio que hace cada momento especial.' },
+  { num: '05', name: 'Corporativos',    tag: 'Negocios con estilo',              desc: 'Convenciones, presentaciones de empresa y cenas ejecutivas en un ambiente que inspira, sorprende y deja una impresión duradera a tus clientes y equipo.' },
+  { num: '06', name: 'Bautizos',        tag: 'La bienvenida más especial',       desc: 'Celebra la llegada de los nuevos integrantes de la familia en un espacio íntimo y cálido, rodeado de naturaleza y de las personas más importantes.' },
 ];
 
 export default function Events() {
+  const [open, setOpen] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const obs = new IntersectionObserver(
       entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-      { threshold: 0.1 }
+      { threshold: 0.06 }
     );
     sectionRef.current?.querySelectorAll('.reveal').forEach(el => obs.observe(el));
     return () => obs.disconnect();
   }, []);
 
   return (
-    <section id="eventos" className="section section-light" ref={sectionRef}>
+    <section id="eventos" className="section section-dark" ref={sectionRef} style={{ paddingTop: 120, paddingBottom: 120 }}>
       <div className="container">
-        <div style={{ textAlign: 'center', maxWidth: 560, margin: '0 auto' }}>
-          <span className="sec-eyebrow sec-eyebrow-dark reveal">Tipos de Eventos</span>
-          <h2 className="sec-title reveal reveal-delay-1" style={{ color: 'var(--dark-text)' }}>
-            Celebraciones de <em style={{ color: 'var(--terra)' }}>todo tipo</em>, un solo lugar
-          </h2>
-          <p className="sec-desc reveal reveal-delay-2" style={{ color: 'var(--mid-text)', margin: '0 auto' }}>
-            Desde bodas íntimas hasta grandes fiestas, adaptamos nuestro espacio
-            y servicios a cada tipo de celebración.
+        {/* Header */}
+        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32, marginBottom: 80 }}>
+          <div style={{ flex: 1, minWidth: 280 }}>
+            <span className="sec-eyebrow reveal">Tipos de Eventos</span>
+            <h2 className="sec-title reveal" style={{ marginBottom: 0 }}>
+              Cada celebración,<br /><em>a tu medida</em>
+            </h2>
+          </div>
+          <p className="reveal" style={{ fontSize: 15, fontWeight: 300, color: 'var(--muted)', maxWidth: 340, lineHeight: 1.8 }}>
+            Sin importar el tipo de evento, adaptamos nuestros espacios, servicios y atención para que tu celebración sea exactamente como la imaginaste.
           </p>
         </div>
 
-        <div className="events-grid">
+        {/* Numbered accordion list */}
+        <div style={{ borderTop: '1px solid var(--border-dark)' }}>
           {EVENTS.map((ev, i) => (
             <div
               key={i}
-              className={`event-card reveal reveal-delay-${(i % 3) + 1}`}
-              onClick={() => document.getElementById('cotizador')?.scrollIntoView({ behavior: 'smooth' })}
+              className="reveal"
+              style={{
+                borderBottom: '1px solid var(--border-dark)',
+                transition: 'background 0.3s',
+                background: open === i ? 'rgba(200,164,68,0.04)' : 'transparent',
+                cursor: 'pointer',
+              }}
+              onClick={() => setOpen(open === i ? null : i)}
             >
-              <span className="event-icon">{ev.icon}</span>
-              <div className="event-name">{ev.name}</div>
-              <div className="event-desc">{ev.desc}</div>
               <div style={{
-                marginTop: 20, fontSize: 11, fontWeight: 700,
-                letterSpacing: 3, textTransform: 'uppercase',
-                color: 'var(--gold)', display: 'flex', alignItems: 'center', gap: 6,
+                display: 'flex', alignItems: 'center', gap: 40, padding: '28px 0',
+                transition: 'padding 0.3s',
               }}>
-                Cotizar →
+                {/* Number */}
+                <span style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: 13,
+                  fontWeight: 400,
+                  letterSpacing: '2px',
+                  color: open === i ? 'var(--gold)' : 'var(--muted)',
+                  width: 28,
+                  flexShrink: 0,
+                  transition: 'color 0.3s',
+                }}>
+                  {ev.num}
+                </span>
+
+                {/* Name */}
+                <div style={{ flex: 1 }}>
+                  <div style={{
+                    fontFamily: "'Playfair Display', serif",
+                    fontSize: 'clamp(22px, 3.5vw, 34px)',
+                    fontWeight: 400,
+                    color: open === i ? 'var(--light-text)' : 'rgba(240,226,200,0.7)',
+                    transition: 'color 0.3s, font-size 0.3s',
+                  }}>
+                    {ev.name}
+                  </div>
+                  {open === i && (
+                    <div style={{
+                      paddingTop: 16, paddingBottom: 8,
+                      display: 'grid', gridTemplateColumns: '1fr auto',
+                      gap: 32, alignItems: 'start',
+                    }}>
+                      <div>
+                        <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 3, textTransform: 'uppercase', color: 'var(--gold)', marginBottom: 10 }}>
+                          {ev.tag}
+                        </div>
+                        <div style={{ fontSize: 15, fontWeight: 300, color: 'var(--muted)', lineHeight: 1.8, maxWidth: 540 }}>
+                          {ev.desc}
+                        </div>
+                      </div>
+                      <button
+                        style={{
+                          display: 'flex', alignItems: 'center', gap: 8,
+                          background: 'var(--gold)', border: 'none',
+                          borderRadius: 50, padding: '12px 22px',
+                          color: 'var(--bg)', fontSize: 11, fontWeight: 700,
+                          letterSpacing: 3, textTransform: 'uppercase', cursor: 'pointer',
+                          whiteSpace: 'nowrap', flexShrink: 0,
+                          fontFamily: "'Lato', sans-serif",
+                          transition: 'background 0.2s',
+                        }}
+                        onClick={e => { e.stopPropagation(); document.getElementById('cotizador')?.scrollIntoView({ behavior: 'smooth' }); }}
+                      >
+                        Cotizar <ArrowUpRight size={14} />
+                      </button>
+                    </div>
+                  )}
+                </div>
+
+                {/* Tag (desktop) */}
+                <span style={{
+                  fontSize: 12, letterSpacing: 2, color: 'var(--muted)',
+                  display: open === i ? 'none' : 'block',
+                  fontWeight: 300, minWidth: 180, textAlign: 'right',
+                }}>
+                  {ev.tag}
+                </span>
+
+                {/* Arrow */}
+                <div style={{
+                  width: 32, height: 32, borderRadius: '50%',
+                  border: '1px solid var(--border-dark)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  flexShrink: 0,
+                  transform: open === i ? 'rotate(45deg)' : 'rotate(0)',
+                  transition: 'transform 0.35s, border-color 0.3s',
+                  borderColor: open === i ? 'var(--gold)' : '',
+                }}>
+                  <span style={{ fontSize: 14, color: open === i ? 'var(--gold)' : 'var(--muted)' }}>+</span>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Divider band */}
-        <div style={{
-          marginTop: 80, padding: '40px 60px',
-          background: 'linear-gradient(135deg, var(--terra), var(--gold))',
-          borderRadius: 'var(--r-lg)',
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          flexWrap: 'wrap', gap: 24,
-        }} className="reveal">
-          <div>
-            <div style={{ fontFamily: 'Playfair Display, serif', fontSize: 28, color: '#fff', marginBottom: 6 }}>
-              ¿Tu evento no está en la lista?
-            </div>
-            <div style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', fontWeight: 300 }}>
-              Contáctanos y creamos algo especial para ti.
-            </div>
-          </div>
+        {/* CTA */}
+        <div style={{ marginTop: 60, display: 'flex', justifyContent: 'center' }} className="reveal">
           <button
             className="btn-primary"
-            style={{ background: '#fff', color: 'var(--terra)' }}
-            onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('cotizador')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Contáctanos
+            ✦ Cotizar mi evento
           </button>
         </div>
       </div>

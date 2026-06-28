@@ -1130,3 +1130,41 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 400; 
   .quote-chips    { grid-template-columns: 1fr; }
   .stats-grid     { grid-template-columns: 1fr 1fr; }
 }
+
+/* ─── MARQUEE TICKER ─── */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+
+/* ─── SPACES HORIZONTAL SCROLL ─── */
+.spaces-hscroll::-webkit-scrollbar { display: none; }
+
+/* ─── FILM GRAIN OVERLAY ─── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+/* ─── SECTION CLIP DIVIDERS ─── */
+.section-clip-top {
+  clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
+  margin-top: -40px;
+  padding-top: 140px;
+}
+.section-clip-bottom {
+  clip-path: polygon(0 0%, 100% 0%, 100% 96%, 0% 100%);
+  padding-bottom: 140px;
+}

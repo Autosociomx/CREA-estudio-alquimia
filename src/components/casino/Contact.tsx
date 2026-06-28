@@ -84,14 +84,34 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Google Maps placeholder */}
-            <div className="map-placeholder">
-              <div className="map-pin">📍</div>
-              <div style={{ fontSize: 13, letterSpacing: 2, textTransform: 'uppercase', color: 'var(--muted)' }}>
-                Próximamente en Google Maps
-              </div>
-              <div style={{ fontSize: 12, color: 'var(--muted)', opacity: 0.6, textAlign: 'center', maxWidth: 240, lineHeight: 1.6 }}>
-                Estamos completando nuestro registro. Por ahora, escríbenos y te enviamos la ubicación exacta.
+            {/* Google Maps — embed centrado en UTN Nayarit hasta confirmar registro */}
+            <div style={{ marginTop: 32, borderRadius: 'var(--r)', overflow: 'hidden', border: '1px solid var(--border-light)' }}>
+              <iframe
+                title="Ubicación Casino Bambú"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.8!2d-104.8914!3d21.4931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842748c8f1d2db55%3A0x7c8e1a0e6bde4ef3!2sUniversidad%20Tecnol%C3%B3gica%20de%20Nayarit!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx"
+                width="100%"
+                height="260"
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div style={{
+                background: 'var(--cream)',
+                padding: '14px 20px',
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                gap: 12, flexWrap: 'wrap',
+              }}>
+                <span style={{ fontSize: 12, color: 'var(--mid-text)', fontWeight: 300 }}>
+                  📍 Junto a Universidad Tecnológica de Nayarit · Próximamente en Google Maps
+                </span>
+                <a
+                  href="https://maps.app.goo.gl/UTNNayarit"
+                  target="_blank" rel="noreferrer"
+                  style={{ fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', color: 'var(--terra)', textDecoration: 'none' }}
+                >
+                  Cómo llegar →
+                </a>
               </div>
             </div>
           </div>

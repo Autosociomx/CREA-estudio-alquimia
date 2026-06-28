@@ -1,5 +1,6 @@
 import Navbar       from './components/casino/Navbar';
 import Hero         from './components/casino/Hero';
+import Marquee      from './components/casino/Marquee';
 import About        from './components/casino/About';
 import Spaces       from './components/casino/Spaces';
 import Events       from './components/casino/Events';
@@ -16,6 +17,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Marquee />
         <About />
         <Spaces />
         <Events />
