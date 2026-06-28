@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 
+const GALLERY = `${import.meta.env.BASE_URL}venue-gallery.png`;
+
 const CARDS = [
   { icon: '🎋', title: 'Arquitectura Natural', desc: 'Madera, piedra y vegetación tropical crean una atmósfera única e irrepetible.' },
   { icon: '✨', title: 'Iluminación Mágica', desc: 'Luces colgantes que transforman cada espacio al caer la noche.' },
@@ -28,7 +30,7 @@ export default function About() {
             <div style={{ position: 'relative', borderRadius: 'var(--r-xl)', overflow: 'hidden', aspectRatio: '4/5' }}>
               <div style={{
                 width: '100%', height: '100%',
-                backgroundImage: 'url(/venue-gallery.png)',
+                backgroundImage: `url(${GALLERY})`,
                 backgroundSize: '400% 200%',
                 backgroundPosition: '100% 100%',
                 backgroundRepeat: 'no-repeat',

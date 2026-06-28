@@ -7,6 +7,8 @@ import { ArrowRight } from 'lucide-react';
  * Photo 7 (66% 100%) = Jardín vista montaña       → Terraza Los Olivos
  * Photo 3 (66%  0%) = Salón interior madera       → Salón Bugambilia
  */
+const GALLERY = `${import.meta.env.BASE_URL}venue-gallery.png`;
+
 const SPACES = [
   {
     tag: 'Espacio Principal',
@@ -61,7 +63,7 @@ export default function Spaces() {
               <div
                 style={{
                   width: '100%', height: '100%',
-                  backgroundImage: 'url(/venue-gallery.png)',
+                  backgroundImage: `url(${GALLERY})`,
                   backgroundSize: '400% 200%',
                   backgroundPosition: s.bgPos,
                   transition: 'transform .6s',

@@ -16,6 +16,7 @@ const PHOTOS = [
   { x: '100%',    y: '100%',  label: 'Terraza & bugambilias',  cat: 'bodas'   },
 ];
 
+const GALLERY_IMG = `${import.meta.env.BASE_URL}venue-gallery.png`;
 const HEIGHTS = [260, 200, 240, 220, 200, 260, 240, 220];
 
 export default function Gallery() {
@@ -87,7 +88,7 @@ export default function Gallery() {
                   className="gallery-strip-img"
                   style={{
                     width: '100%', height: '100%',
-                    backgroundImage: 'url(/venue-gallery.png)',
+                    backgroundImage: `url(${GALLERY_IMG})`,
                     backgroundSize: '400% 200%',
                     backgroundPosition: `${p.x} ${p.y}`,
                   }}
@@ -113,7 +114,7 @@ export default function Gallery() {
               <div
                 style={{
                   width: '100%', height: '100%',
-                  backgroundImage: 'url(/venue-gallery.png)',
+                  backgroundImage: `url(${GALLERY_IMG})`,
                   backgroundSize: '400% 200%',
                   backgroundPosition: `${p.x} ${p.y}`,
                   transition: 'transform .4s',

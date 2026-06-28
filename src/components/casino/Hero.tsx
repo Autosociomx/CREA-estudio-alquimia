@@ -1,3 +1,5 @@
+const GALLERY = `${import.meta.env.BASE_URL}venue-gallery.png`;
+
 export default function Hero() {
   const scroll = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -45,7 +47,7 @@ export default function Hero() {
       <div className="hero-right">
         <div style={{
           width: '100%', height: '100%',
-          backgroundImage: 'url(/venue-gallery.png)',
+          backgroundImage: `url(${GALLERY})`,
           backgroundSize: '400% 200%',
           backgroundPosition: '0% 0%',
           backgroundRepeat: 'no-repeat',
